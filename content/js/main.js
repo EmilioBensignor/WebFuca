@@ -88,7 +88,7 @@ const novedades = [
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   redes.innerHTML += `
     <div class="iconRedes columnAlignCenter bg-white">
-      <img src="/content/images/${iconosRedes[iconRed].img}.svg" alt="${iconosRedes[iconRed].alt}" />
+      <img src="./content/images/${iconosRedes[iconRed].img}.svg" alt="${iconosRedes[iconRed].alt}" />
     </div>
   `;
 }
