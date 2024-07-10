@@ -163,7 +163,7 @@ header {
 
 .imgHero {
   height: 10rem;
-  background-image: url("./content/images/Img-Hero.png");
+  background-image: url("/content/images/Img-Hero.png");
 }
 
 .heroContent {
@@ -192,19 +192,19 @@ h1 span {
 /* Nuestros Pilares */
 
 .centroInvestigacionesOncologicas {
-  background-image: url("./content/images/Centro-Investigaciones-Oncologicas.jpeg");
+  background-image: url("/content/images/Centro-Investigaciones-Oncologicas.jpeg");
 }
 
 .educacionMedicaOncologia {
-  background-image: url("./content/images/Educacion-Médica-Oncologia.jpeg");
+  background-image: url("/content/images/Educacion-Medica-Oncologia.jpeg");
 }
 
 .aulasAbiertasConcientizacion {
-  background-image: url("./content/images/Aulas-Abiertas-Concientizacion.jpeg");
+  background-image: url("/content/images/Aulas-Abiertas-Concientizacion.jpeg");
 }
 
 .bibliotecaBiomedicaProfesionalesSalud {
-  background-image: url("./content/images/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
+  background-image: url("/content/images/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
 }
 
 .pilar {
@@ -277,7 +277,7 @@ h1 span {
   position: absolute;
   top: 50%;
   right: 2rem;
-  background-image: url("./content/images/Icon-Flecha.png");
+  background-image: url("/content/images/Icon-Flecha.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
