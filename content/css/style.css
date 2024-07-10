@@ -1,0 +1,329 @@
+/* Estilos Generales */
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
+
+:root {
+  --color-primario: #17AF95;
+  --fondo-gris: #0000000D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Encode Sans", sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.ga-05 {
+  gap: 0.5rem;
+}
+
+.ga-075 {
+  gap: 0.75rem;
+}
+
+.ga-1 {
+  gap: 1rem;
+}
+
+.ga-15 {
+  gap: 1.5rem;
+}
+
+.mt-15 {
+  margin-top: 1.5rem;
+}
+
+.my-15 {
+  margin: 1.5rem 0;
+}
+
+.py-15-px-1 {
+  padding: 1.5rem 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgImgCover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-primary {
+  background-color: var(--color-primario);
+}
+
+.bg-fondo {
+  background-color: var(--fondo-gris);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* Fuca */
+
+h1 {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 0.875rem;
+}
+
+.text-white {
+  color: white;
+}
+
+.primaryButton {
+  background-color: var(--color-primario);
+  border-radius: 99px;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.875rem 3rem;
+  cursor: pointer;
+}
+
+.greenUnderlineTitle {
+  height: 0;
+  border: 2px solid var(--color-primario);
+}
+
+.whiteUnderlineTitle {
+  height: 0;
+  border: 2px solid #ffffff;
+}
+
+.titleUnderline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shadow-2-primary {
+  box-shadow: 2px 2px 2px var(--color-primario);
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1rem;
+}
+
+/* Hero */
+
+.imgHero {
+  height: 10rem;
+  background-image: url("/content/images/Img-Hero.png");
+}
+
+.heroContent {
+  background: var(--fondo-gris);
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 span {
+  color: var(--color-primario);
+}
+
+.iconRedes {
+  width: 1.75rem;
+  height: 1.75rem;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.iconRedes img {
+  color: var(--color-primario);
+}
+
+/* Nuestros Pilares */
+
+.centroInvestigacionesOncologicas {
+  background-image: url("/content/images/Centro-Investigaciones-Oncologicas.jpeg");
+}
+
+.educacionMedicaOncologia {
+  background-image: url("/content/images/Educacion-Médica-Oncologia.jpeg");
+}
+
+.aulasAbiertasConcientizacion {
+  background-image: url("/content/images/Aulas-Abiertas-Concientizacion.jpeg");
+}
+
+.bibliotecaBiomedicaProfesionalesSalud {
+  background-image: url("/content/images/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
+}
+
+.pilar {
+  padding: 4.5rem 1.09rem 1.5rem 1.09rem;
+}
+
+.pilar p {
+  font-weight: bold;
+}
+
+/* Novedades */
+
+.filtrosNovedades {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtroNovedad {
+  border: 1px solid var(--color-primario);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--color-primario);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.78rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.filtroNovedad:hover {
+  box-shadow: 2px 2px 2px var(--color-primario);
+}
+
+.filtroNovedad.selected {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.headerNovedades {
+  line-height: 1;
+  padding: 0.75rem 1rem;
+}
+
+.headerNovedades p {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.headerNovedades p:nth-child(2) {
+  font-size: 2.25rem;
+}
+
+.contentNovedades {
+  color: #000000CC;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0.75rem 1.15rem;
+}
+
+.novedadesBtn {
+  position: relative;
+  font-size: 1rem;
+  padding: 0.75rem 3.5rem 0.75rem 2rem;
+}
+
+.novedadesBtn::after {
+  width: 1rem;
+  height: 1rem;
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  background-image: url("/content/images/Icon-Flecha.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+/* Recursos - Objetivos */
+
+.recursosObjetivos {
+  background: linear-gradient(96.42deg, #17AF95 0.27%, #1A8A97 100.94%);
+}
+
+.enFuca {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.btnDona, .btnActualiza {
+  width: 100%;
+  border-radius: 99px;
+  border: 3px solid #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.95rem 0;
+}
+
+.btnDona {
+  background-color: #ffffff;
+  color: var(--color-primario);
+}
+
+.btnActualiza {
+  background-color: transparent;
+  color: white;
+}
+
+/* Newsletter */
+
+.suscribete h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.suscribete p {
+  font-size: 0.875rem;
+}
