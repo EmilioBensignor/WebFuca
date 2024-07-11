@@ -3,6 +3,7 @@ const pilares = document.getElementById("pilares");
 const filtrosNovedades = document.getElementById("filtrosNovedades");
 const novedadesContainer = document.getElementById("novedadesContainer");
 const redesFooter = document.getElementById("redesFooter");
+const acompanan = document.getElementById("acompanan");
 
 const iconosRedes = [
   {
@@ -85,6 +86,39 @@ const novedades = [
     cta: "INSCRIBIRME",
   },
 ];
+// Cambiar nombres
+const nosAcompanan = [
+  {
+    img: "Logo-AAOC.png",
+    link: "#",
+    alt: "Logo"
+  },
+  {
+    img: "Logo-SAMastologia.png",
+    link: "#",
+    alt: "Logo"
+  },
+  {
+    img: "Logo-Salesforce.png",
+    link: "#",
+    alt: "Logo"
+  },
+  {
+    img: "Logo-AAOC.png",
+    link: "#",
+    alt: "Logo"
+  },
+  {
+    img: "Logo-SAMastologia.png",
+    link: "#",
+    alt: "Logo"
+  },
+  {
+    img: "Logo-Salesforce.png",
+    link: "#",
+    alt: "Logo"
+  },
+];
 
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   redes.innerHTML += `
@@ -132,6 +166,14 @@ for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
     <div class="iconRedesFooter columnAlignCenter bg-white">
       <img src="/content/images/${iconosRedes[iconRed].img}.svg" alt="${iconosRedes[iconRed].alt}" />
     </div>
+  `;
+}
+
+for (let logo = 0; logo < nosAcompanan.length; logo++) {
+  acompanan.innerHTML += `
+    <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
+      <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
+    </a>
   `;
 }
 

@@ -411,6 +411,23 @@ h1 span {
   color: white;
 }
 
+.sliderAcompanan {
+  display: flex;
+}
+
+.slideAcompanan {
+  width: 110px !important;
+  height: 64px !important;
+  border-radius: 9px;
+  padding: 1rem 1.7rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.slideAcompanan img {
+  width: 100%;
+  height: 50px;
+}
+
 /* Newsletter */
 
 .suscribete h2 {
