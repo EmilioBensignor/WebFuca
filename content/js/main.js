@@ -2,6 +2,7 @@ const redes = document.getElementById("redes");
 const pilares = document.getElementById("pilares");
 const filtrosNovedades = document.getElementById("filtrosNovedades");
 const novedadesContainer = document.getElementById("novedadesContainer");
+const redesFooter = document.getElementById("redesFooter");
 
 const iconosRedes = [
   {
@@ -122,6 +123,14 @@ for (let novedad = 0; novedad < novedades.length; novedad++) {
         <p class="contentNovedades">${novedades[novedad].texto}</p>
         <button class="novedadesBtn primaryButton">${novedades[novedad].cta}</button>
       </div>
+    </div>
+  `;
+}
+
+for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
+  redesFooter.innerHTML += `
+    <div class="iconRedesFooter columnAlignCenter bg-white">
+      <img src="/content/images/${iconosRedes[iconRed].img}.svg" alt="${iconosRedes[iconRed].alt}" />
     </div>
   `;
 }

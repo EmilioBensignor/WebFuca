@@ -4,6 +4,7 @@
 
 :root {
   --color-primario: #17AF95;
+  --color-secundario: #088896;
   --fondo-gris: #0000000D;
 }
 
@@ -22,6 +23,10 @@ html {
 
 .w-100 {
   width: 100%;
+}
+
+.w-75 {
+  width: 75%;
 }
 
 .w-70 {
@@ -60,12 +65,36 @@ html {
   margin-top: 1.5rem;
 }
 
+.mt-075 {
+  margin-top: 0.75rem;
+}
+
+.my-075 {
+  margin: 0.75rem 0;
+}
+
 .my-15 {
   margin: 1.5rem 0;
 }
 
+.mx-1 {
+  margin: 0 1rem;
+}
+
 .py-15-px-1 {
   padding: 1.5rem 1rem;
+}
+
+.py-05 {
+  padding: 0.5rem 0;
+}
+
+.py-075 {
+  padding: 0.75rem 0;
+}
+
+.py-15 {
+  padding: 1.5rem 0;
 }
 
 .d-flex {
@@ -77,10 +106,36 @@ html {
   flex-direction: column;
 }
 
+.rowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .columnAlignCenter {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .bgImgCover {
@@ -93,12 +148,24 @@ html {
   background-color: var(--color-primario);
 }
 
+.bg-secondary {
+  background-color: var(--color-secundario);
+}
+
 .bg-fondo {
   background-color: var(--fondo-gris);
 }
 
 .bg-white {
   background-color: #ffffff;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.text-none {
+  text-decoration: none;
 }
 
 /* Fuca */
@@ -273,7 +340,7 @@ h1 span {
 .novedadesBtn::after {
   width: 1rem;
   height: 1rem;
-  content: ' ';
+  content: '';
   position: absolute;
   top: 50%;
   right: 2rem;
@@ -288,6 +355,33 @@ h1 span {
 
 .recursosObjetivos {
   background: linear-gradient(96.42deg, #17AF95 0.27%, #1A8A97 100.94%);
+}
+
+.curvasContainer {
+  background-image: url("/content/images/Curva-Grafico-Arriba.svg"), url("/content/images/Curva-Grafico-Abajo.svg");
+  background-size: contain, contain;
+  background-position-x: right, left;
+  background-position-y: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.graficoContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.datosGrafico {
+  width: 50%;
+}
+
+.datosGrafico :first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.datosGrafico :last-child {
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .enFuca {
@@ -326,4 +420,76 @@ h1 span {
 
 .suscribete p {
   font-size: 0.875rem;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+}
+
+.inputText {
+  width: 100%;
+  border-radius: 99px;
+  border: none;
+  background-color: #F2F2F2;
+  color: #00000080;
+  padding: 0.875rem 1.5rem 0.875rem 3.125rem;
+}
+
+.inputText:focus-visible {
+  outline: var(--color-primario) auto 1px;
+}
+
+.inputContainer::before {
+  width: 1.5rem;
+  height: 1.25rem;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  background-image: url("/content/images/Icon-Email.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.btnNewsletter {
+  font-size: 1rem;
+}
+
+.iconYoutube {
+  width: 1.5rem;
+  height: 1rem;
+  background-image: url("/content/images/Icon-Youtube.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.miraYoutube a {
+  color: var(--color-primario);
+  font-size: 0.875rem;
+}
+
+/* Footer */
+
+.containerRedesFooter {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.iconRedesFooter {
+  width: 1.75rem;
+  height: 1.75rem;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.iconRedesFooter img {
+  color: var(--color-secundario);
+}
+
+.donaFucaFooter {
+  padding: 0.875rem 2rem;
 }
