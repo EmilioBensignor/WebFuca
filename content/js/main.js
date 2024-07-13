@@ -2,9 +2,87 @@ const redes = document.getElementById("redes");
 const pilares = document.getElementById("pilares");
 const filtrosNovedades = document.getElementById("filtrosNovedades");
 const novedadesContainer = document.getElementById("novedadesContainer");
-const redesFooter = document.getElementById("redesFooter");
 const acompanan = document.getElementById("acompanan");
+const redesFooter = document.getElementById("redesFooter");
+const menuFooterMobile = document.getElementById("menuFooterMobile");
+const contactateList = document.getElementById("contactateList");
+const menuFooterDesktop = document.getElementById("menuFooterDesktop");
+const menuFooterColumnList = document.getElementById("menuFooterColumnList");
 
+const menu = [
+  {
+    titulo: "EDUCACIÓN MÉDICA",
+    paginas: [
+      {
+        nombre: "Biblioteca biomédica",
+        link: "#"
+      },
+      {
+        nombre: "Formación Médica",
+        link: "#"
+      },
+      {
+        nombre: "Becarios y Ex Becarios",
+        link: "#"
+      },
+      {
+        nombre: "Cursos",
+        link: "#"
+      },
+    ],
+  },
+  {
+    titulo: "INVESTIGACIÓN",
+    paginas: [
+      {
+        nombre: "Centro de investigaciones Oncológicas",
+        link: "#"
+      },
+    ],
+  },
+  {
+    titulo: "INFORMATE",
+    paginas: [
+      {
+        nombre: "Aulas Abiertas",
+        link: "#"
+      },
+      {
+        nombre: "Información del cáncer",
+        link: "#"
+      },
+      {
+        nombre: "Charlas de profesionales",
+        link: "#"
+      },
+    ],
+  },
+  {
+    titulo: "CONOCENOS",
+    paginas: [
+      {
+        nombre: "Quiénes somos",
+        link: "#"
+      },
+      {
+        nombre: "Nuestra historia",
+        link: "#"
+      },
+      {
+        nombre: "Novedades",
+        link: "#"
+      },
+      {
+        nombre: "Donaciones",
+        link: "#"
+      },
+      {
+        nombre: "Espacio FUCA Online",
+        link: "#"
+      },
+    ],
+  },
+];
 const iconosRedes = [
   {
     img: "Icon-Whatsapp",
@@ -119,6 +197,20 @@ const nosAcompanan = [
     alt: "Logo"
   },
 ];
+const contactate = [
+  {
+    icon: "iconEmail",
+    texto: "info@fuca.com.ar",
+  },
+  {
+    icon: "iconTelefono",
+    texto: "Oficina: +54 9 4047-5040",
+  },
+  {
+    icon: "iconTelefono",
+    texto: "Espacio FUCA: +54 9 6188-8929",
+  },
+];
 
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   redes.innerHTML += `
@@ -169,11 +261,46 @@ for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   `;
 }
 
-for (let logo = 0; logo < nosAcompanan.length; logo++) {
-  acompanan.innerHTML += `
-    <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
-      <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
-    </a>
+// for (let logo = 0; logo < nosAcompanan.length; logo++) {
+//   acompanan.innerHTML += `
+//     <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
+//       <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
+//     </a>
+//   `;
+// } 
+
+for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
+  menuFooterMobile.innerHTML += `
+  <div class="footerTitle">
+    <div class="titleUnderline">
+      <p class="text-white font-weight-bold">${menu[menuItemMobile].titulo}</p>
+      <span class="underlineFooter whiteUnderlineTitle"></span>
+    </div>
+    <div class="iconFlecha flexCenter bg-white">
+      <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" />
+    </div>
+  </div>
+  `;
+}
+
+for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
+  menuFooterDesktop.innerHTML += `
+    <div class="menuFooterColumn column">
+      <div class="titleUnderline">
+        <p class="text-white font-weight-bold">${menu[menuItemDesktop].titulo}</p>
+        <span class="underlineFooter whiteUnderlineTitle"></span>
+      </div>
+      <ul id="menuFooterColumnList"></ul>
+    </div>
+  `;
+}
+
+for (let contactateItem = 0; contactateItem < contactate.length; contactateItem++) {
+  contactateList.innerHTML += `
+  <div class="rowAlign ga-05">
+    <div class="${contactate[contactateItem].icon} bgImgContain"></div>
+    <p class="contactateText text-white">${contactate[contactateItem].texto}</p>
+  </div>
   `;
 }
 
