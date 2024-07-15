@@ -6,6 +6,7 @@ const acompanan = document.getElementById("acompanan");
 const redesFooter = document.getElementById("redesFooter");
 const menuFooterMobile = document.getElementById("menuFooterMobile");
 const contactateList = document.getElementById("contactateList");
+const contactateListDesktop = document.getElementById("contactateListDesktop");
 const menuFooterDesktop = document.getElementById("menuFooterDesktop");
 const menuFooterColumnList = document.getElementById("menuFooterColumnList");
 
@@ -78,6 +79,10 @@ const menu = [
       },
       {
         nombre: "Espacio FUCA Online",
+        link: "#"
+      },
+      {
+        nombre: "Contacto",
         link: "#"
       },
     ],
@@ -239,7 +244,7 @@ for (let filtro = 0; filtro < filtros.length; filtro++) {
 
 for (let novedad = 0; novedad < novedades.length; novedad++) {
   novedadesContainer.innerHTML += `
-    <div>
+    <div class="novedad">
       <div class="headerNovedades bg-primary">
         <p class="text-white">${novedades[novedad].mes}</p>
         <p class="text-white">${novedades[novedad].dia}</p>
@@ -270,36 +275,89 @@ for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
 // } 
 
 for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
+  let paginasFucaMobile = "";
+  for (let pagina = 0; pagina < menu[menuItemMobile].paginas.length; pagina++) {
+    paginasFucaMobile += `<li><a href="${menu[menuItemMobile].paginas[pagina].link}" class="text-white">${menu[menuItemMobile].paginas[pagina].nombre}</a></li>`;
+  }
+
   menuFooterMobile.innerHTML += `
-  <div class="footerTitle">
-    <div class="titleUnderline">
-      <p class="text-white font-weight-bold">${menu[menuItemMobile].titulo}</p>
-      <span class="underlineFooter whiteUnderlineTitle"></span>
+    <div class="menuFooterColumn column">
+      <div class="footerTitle" onclick="toggleMenu(${menuItemMobile})">
+        <div class="titleUnderline">
+          <p class="text-white font-weight-bold">${menu[menuItemMobile].titulo}</p>
+          <span class="underlineFooter whiteUnderlineTitle"></span>
+        </div>
+        <div class="iconFlecha flexCenter bg-white">
+          <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlecha${menuItemMobile}" />
+        </div>
+      </div>
+      <ul id="menuFooterColumnList${menuItemMobile}" class="menuFooterColumnList">
+        ${paginasFucaMobile}
+      </ul>
     </div>
-    <div class="iconFlecha flexCenter bg-white">
-      <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" />
-    </div>
-  </div>
   `;
 }
 
+function toggleMenu(index) {
+  const menuList = document.getElementById(`menuFooterColumnList${index}`);
+  const iconFlecha = document.getElementById(`iconFlecha${index}`);
+
+  if (menuList) {
+    if (menuList.classList.contains('show')) {
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menuList.style.maxHeight = "0px";
+      });
+      menuList.classList.remove('show');
+      if (iconFlecha) {
+        iconFlecha.classList.remove('rotate');
+      }
+    } else {
+      menuList.classList.add('show');
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menuList.style.maxHeight = "500px";
+      });
+      if (iconFlecha) {
+        iconFlecha.classList.add('rotate');
+      }
+    }
+  }
+}
+
 for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
+  let paginasFucaDesktop = "";
+  for (let pagina = 0; pagina < menu[menuItemDesktop].paginas.length; pagina++) {
+    paginasFucaDesktop += `<li><a href="${menu[menuItemDesktop].paginas[pagina].link}" class="text-white">${menu[menuItemDesktop].paginas[pagina].nombre}</a></li>`;
+  }
+
   menuFooterDesktop.innerHTML += `
     <div class="menuFooterColumn column">
       <div class="titleUnderline">
         <p class="text-white font-weight-bold">${menu[menuItemDesktop].titulo}</p>
         <span class="underlineFooter whiteUnderlineTitle"></span>
       </div>
-      <ul id="menuFooterColumnList"></ul>
+      <ul id="menuFooterColumnList" class="menuFooterColumnList column ga-05 mt-05">
+        ${paginasFucaDesktop}
+      </ul>
     </div>
   `;
 }
 
-for (let contactateItem = 0; contactateItem < contactate.length; contactateItem++) {
+for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
   contactateList.innerHTML += `
   <div class="rowAlign ga-05">
-    <div class="${contactate[contactateItem].icon} bgImgContain"></div>
-    <p class="contactateText text-white">${contactate[contactateItem].texto}</p>
+    <div class="${contactate[contactateItemMobile].icon} bgImgContain"></div>
+    <p class="contactateText text-white">${contactate[contactateItemMobile].texto}</p>
+  </div>
+  `;
+}
+
+for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
+  contactateListDesktop.innerHTML += `
+  <div class="rowAlign ga-05">
+    <div class="${contactate[contactateItemDesktop].icon} bgImgContain"></div>
+    <p class="contactateText text-white">${contactate[contactateItemDesktop].texto}</p>
   </div>
   `;
 }

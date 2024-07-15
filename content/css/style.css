@@ -57,6 +57,10 @@ html {
   width: 20%;
 }
 
+.w-15 {
+  width: 15%;
+}
+
 .h-100 {
   height: 100%;
 }
@@ -77,12 +81,20 @@ html {
   gap: 1.5rem;
 }
 
-.mt-15 {
-  margin-top: 1.5rem;
+.mt-05 {
+  margin-top: 0.5rem;
 }
 
 .mt-075 {
   margin-top: 0.75rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-15 {
+  margin-top: 1.5rem;
 }
 
 .my-075 {
@@ -296,6 +308,10 @@ h1 span {
 
 /* Nuestros Pilares */
 
+.h2NuestrosPilares span {
+  width: 6.5rem;
+}
+
 .centroInvestigacionesOncologicas {
   background-image: url("/content/images/Centro-Investigaciones-Oncologicas.jpeg");
 }
@@ -313,6 +329,7 @@ h1 span {
 }
 
 .pilar {
+  height: 12.5rem;
   padding: 4.5rem 1.09rem 1.5rem 1.09rem;
 }
 
@@ -321,6 +338,10 @@ h1 span {
 }
 
 /* Novedades */
+
+.h2Novedades span {
+  width: 5.5rem;
+}
 
 .temasDestacados p {
   display: none;
@@ -454,6 +475,10 @@ h1 span {
   color: white;
 }
 
+.h2NosAcompanan span {
+  width: 7rem;
+}
+
 .sliderAcompanan {
   display: flex;
 }
@@ -507,7 +532,7 @@ h1 span {
   position: absolute;
   top: 50%;
   left: 1rem;
-  background-image: url("/content/images/Icon-Email.svg");
+  background-image: url("/content/images/Icon-Email-Gris.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -520,15 +545,11 @@ h1 span {
 
 .iconYoutube {
   width: 1.5rem;
-  height: 1rem;
+  height: 1.5rem;
   background-image: url("/content/images/Icon-Youtube.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.miraYoutube {
-  align-items: baseline;
 }
 
 .miraYoutube a {
@@ -555,6 +576,7 @@ h1 span {
 }
 
 .donaFucaFooter {
+  text-align: center;
   padding: 0.875rem 2rem;
 }
 
@@ -567,10 +589,38 @@ h1 span {
 .footerTitle {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .underlineFooter {
   width: 3rem;
+}
+
+.menuFooterColumnList {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.menuFooterColumnList.show {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: max-height 0.75s ease-in-out;
+  max-height: 500px;
+}
+
+.iconFlecha img {
+  transition: transform 0.75s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.menuFooterColumnList li a {
+  text-decoration: none;
 }
 
 .iconFlecha {
@@ -588,7 +638,7 @@ h1 span {
 .iconEmail {
   width: 1rem;
   height: 0.9rem;
-  background-image: url("/content/images/Icon-Email.svg");
+  background-image: url("/content/images/Icon-Email-Blanco.svg");
 }
 
 .iconTelefono {
@@ -606,6 +656,290 @@ h1 span {
   line-height: 1.4;
 }
 
+.menuFooterDesktop,
+.footerDesktopAbajo {
+  display: none;
+}
+
+@media only screen and (min-width: 480px) {
+
+  /* Generales */
+  h1 {
+    font-size: 1.15rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  /* Header */
+  .logoHeader {
+    width: 40%;
+  }
+
+  header img:last-child {
+    width: 5%;
+  }
+
+  /* Hero */
+  .imgHero {
+    height: 15.5rem;
+  }
+
+  .iconRedes {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* Nuestros pilares */
+  .h2NuestrosPilares span {
+    width: 27.5%;
+  }
+
+  .pilar p {
+    font-size: 1.2rem;
+  }
+
+  /* Novedades */
+  .h2Novedades span {
+    width: 25%;
+  }
+
+  /* Recursos - Objetivos */
+  .enFucaBtns {
+    max-width: 330px;
+  }
+
+  .h2NosAcompanan span {
+    width: 10rem;
+  }
+
+  /* Footer */
+  .logoFooter {
+    width: 40%;
+  }
+
+  .iconRedesFooter {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .donaFucaFooter {
+    max-width: 230px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) {
+  .m-py-175-px-15 {
+    padding: 1.75rem 1.5rem;
+  }
+
+  header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .imgHero {
+    height: 19rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .primaryButton {
+    font-size: 1.2rem;
+  }
+
+  /* Nuestros pilares */
+  .pilar {
+    height: 13rem;
+  }
+
+  .pilar p {
+    font-size: 1.4rem;
+  }
+
+  /* Novedaes */
+  .h2Novedades span {
+    width: 7rem;
+  }
+
+  .filtroNovedad {
+    font-size: 0.9rem;
+  }
+
+  .contentNovedades {
+    font-size: 0.9rem;
+  }
+
+  /* Recursos - Objetivos */
+
+  .curvasContainer {
+    background-image: url(/content/images/Curva-Grafico-Abajo.svg);
+    background-size: contain;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+  }
+
+  .graficoContainer {
+    width: 70%;
+  }
+
+  .graficoContainer img {
+    width: 40%;
+  }
+
+  .datosGrafico :first-child {
+    font-size: 1.75rem;
+  }
+
+  .enFucaContainer {
+    margin: 0 1.5rem;
+  }
+
+  .datosGrafico :last-child {
+    font-size: 1rem;
+  }
+
+  .enFuca {
+    font-size: 1rem;
+  }
+
+  .enFucaBtns a {
+    font-size: 1rem;
+  }
+
+  .acompananContainer {
+    margin-left: 1.5rem;
+  }
+
+  /* Newsletter */
+  .suscribeteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suscribete h2 {
+    font-size: 1.3rem;
+  }
+
+  .suscribete p {
+    font-size: 1rem;
+  }
+
+  form {
+    width: 400px;
+  }
+
+  .miraYoutube a {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+
+  .donaFucaFooter {
+    max-width: 250px;
+  }
+
+  .underlineFooter {
+    width: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+
+  .logoHeader,
+  .logoFooter {
+    width: 30%;
+  }
+
+  header img:last-child {
+    width: 4%;
+  }
+
+  .imgHero {
+    height: 22rem;
+  }
+
+  .iconRedes {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  /* Nuestros pilares */
+
+  .h2NuestrosPilares span {
+    width: 9rem;
+  }
+
+  .pilares {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pilar {
+    height: 16rem;
+    width: 48.5%;
+    justify-content: flex-end;
+  }
+
+  /* Novedades */
+  .novedadesContainer {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .novedad {
+    width: 48%;
+  }
+
+  /* Recursos - Objetivos */
+  .enFucaContainer {
+    margin-top: 1.25rem;
+  }
+
+  /* Footer */
+  .iconRedesFooter {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .logoHeader,
+  .logoFooter {
+    width: 25%;
+  }
+
+  header img:last-child {
+    width: 3%;
+  }
+
+  .imgHero {
+    height: 24rem;
+  }
+}
+
 /* Desktop */
 @media only screen and (min-width: 1080px) {
 
@@ -614,11 +948,29 @@ h1 span {
     display: none;
   }
 
+  .lg-py-225-px-3 {
+    padding: 2.25rem 3rem;
+  }
+
+  .greenUnderlineTitle {
+    border: 3px solid var(--color-primario);
+  }
+
+  .whiteUnderlineTitle {
+    border: 3px solid white;
+  }
+
   /* Fuca */
 
   h1 {
+    width: 53%;
+    font-size: 2.5rem;
     text-align: start;
     color: white;
+  }
+
+  h2 {
+    font-size: 1.75rem;
   }
 
   h1 span {
@@ -628,16 +980,17 @@ h1 span {
   /* Header */
 
   header {
-    padding: 1.875rem 4.93rem;
+    padding: 1.875rem 3rem;
   }
 
   .logoHeader {
-    width: 15.75rem;
+    width: 11rem;
   }
 
   /* Hero */
 
   .heroContent {
+    height: 27rem;
     justify-content: center;
     align-items: flex-start;
     background-image: url("/content/images/Img-Hero.png");
@@ -652,16 +1005,20 @@ h1 span {
     flex-direction: row;
   }
 
+  .iconRedes {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   /* Nuestros pilares */
-  .pilares {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+
+  .pilar {
+    height: 18rem;
+    width: 49.25%;
   }
 
   .pilar p {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   /* Novedades */
@@ -678,15 +1035,16 @@ h1 span {
     font-size: 1.5rem;
   }
 
-  .novedadesContainer {
-    flex-direction: row;
-  }
-
   .filtroNovedad {
     font-size: 1rem;
   }
 
+  .novedad {
+    width: 23%;
+  }
+
   .novedadesContainer .novedadesBtn {
+    font-size: 1rem;
     padding: 0.875rem 3rem 0.875rem 1.5rem;
   }
 
@@ -712,8 +1070,17 @@ h1 span {
     margin: 0;
   }
 
+  .graficoContainer img {
+    width: 70%;
+    margin-right: 2rem;
+  }
+
   .enFucaContainer {
-    width: 40%;
+    width: 45%;
+  }
+
+  .enFucaBtns {
+    max-width: 100%;
   }
 
   .graficoContainer {
@@ -759,6 +1126,10 @@ h1 span {
     font-size: 1rem;
   }
 
+  .acompananContainer {
+    margin-left: 3rem;
+  }
+
   /* Newsletter */
 
   .suscribeteContainer {
@@ -767,21 +1138,30 @@ h1 span {
   }
 
   .suscribeteContainer form {
+    width: 85%;
     position: relative;
   }
 
   .inputContainer::before {
+    top: 58%;
     left: 2rem;
   }
 
   .inputText {
+    font-size: 1rem;
     margin-top: 1.5rem;
-    padding: 0.875rem 1.5rem 0.875rem 4.25rem;
+    padding: 1rem 1.5rem 1rem 4.25rem;
   }
 
   .suscribeteContainer .btnNewsletter {
     position: absolute;
-    padding: 0.725rem 2.25rem;
+    top: 33%;
+    right: 1%;
+    padding: 0.5rem 2.25rem;
+  }
+
+  .miraYoutube {
+    align-items: flex-end;
   }
 
   .miraYoutube a {
@@ -790,11 +1170,20 @@ h1 span {
 
   /* Footer */
 
+  .logoFooter {
+    width: 15rem;
+  }
+
   .logoRedesFooter {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid white;
+  }
+
+  .iconRedesFooter {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .containerRedesFooter {
@@ -811,6 +1200,10 @@ h1 span {
     width: 20%;
   }
 
+  .donaHoyContainer p {
+    font-size: 0.9rem;
+  }
+
   .donaHoyContainer .donaFucaFooter {
     width: 85%;
     text-align: center;
@@ -820,21 +1213,92 @@ h1 span {
   .menuFooterDesktop {
     width: 80%;
     display: flex;
-    gap: 2.6rem;
+    gap: 2rem;
   }
 
   .menuFooterColumn {
-    width: 20%;
+    width: 25%;
+  }
+
+  .menuFooterColumn .titleUnderline p {
+    font-size: 0.9rem;
   }
 
   .titleUnderline .underlineFooter {
     width: 3rem;
   }
 
+  .menuFooterColumnList {
+    display: flex;
+    overflow: visible;
+    margin-top: 0.5rem;
+  }
+
+  .menuFooterColumnList li a {
+    font-size: 0.8rem;
+  }
+
+  .donaHoyContainer .donaFucaFooter {
+    max-width: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .footerDesktopAbajo {
+    display: flex;
+    gap: 3.56rem;
+  }
+
+  .fucaDesarrolla {
+    width: 19%;
+  }
+
+  .fleming {
+    width: 34%;
+  }
+
+  .fucaDesarrollaDerecha {
+    display: flex;
+    gap: 2.6rem;
+  }
+
+  .contactateList {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contactateText {
+    font-size: 0.75rem;
+  }
+
   .derechos {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+  }
+
+  .derechos p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .heroContent {
+    height: 30rem;
+  }
+
+  h1 {
+    width: 45%;
+  }
+
+  /* Nuestros pilares */
+  .pilar {
+    width: 49.4%;
+  }
+
+  /* Novedades */
+  .novedad {
+    width: 23.25%;
   }
 }
 
@@ -870,6 +1334,18 @@ h1 span {
     border: 4px solid var(--color-primario);
   }
 
+  .primaryButton {
+    font-size: 1.25rem;
+  }
+
+  header {
+    padding: 1.875rem 4.93rem;
+  }
+
+  .logoHeader {
+    width: 15rem;
+  }
+
   /* Hero */
 
   .heroContent {
@@ -881,13 +1357,26 @@ h1 span {
 
   .pilar {
     width: 49.5%;
+    height: 18.75rem;
     padding: 7.625rem 3.9rem 1.5rem 3.9rem;
   }
+
+  .pilar p {
+    font-size: 2rem;
+  }
+
+  /* Novedades */
+  .headerNovedades p {
+    font-size: 1rem;
+  }
+
+  .headerNovedades p:nth-child(2) {
+    font-size: 3rem;
+}
 
   /* Recursos - Objetivos */
   .graficoContainer img {
     width: 82.5%;
-    margin-right: 2rem;
   }
 
   .enFuca {
@@ -899,7 +1388,7 @@ h1 span {
     padding: 0.875rem 2.25rem;
   }
 
-  .h2Acompanan {
+  .acompananContainer {
     margin-left: 4.9rem;
   }
 
@@ -921,15 +1410,54 @@ h1 span {
     font-size: 1.25rem;
   }
 
-  .btnNewsletter {
+  .suscribeteContainer .btnNewsletter {
     top: 29.5%;
     right: 0.5%;
     font-size: 1.25rem;
+    padding: 0.7rem 2.25rem;
   }
 
   /* Footer */
 
   .logoFooter {
     width: 17.75%;
-  } 
+  }
+
+  .donaHoyContainer p {
+    font-size: 1rem;
+  }
+
+  .donaHoyContainer .donaFucaFooter {
+    width: 85%;
+    font-size: 1rem;
+  }
+
+  .fucaDesarrolla p {
+    font-size: 0.875rem;
+  }
+
+  .fleming {
+    width: 25%;
+  }
+
+  .menuFooterColumn .titleUnderline p {
+    font-size: 1rem;
+  }
+
+  .menuFooterColumn .titleUnderline .whiteUnderlineTitle, .fucaDesarrollaDerecha .titleUnderline .whiteUnderlineTitle {
+    border: 2px solid white;
+    width: 4rem;
+  }
+
+  .menuFooterColumnList li a {
+    font-size: 0.875rem;
+  }
+
+  .contactateText {
+    font-size: 0.875rem;
+  }
+
+  .derechos p {
+    font-size: 1rem;
+  }
 }
