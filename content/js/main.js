@@ -1,3 +1,4 @@
+// Constantes
 const redes = document.getElementById("redes");
 const pilares = document.getElementById("pilares");
 const filtrosNovedades = document.getElementById("filtrosNovedades");
@@ -10,6 +11,7 @@ const contactateListDesktop = document.getElementById("contactateListDesktop");
 const menuFooterDesktop = document.getElementById("menuFooterDesktop");
 const menuFooterColumnList = document.getElementById("menuFooterColumnList");
 
+//Arrays
 const menu = [
   {
     titulo: "EDUCACIÓN MÉDICA",
@@ -217,6 +219,32 @@ const contactate = [
   },
 ];
 
+// Nav
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  document.body.appendChild(overlay);
+
+  menuToggle.addEventListener('click', function () {
+    if (mobileMenu.style.display === 'block') {
+      mobileMenu.style.display = 'none';
+      overlay.style.display = 'none';
+    } else {
+      mobileMenu.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+  });
+
+  overlay.addEventListener('click', function () {
+    mobileMenu.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+});
+
+
+// Redes Hero
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   redes.innerHTML += `
     <div class="iconRedes columnAlignCenter bg-white">
@@ -225,6 +253,7 @@ for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   `;
 }
 
+// Nuestros pilares
 for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
   pilares.innerHTML += `
   <div class="pilar column ga-05 bgImgCover ${nuestrosPilares[pilar].fondo}">
@@ -234,6 +263,7 @@ for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
   `;
 }
 
+// Filtros novedades
 for (let filtro = 0; filtro < filtros.length; filtro++) {
   filtrosNovedades.innerHTML += `
     <button class="filtroNovedad">
@@ -242,6 +272,13 @@ for (let filtro = 0; filtro < filtros.length; filtro++) {
   `;
 }
 
+document.querySelectorAll('.filtroNovedad').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('selected')
+  })
+});
+
+// Novedades
 for (let novedad = 0; novedad < novedades.length; novedad++) {
   novedadesContainer.innerHTML += `
     <div class="novedad">
@@ -258,6 +295,7 @@ for (let novedad = 0; novedad < novedades.length; novedad++) {
   `;
 }
 
+// Redes Footer
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   redesFooter.innerHTML += `
     <div class="iconRedesFooter columnAlignCenter bg-white">
@@ -274,6 +312,7 @@ for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
 //   `;
 // } 
 
+// Footer Mobile
 for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
   let paginasFucaMobile = "";
   for (let pagina = 0; pagina < menu[menuItemMobile].paginas.length; pagina++) {
@@ -325,6 +364,16 @@ function toggleMenu(index) {
   }
 }
 
+for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
+  contactateList.innerHTML += `
+  <div class="rowAlign ga-05">
+    <div class="${contactate[contactateItemMobile].icon} bgImgContain"></div>
+    <p class="contactateText text-white">${contactate[contactateItemMobile].texto}</p>
+  </div>
+  `;
+}
+
+// Footer Desktop
 for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
   let paginasFucaDesktop = "";
   for (let pagina = 0; pagina < menu[menuItemDesktop].paginas.length; pagina++) {
@@ -344,15 +393,6 @@ for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) 
   `;
 }
 
-for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
-  contactateList.innerHTML += `
-  <div class="rowAlign ga-05">
-    <div class="${contactate[contactateItemMobile].icon} bgImgContain"></div>
-    <p class="contactateText text-white">${contactate[contactateItemMobile].texto}</p>
-  </div>
-  `;
-}
-
 for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
   contactateListDesktop.innerHTML += `
   <div class="rowAlign ga-05">
@@ -361,9 +401,3 @@ for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; c
   </div>
   `;
 }
-
-document.querySelectorAll('.filtroNovedad').forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('selected')
-  })
-});
