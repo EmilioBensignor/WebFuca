@@ -244,15 +244,34 @@ h3 {
   color: black;
 }
 
-.primaryButton {
-  background-color: var(--color-primario);
+.primaryButton, .secondaryButton {
   border-radius: 99px;
   border: none;
-  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
   padding: 0.875rem 3rem;
+  transition: all 0.3s;
   cursor: pointer;
+}
+
+.primaryButton {
+  background-color: var(--color-primario);
+  color: #ffffff;
+}
+
+.primaryButton:hover {
+  background-color: white;
+  color: var(--color-primario);
+}
+
+.secondaryButton {
+  background-color: white;
+  color: var(--color-primario);
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-secundario);
+  color: white;
 }
 
 .greenUnderlineTitle {
@@ -367,6 +386,10 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+#desktop-menu {
+  display: none;
 }
 
 /* Hero */
@@ -556,6 +579,7 @@ h1 span {
   font-size: 0.875rem;
   font-weight: 700;
   padding: 0.95rem 0;
+  transition: all 0.3s;
 }
 
 .btnDona {
@@ -563,9 +587,20 @@ h1 span {
   color: var(--color-primario);
 }
 
+.btnDona:hover {
+  background-color: var(--color-secundario);
+  border: 3px solid var(--color-secundario);
+  color: white;
+}
+
 .btnActualiza {
   background-color: transparent;
   color: white;
+}
+
+.btnActualiza:hover {
+  background-color: white;
+  color: var(--color-primario);
 }
 
 .h2NosAcompanan span {
@@ -648,6 +683,10 @@ h1 span {
 .miraYoutube a {
   color: var(--color-primario);
   font-size: 0.875rem;
+}
+
+.miraYoutube a:hover {
+  color: #6080E0;
 }
 
 /* Footer */
@@ -1048,6 +1087,10 @@ h1 span {
 
   #mobile-menu {
     display: none;
+  }
+
+  #desktop-menu {
+    display: flex;
   }
 
   .lg-py-225-px-3 {
