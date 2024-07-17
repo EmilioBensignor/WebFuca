@@ -236,6 +236,14 @@ h3 {
   color: white;
 }
 
+.text-primary {
+  color: var(--color-primario);
+}
+
+.text-black {
+  color: black;
+}
+
 .primaryButton {
   background-color: var(--color-primario);
   border-radius: 99px;
@@ -267,6 +275,10 @@ h3 {
   box-shadow: 2px 2px 2px var(--color-primario);
 }
 
+.rotate {
+  transform: rotate(180deg);
+}
+
 /* Header */
 
 header {
@@ -288,27 +300,62 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--color-primario);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
   z-index: 2;
 }
 
-#mobile-menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.navTitle {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-#mobile-menu li {
-  border-bottom: 1px solid #ccc;
+.underlineNav {
+  width: 3rem;
 }
 
-#mobile-menu li a {
-  display: block;
-  padding: 1rem;
-  color: white;
+.menuNavColumnList {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.menuNavColumnList.show {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: max-height 0.75s ease-in-out;
+  max-height: 500px;
+}
+
+.menuNavColumnList li a {
   text-decoration: none;
-  font-weight: bold;
+}
+
+.navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.navTitle .iconFlecha img {
+  transition: transform 0.75s ease;
+}
+
+.navTitle .iconFlecha {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.iconFlechaNav {
+  box-shadow: 0px 1px 3px 0px #0000002E;
+}
+
+.btnNav {
+  width: 190px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .overlay {
@@ -657,19 +704,15 @@ h1 span {
   max-height: 500px;
 }
 
-.iconFlecha img {
+.footerTitle .iconFlecha img {
   transition: transform 0.75s ease;
-}
-
-.rotate {
-  transform: rotate(180deg);
 }
 
 .menuFooterColumnList li a {
   text-decoration: none;
 }
 
-.iconFlecha {
+.footerTitle .iconFlecha {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
@@ -727,7 +770,7 @@ h1 span {
     width: 40%;
   }
 
-  header img:last-child {
+  header .hamburger {
     width: 5%;
   }
 
@@ -787,6 +830,11 @@ h1 span {
 
   header {
     padding: 1.25rem 1.5rem;
+  }
+
+  .btnNav {
+    width: 220px;
+    margin: 0;
   }
 
   .imgHero {
@@ -905,6 +953,10 @@ h1 span {
   .underlineFooter {
     width: 3.5rem;
   }
+
+  .underlineNav {
+    width: 3.5rem;
+  }
 }
 
 @media only screen and (min-width: 770px) {
@@ -914,7 +966,7 @@ h1 span {
     width: 30%;
   }
 
-  header img:last-child {
+  header .hamburger {
     width: 4%;
   }
 
@@ -977,7 +1029,7 @@ h1 span {
     width: 25%;
   }
 
-  header img:last-child {
+  header .hamburger {
     width: 3%;
   }
 
@@ -1275,6 +1327,10 @@ h1 span {
   }
 
   .titleUnderline .underlineFooter {
+    width: 3rem;
+  }
+
+  .titleUnderline .underlineNav {
     width: 3rem;
   }
 

@@ -1,4 +1,5 @@
 // Constantes
+const mobileMenu = document.getElementById("mobile-menu");
 const redes = document.getElementById("redes");
 const pilares = document.getElementById("pilares");
 const filtrosNovedades = document.getElementById("filtrosNovedades");
@@ -228,12 +229,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(overlay);
 
   menuToggle.addEventListener('click', function () {
-    if (mobileMenu.style.display === 'block') {
+    if (mobileMenu.style.display === 'flex') {
       mobileMenu.style.display = 'none';
       overlay.style.display = 'none';
     } else {
-      mobileMenu.style.display = 'block';
-      overlay.style.display = 'block';
+      mobileMenu.style.display = 'flex';
+      overlay.style.display = 'flex';
     }
   });
 
@@ -243,6 +244,64 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+for (let navItemMobile = 0; navItemMobile < menu.length; navItemMobile++) {
+  let paginasFucaMobile = "";
+  for (let pagina = 0; pagina < menu[navItemMobile].paginas.length; pagina++) {
+    paginasFucaMobile += `<li><a href="${menu[navItemMobile].paginas[pagina].link}" class="navLink text-black">${menu[navItemMobile].paginas[pagina].nombre}</a></li>`;
+  }
+
+  mobileMenu.innerHTML += `
+    <div class="column">
+      <div class="navTitle" onclick="toggleMenuNav(${navItemMobile})">
+        <div class="titleUnderline">
+          <p class="text-primary font-weight-bold">${menu[navItemMobile].titulo}</p>
+          <span class="underlineNav greenUnderlineTitle"></span>
+        </div>
+        <div class="iconFlecha iconFlechaNav flexCenter bg-white">
+          <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlechaNav${navItemMobile}" />
+        </div>
+      </div>
+      <ul id="menuNavColumnList${navItemMobile}" class="menuNavColumnList">
+        ${paginasFucaMobile}
+      </ul>
+    </div>
+  `;
+};
+
+const donaHoy = document.createElement('a');
+donaHoy.href = "#";
+donaHoy.classList.add('primaryButton');
+donaHoy.classList.add('btnNav');
+donaHoy.textContent = "DONÁ HOY";
+
+mobileMenu.appendChild(donaHoy);
+
+function toggleMenuNav(index) {
+  const menuList = document.getElementById(`menuNavColumnList${index}`);
+  const iconFlechaNav = document.getElementById(`iconFlechaNav${index}`);
+
+  if (menuList) {
+    if (menuList.classList.contains('show')) {
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menuList.style.maxHeight = "0px";
+      });
+      menuList.classList.remove('show');
+      if (iconFlechaNav) {
+        iconFlechaNav.classList.remove('rotate');
+      }
+    } else {
+      menuList.classList.add('show');
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menuList.style.maxHeight = "500px";
+      });
+      if (iconFlechaNav) {
+        iconFlechaNav.classList.add('rotate');
+      }
+    }
+  }
+}
 
 // Redes Hero
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
@@ -321,13 +380,13 @@ for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
 
   menuFooterMobile.innerHTML += `
     <div class="menuFooterColumn column">
-      <div class="footerTitle" onclick="toggleMenu(${menuItemMobile})">
+      <div class="footerTitle" onclick="toggleMenuFooter(${menuItemMobile})">
         <div class="titleUnderline">
           <p class="text-white font-weight-bold">${menu[menuItemMobile].titulo}</p>
           <span class="underlineFooter whiteUnderlineTitle"></span>
         </div>
         <div class="iconFlecha flexCenter bg-white">
-          <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlecha${menuItemMobile}" />
+          <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlechaFooter${menuItemMobile}" />
         </div>
       </div>
       <ul id="menuFooterColumnList${menuItemMobile}" class="menuFooterColumnList">
@@ -337,9 +396,9 @@ for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
   `;
 }
 
-function toggleMenu(index) {
+function toggleMenuFooter(index) {
   const menuList = document.getElementById(`menuFooterColumnList${index}`);
-  const iconFlecha = document.getElementById(`iconFlecha${index}`);
+  const iconFlechaFooter = document.getElementById(`iconFlechaFooter${index}`);
 
   if (menuList) {
     if (menuList.classList.contains('show')) {
@@ -348,8 +407,8 @@ function toggleMenu(index) {
         menuList.style.maxHeight = "0px";
       });
       menuList.classList.remove('show');
-      if (iconFlecha) {
-        iconFlecha.classList.remove('rotate');
+      if (iconFlechaFooter) {
+        iconFlechaFooter.classList.remove('rotate');
       }
     } else {
       menuList.classList.add('show');
@@ -357,8 +416,8 @@ function toggleMenu(index) {
       requestAnimationFrame(() => {
         menuList.style.maxHeight = "500px";
       });
-      if (iconFlecha) {
-        iconFlecha.classList.add('rotate');
+      if (iconFlechaFooter) {
+        iconFlechaFooter.classList.add('rotate');
       }
     }
   }
