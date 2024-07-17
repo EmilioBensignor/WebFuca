@@ -244,7 +244,8 @@ h3 {
   color: black;
 }
 
-.primaryButton, .secondaryButton {
+.primaryButton,
+.secondaryButton {
   border-radius: 99px;
   border: none;
   font-weight: bold;
@@ -416,10 +417,16 @@ h1 span {
   height: 1.5rem;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.iconRedes img {
-  color: var(--color-primario);
+.iconRedes:hover {
+  background-color: var(--color-secundario);
+}
+
+.iconRedes:hover svg path {
+  fill: white;
 }
 
 /* Nuestros Pilares */
@@ -489,6 +496,10 @@ h1 span {
   color: white;
 }
 
+.novedad {
+  justify-content: space-between;
+}
+
 .headerNovedades {
   line-height: 1;
   padding: 0.75rem 1rem;
@@ -507,13 +518,14 @@ h1 span {
   color: #000000CC;
   font-size: 0.875rem;
   line-height: 1.4;
-  margin: 0.75rem 1.15rem;
+  margin: 0.75rem 1rem;
 }
 
 .novedadesBtn {
   position: relative;
   font-size: 1rem;
   padding: 0.75rem 3.5rem 0.75rem 2rem;
+  transition: all 0.3s;
 }
 
 .novedadesBtn::after {
@@ -523,11 +535,16 @@ h1 span {
   position: absolute;
   top: 50%;
   right: 2rem;
-  background-image: url("/content/images/Icon-Flecha.png");
+  background-image: url("/content/images/Icon-Flecha-Novedad-Blanco.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+.novedadesBtn:hover::after {
+  background-image: url("/content/images/Icon-Flecha-Novedad-Verde.png");
 }
 
 /* Recursos - Objetivos */
@@ -671,13 +688,9 @@ h1 span {
   font-size: 1rem;
 }
 
-.iconYoutube {
+.miraYoutube svg {
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url("/content/images/Icon-Youtube.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .miraYoutube a {
@@ -701,10 +714,16 @@ h1 span {
   height: 1.5rem;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.iconRedesFooter img {
-  color: var(--color-secundario);
+.iconRedesFooter:hover {
+  background-color: var(--color-primario);
+}
+
+.iconRedesFooter:hover svg path {
+  fill: white;
 }
 
 .donaFucaFooter {
@@ -1091,6 +1110,64 @@ h1 span {
 
   #desktop-menu {
     display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .menuDesktopList {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+
+  .menuDesktopItem {
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .underlineNavDesktop {
+    visibility: hidden;
+    width: 4.5rem;
+    border: 2px solid white;
+    margin-top: 0.75rem;
+  }
+
+  .menuDesktopItem:hover .submenuDesktop {
+    display: flex;
+  }
+
+  .menuDesktopItem:hover .underlineNavDesktop {
+    visibility:visible;
+  }
+
+  .menuDesktopItem p {
+    cursor: default;
+  }
+
+  .submenuDesktop {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+  }
+
+  .submenuDesktop li a {
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+  }
+
+
+  .btnNavDesktop {
+    font-size: 1.25rem;
+    padding: 0.75rem 2.25rem;
   }
 
   .lg-py-225-px-3 {
