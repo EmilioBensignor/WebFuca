@@ -286,6 +286,7 @@ const nosAcompanan = [
     alt: "Logo"
   },
 ];
+const acompananDuplicados = [...nosAcompanan, ...nosAcompanan, ...nosAcompanan]
 const contactate = [
   {
     icon: "iconEmail",
@@ -495,13 +496,51 @@ for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
   `;
 }
 
-// for (let logo = 0; logo < nosAcompanan.length; logo++) {
-//   acompanan.innerHTML += `
-//     <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
-//       <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
-//     </a>
-//   `;
-// } 
+// Slider Acompanan
+for (let logo = 0; logo < nosAcompanan.length; logo++) {
+  acompanan.innerHTML += `
+    <div class="slideAcompanan flexCenter bg-white">
+      <a href="${nosAcompanan[logo].link}">
+        <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
+      </a>
+    </div>
+  `;
+}
+
+$("#acompanan").slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 1000,
+  speed: 500,
+  swipeToSlide: false,
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 770,
+      setting: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        centerMode: true,
+
+      }
+    },
+    {
+      breakpoint: 480,
+      setting: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        centerMode: true,
+        
+      }
+    }
+  ],
+});
 
 // Footer Mobile
 for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
