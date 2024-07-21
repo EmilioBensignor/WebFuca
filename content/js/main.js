@@ -396,11 +396,14 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
     }
     paginasFucaDesktop += `
       <li class="subMenuLink">
-        <div>
-          <a href="${menu[navItemDesktop].paginas[pagina].link}" class="navLink text-black">
-            ${menu[navItemDesktop].paginas[pagina].nombre}
-          </a>
-          <ul>
+        <div class="subMenuList">
+          <div class="navLinkFlecha">
+            <a href="${menu[navItemDesktop].paginas[pagina].link}" class="navLink text-black">
+              ${menu[navItemDesktop].paginas[pagina].nombre}
+            </a>
+            <div class="flechaLink"></div>
+          </div>
+          <ul class="column">
             ${infoPaginas}
           </ul>
         </div>
@@ -422,51 +425,51 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
   `;
 }
 
-  const donaHoyDesktop = document.createElement('a');
-  donaHoyDesktop.href = "#";
-  donaHoyDesktop.classList.add('secondaryButton');
-  donaHoyDesktop.classList.add('btnNavDesktop');
-  donaHoyDesktop.textContent = "DONÁ HOY";
+const donaHoyDesktop = document.createElement('a');
+donaHoyDesktop.href = "#";
+donaHoyDesktop.classList.add('secondaryButton');
+donaHoyDesktop.classList.add('btnNavDesktop');
+donaHoyDesktop.textContent = "DONÁ HOY";
 
-  desktopMenu.appendChild(donaHoyDesktop);
+desktopMenu.appendChild(donaHoyDesktop);
 
-  // Redes Hero
-  for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
-    redes.innerHTML += `
+// Redes Hero
+for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
+  redes.innerHTML += `
     <div class="iconRedes columnAlignCenter bg-white">
       ${iconosRedes[iconRed].img}
     </div>
   `;
-  }
+}
 
-  // Nuestros pilares
-  for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
-    pilares.innerHTML += `
+// Nuestros pilares
+for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
+  pilares.innerHTML += `
   <div class="pilar column ga-05 bgImgCover ${nuestrosPilares[pilar].fondo}">
     <h3 class="text-white">${nuestrosPilares[pilar].titulo}</h3>
     <p class="text-white">${nuestrosPilares[pilar].text}</p>
   </div>
   `;
-  }
+}
 
-  // Filtros novedades
-  for (let filtro = 0; filtro < filtros.length; filtro++) {
-    filtrosNovedades.innerHTML += `
+// Filtros novedades
+for (let filtro = 0; filtro < filtros.length; filtro++) {
+  filtrosNovedades.innerHTML += `
     <button class="filtroNovedad">
       ${filtros[filtro]}
     </button>
   `;
-  }
+}
 
-  document.querySelectorAll('.filtroNovedad').forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.toggle('selected')
-    })
-  });
+document.querySelectorAll('.filtroNovedad').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('selected')
+  })
+});
 
-  // Novedades
-  for (let novedad = 0; novedad < novedades.length; novedad++) {
-    novedadesContainer.innerHTML += `
+// Novedades
+for (let novedad = 0; novedad < novedades.length; novedad++) {
+  novedadesContainer.innerHTML += `
     <div class="novedad column">
       <div>
         <div class="headerNovedades bg-primary">
@@ -481,33 +484,33 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
       </div>
     </div>
   `;
-  }
+}
 
-  // Redes Footer
-  for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
-    redesFooter.innerHTML += `
+// Redes Footer
+for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
+  redesFooter.innerHTML += `
     <div class="iconRedesFooter columnAlignCenter bg-white">
       ${iconosRedes[iconRed].img}
     </div>
   `;
+}
+
+// for (let logo = 0; logo < nosAcompanan.length; logo++) {
+//   acompanan.innerHTML += `
+//     <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
+//       <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
+//     </a>
+//   `;
+// } 
+
+// Footer Mobile
+for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
+  let paginasFucaMobile = "";
+  for (let pagina = 0; pagina < menu[menuItemMobile].paginas.length; pagina++) {
+    paginasFucaMobile += `<li><a href="${menu[menuItemMobile].paginas[pagina].link}" class="text-white">${menu[menuItemMobile].paginas[pagina].nombre}</a></li>`;
   }
 
-  // for (let logo = 0; logo < nosAcompanan.length; logo++) {
-  //   acompanan.innerHTML += `
-  //     <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
-  //       <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
-  //     </a>
-  //   `;
-  // } 
-
-  // Footer Mobile
-  for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
-    let paginasFucaMobile = "";
-    for (let pagina = 0; pagina < menu[menuItemMobile].paginas.length; pagina++) {
-      paginasFucaMobile += `<li><a href="${menu[menuItemMobile].paginas[pagina].link}" class="text-white">${menu[menuItemMobile].paginas[pagina].nombre}</a></li>`;
-    }
-
-    menuFooterMobile.innerHTML += `
+  menuFooterMobile.innerHTML += `
     <div class="menuFooterColumn column">
       <div class="footerTitle" onclick="toggleMenuFooter(${menuItemMobile})">
         <div class="titleUnderline">
@@ -523,52 +526,52 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
       </ul>
     </div>
   `;
-  }
+}
 
-  function toggleMenuFooter(index) {
-    const menuList = document.getElementById(`menuFooterColumnList${index}`);
-    const iconFlechaFooter = document.getElementById(`iconFlechaFooter${index}`);
+function toggleMenuFooter(index) {
+  const menuList = document.getElementById(`menuFooterColumnList${index}`);
+  const iconFlechaFooter = document.getElementById(`iconFlechaFooter${index}`);
 
-    if (menuList) {
-      if (menuList.classList.contains('show')) {
-        menuList.style.maxHeight = menuList.scrollHeight + "px";
-        requestAnimationFrame(() => {
-          menuList.style.maxHeight = "0px";
-        });
-        menuList.classList.remove('show');
-        if (iconFlechaFooter) {
-          iconFlechaFooter.classList.remove('rotate');
-        }
-      } else {
-        menuList.classList.add('show');
-        menuList.style.maxHeight = menuList.scrollHeight + "px";
-        requestAnimationFrame(() => {
-          menuList.style.maxHeight = "500px";
-        });
-        if (iconFlechaFooter) {
-          iconFlechaFooter.classList.add('rotate');
-        }
+  if (menuList) {
+    if (menuList.classList.contains('show')) {
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menuList.style.maxHeight = "0px";
+      });
+      menuList.classList.remove('show');
+      if (iconFlechaFooter) {
+        iconFlechaFooter.classList.remove('rotate');
+      }
+    } else {
+      menuList.classList.add('show');
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menuList.style.maxHeight = "500px";
+      });
+      if (iconFlechaFooter) {
+        iconFlechaFooter.classList.add('rotate');
       }
     }
   }
+}
 
-  for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
-    contactateList.innerHTML += `
+for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
+  contactateList.innerHTML += `
   <div class="rowAlign ga-05">
     <div class="${contactate[contactateItemMobile].icon} bgImgContain"></div>
     <p class="contactateText text-white">${contactate[contactateItemMobile].texto}</p>
   </div>
   `;
+}
+
+// Footer Desktop
+for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
+  let paginasFucaDesktop = "";
+  for (let pagina = 0; pagina < menu[menuItemDesktop].paginas.length; pagina++) {
+    paginasFucaDesktop += `<li><a href="${menu[menuItemDesktop].paginas[pagina].link}" class="text-white">${menu[menuItemDesktop].paginas[pagina].nombre}</a></li>`;
   }
 
-  // Footer Desktop
-  for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
-    let paginasFucaDesktop = "";
-    for (let pagina = 0; pagina < menu[menuItemDesktop].paginas.length; pagina++) {
-      paginasFucaDesktop += `<li><a href="${menu[menuItemDesktop].paginas[pagina].link}" class="text-white">${menu[menuItemDesktop].paginas[pagina].nombre}</a></li>`;
-    }
-
-    menuFooterDesktop.innerHTML += `
+  menuFooterDesktop.innerHTML += `
     <div class="menuFooterColumn column">
       <div class="titleUnderline">
         <p class="text-white font-weight-bold">${menu[menuItemDesktop].titulo}</p>
@@ -579,13 +582,13 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
       </ul>
     </div>
   `;
-  }
+}
 
-  for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
-    contactateListDesktop.innerHTML += `
+for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
+  contactateListDesktop.innerHTML += `
   <div class="rowAlign ga-05">
     <div class="${contactate[contactateItemDesktop].icon} bgImgContain"></div>
     <p class="contactateText text-white">${contactate[contactateItemDesktop].texto}</p>
   </div>
   `;
-  }
+}

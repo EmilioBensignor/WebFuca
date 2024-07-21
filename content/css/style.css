@@ -1149,45 +1149,56 @@ h1 span {
   }
 
   .submenuDesktop {
-    list-style: none;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     background: white;
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    list-style: none;
     opacity: 0;
     transition: opacity 200ms;
     transition-delay: 100ms;
   }
 
-  .subMenuLink a {
-    display: block;
-    position: relative;
-    color: var(--color-primario);
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
+  .subMenuList {
     padding: 0.75rem 2rem 0.75rem 1rem;
   }
 
-  .subMenuLink a::after {
+  .navLinkFlecha {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .subMenuLink a {
+    display: block;
+    color: var(--color-primario);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .flechaLink {
     width: 0.75rem;
     height: 0.75rem;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    content: '';
-    transform: translateY(-50%);
     background-image: url("/content/images/Icon-Flecha-Novedad-Verde.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
   }
 
+  .subMenuLink ul {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .subMenuLink ul li {
+    font-size: 0.9rem;
+  }
 
   .btnNavDesktop {
     font-size: 1.25rem;
