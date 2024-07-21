@@ -299,6 +299,21 @@ h3 {
   transform: rotate(180deg);
 }
 
+/* Max Content */
+
+body {
+  background-color: #8a8a8a;
+}
+
+header, main, footer {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: white;
+}
+
 /* Header */
 
 header {
@@ -461,6 +476,10 @@ h1 span {
 }
 
 /* Novedades */
+
+.novedades {
+  background-color: #f2f2f2;
+}
 
 .h2Novedades span {
   width: 5.5rem;
@@ -792,7 +811,7 @@ h1 span {
 }
 
 .derechos {
-  background-color: #00000066;
+  background-color: #8a8a8a;
   line-height: 1.4;
 }
 
@@ -1117,20 +1136,17 @@ h1 span {
   .menuDesktopItem {
     position: relative;
     padding-bottom: 0.75rem;
-    transition: all 0.3s;
   }
 
   .underlineNavDesktop {
     width: 4.5rem;
     border: 2px solid white;
-    opacity: 0;
     margin-top: 0.75rem;
-    transition: opacity 200ms ease-in-out;
-    transition-delay: 100ms;
+    opacity: 0;
   }
 
   .menuDesktopItem:hover .submenuDesktop {
-    opacity: 1;
+    display: flex;
   }
 
   .menuDesktopItem:hover .underlineNavDesktop {
@@ -1143,7 +1159,7 @@ h1 span {
 
   .submenuDesktop {
     width: max-content;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -1151,9 +1167,6 @@ h1 span {
     background: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     list-style: none;
-    opacity: 0;
-    transition: opacity 200ms;
-    transition-delay: 100ms;
   }
 
   .subMenuList {
@@ -1545,6 +1558,10 @@ h1 span {
     width: 45%;
   }
 
+  #desktop-menu {
+    gap: 5rem;
+  }
+
   /* Nuestros pilares */
   .pilar {
     width: 49.4%;
@@ -1596,6 +1613,10 @@ h1 span {
     padding: 1.875rem 4.93rem;
   }
 
+  .menuDesktopList {
+    gap: 4rem;
+  }
+
   .logoHeader {
     width: 15rem;
   }
@@ -1620,6 +1641,10 @@ h1 span {
   }
 
   /* Novedades */
+  .h2Novedades span {
+    width: 8rem;
+  }
+
   .headerNovedades p {
     font-size: 1rem;
   }
@@ -1717,4 +1742,32 @@ h1 span {
   }
 }
 
-/* POST 1440 */
+@media only screen and (min-width: 1600px) {
+  .menuDesktopList {
+    gap: 6rem;
+  }
+
+  .menuDesktopItem p {
+    font-size: 1.1rem;
+  }
+
+  .novedadesContainer {
+    justify-content: space-between;
+  }
+
+  .recursosObjetivos {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .contentNovedades {
+    font-size: 1rem;
+  }
+  .datosGrafico :last-child {
+    font-size: 1.1rem;
+  }
+  .graficoContainer img {
+    margin-left: 1rem;
+  }
+}

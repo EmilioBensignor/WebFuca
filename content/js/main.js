@@ -414,7 +414,7 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
   menuDesktopList.innerHTML += `
     <ul class="menuDesktopList">
       <li class="menuDesktopItem">
-        <div class="column">
+        <div class="menuDekstopItemHover column">
           <p class="text-white font-weight-bold">${menu[navItemDesktop].tituloMinus}</p>
           <span class="underlineNavDesktop"></span>
         </div>
