@@ -22,19 +22,42 @@ const menu = [
     paginas: [
       {
         nombre: "Biblioteca biomédica",
-        link: "#"
+        link: "#",
+        info: [
+          "Presentación de la biblioteca",
+          "REDIO",
+          "Información  y comunicación científica"
+        ],
       },
       {
         nombre: "Formación Médica",
-        link: "#"
+        link: "#",
+        info: [
+          "Residencia en Oncología Clínica",
+          "Residencia en Mastología",
+          "Fellowship en Onco-Hematología",
+          "Fellowship en Urología Oncológica",
+          "Fellowship en Ortopedia Oncológica",
+          "Fellowship en Cirugía Torácica",
+          "Fellowship en Psico-Oncología",
+          "Residencia en DxI"
+        ],
       },
       {
         nombre: "Becarios y Ex Becarios",
-        link: "#"
+        link: "#",
+        info: [
+          "Nuestros Becarios y Ex Becarios"
+        ],
       },
       {
         nombre: "Cursos",
-        link: "#"
+        link: "#",
+        info: [
+          "Campus virtual",
+          "Curso de Oncología Molecular",
+          "Capacitaciones"
+        ],
       },
     ],
   },
@@ -44,7 +67,14 @@ const menu = [
     paginas: [
       {
         nombre: "Centro de investigaciones Oncológicas",
-        link: "#"
+        link: "#",
+        info: [
+          "Presentación del CIO",
+          "Proyectos de investigación",
+          "Actividad académica",
+          "Publicaciones científicas",
+          "Premios recibidos"
+        ],
       },
     ],
   },
@@ -54,15 +84,36 @@ const menu = [
     paginas: [
       {
         nombre: "Aulas Abiertas",
-        link: "#"
+        link: "#",
+        info: [
+          "Sobre Aulas Abiertas",
+          "Inscribí a tu colegio"
+        ],
       },
       {
         nombre: "Información del cáncer",
-        link: "#"
+        link: "#",
+        info: [
+          "¿Qué es el cáncer?",
+          "La importancia de conocer sobre el cáncer",
+          "Medidas de prevención",
+          "Tipos de cáncer",
+          "Ensayos clínicos",
+          "Cáncer hereditario",
+          "Hábitos saludables",
+          "Nutrición",
+          "Psico-Oncología",
+          "Glosario",
+        ],
       },
       {
         nombre: "Charlas de profesionales",
-        link: "#"
+        link: "#",
+        info: [
+          "Vivos en Instagram",
+          "Charlas y talleres",
+          "Inscripción "
+        ],
       },
     ],
   },
@@ -72,27 +123,51 @@ const menu = [
     paginas: [
       {
         nombre: "Quiénes somos",
-        link: "#"
+        link: "#",
+        info: [
+          "Consejo de administración",
+          "Equipo",
+          "Voluntarios"
+        ],
       },
       {
         nombre: "Nuestra historia",
-        link: "#"
+        link: "#",
+        info: [
+          "Misión",
+          "Historia",
+          "Memoria y balance"
+        ],
       },
       {
         nombre: "Novedades",
-        link: "#"
+        link: "#",
+        info: [
+          "Últimas noticias",
+          "Suscribite al newsletter",
+          "Cena de recaudación de fondos",
+          "Eventos y campañas"
+        ],
       },
       {
         nombre: "Donaciones",
-        link: "#"
+        link: "#",
+        info: [
+          "Doná a FUCA",
+          "Aumentá tu donación",
+          "Solicitá tu recibo anual",
+          "Donaciones en especie"
+        ],
       },
       {
         nombre: "Espacio FUCA Online",
-        link: "#"
+        link: "#",
+        info: [],
       },
       {
         nombre: "Contacto",
-        link: "#"
+        link: "#",
+        info: [],
       },
     ],
   },
@@ -313,7 +388,23 @@ function toggleMenuNav(index) {
 for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
   let paginasFucaDesktop = "";
   for (let pagina = 0; pagina < menu[navItemDesktop].paginas.length; pagina++) {
-    paginasFucaDesktop += `<li><a href="${menu[navItemDesktop].paginas[pagina].link}" class="navLink text-black">${menu[navItemDesktop].paginas[pagina].nombre}</a></li>`;
+    let infoPaginas = "";
+    for (let info = 0; info < menu[navItemDesktop].paginas[pagina].info.length; info++) {
+      infoPaginas += `
+        <li>${menu[navItemDesktop].paginas[pagina].info[info]}</li>
+      `;
+    }
+    paginasFucaDesktop += `
+      <li class="subMenuLink">
+        <div>
+          <a href="${menu[navItemDesktop].paginas[pagina].link}" class="navLink text-black">
+            ${menu[navItemDesktop].paginas[pagina].nombre}
+          </a>
+          <ul>
+            ${infoPaginas}
+          </ul>
+        </div>
+      </li>`;
   }
 
   menuDesktopList.innerHTML += `
@@ -331,51 +422,51 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
   `;
 }
 
-const donaHoyDesktop = document.createElement('a');
-donaHoyDesktop.href = "#";
-donaHoyDesktop.classList.add('secondaryButton');
-donaHoyDesktop.classList.add('btnNavDesktop');
-donaHoyDesktop.textContent = "DONÁ HOY";
+  const donaHoyDesktop = document.createElement('a');
+  donaHoyDesktop.href = "#";
+  donaHoyDesktop.classList.add('secondaryButton');
+  donaHoyDesktop.classList.add('btnNavDesktop');
+  donaHoyDesktop.textContent = "DONÁ HOY";
 
-desktopMenu.appendChild(donaHoyDesktop);
+  desktopMenu.appendChild(donaHoyDesktop);
 
-// Redes Hero
-for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
-  redes.innerHTML += `
+  // Redes Hero
+  for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
+    redes.innerHTML += `
     <div class="iconRedes columnAlignCenter bg-white">
       ${iconosRedes[iconRed].img}
     </div>
   `;
-}
+  }
 
-// Nuestros pilares
-for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
-  pilares.innerHTML += `
+  // Nuestros pilares
+  for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
+    pilares.innerHTML += `
   <div class="pilar column ga-05 bgImgCover ${nuestrosPilares[pilar].fondo}">
     <h3 class="text-white">${nuestrosPilares[pilar].titulo}</h3>
     <p class="text-white">${nuestrosPilares[pilar].text}</p>
   </div>
   `;
-}
+  }
 
-// Filtros novedades
-for (let filtro = 0; filtro < filtros.length; filtro++) {
-  filtrosNovedades.innerHTML += `
+  // Filtros novedades
+  for (let filtro = 0; filtro < filtros.length; filtro++) {
+    filtrosNovedades.innerHTML += `
     <button class="filtroNovedad">
       ${filtros[filtro]}
     </button>
   `;
-}
+  }
 
-document.querySelectorAll('.filtroNovedad').forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('selected')
-  })
-});
+  document.querySelectorAll('.filtroNovedad').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('selected')
+    })
+  });
 
-// Novedades
-for (let novedad = 0; novedad < novedades.length; novedad++) {
-  novedadesContainer.innerHTML += `
+  // Novedades
+  for (let novedad = 0; novedad < novedades.length; novedad++) {
+    novedadesContainer.innerHTML += `
     <div class="novedad column">
       <div>
         <div class="headerNovedades bg-primary">
@@ -390,33 +481,33 @@ for (let novedad = 0; novedad < novedades.length; novedad++) {
       </div>
     </div>
   `;
-}
+  }
 
-// Redes Footer
-for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
-  redesFooter.innerHTML += `
+  // Redes Footer
+  for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
+    redesFooter.innerHTML += `
     <div class="iconRedesFooter columnAlignCenter bg-white">
       ${iconosRedes[iconRed].img}
     </div>
   `;
-}
-
-// for (let logo = 0; logo < nosAcompanan.length; logo++) {
-//   acompanan.innerHTML += `
-//     <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
-//       <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
-//     </a>
-//   `;
-// } 
-
-// Footer Mobile
-for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
-  let paginasFucaMobile = "";
-  for (let pagina = 0; pagina < menu[menuItemMobile].paginas.length; pagina++) {
-    paginasFucaMobile += `<li><a href="${menu[menuItemMobile].paginas[pagina].link}" class="text-white">${menu[menuItemMobile].paginas[pagina].nombre}</a></li>`;
   }
 
-  menuFooterMobile.innerHTML += `
+  // for (let logo = 0; logo < nosAcompanan.length; logo++) {
+  //   acompanan.innerHTML += `
+  //     <a href="${nosAcompanan[logo].link}" class="slideAcompanan rowCenter bg-white">
+  //       <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
+  //     </a>
+  //   `;
+  // } 
+
+  // Footer Mobile
+  for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
+    let paginasFucaMobile = "";
+    for (let pagina = 0; pagina < menu[menuItemMobile].paginas.length; pagina++) {
+      paginasFucaMobile += `<li><a href="${menu[menuItemMobile].paginas[pagina].link}" class="text-white">${menu[menuItemMobile].paginas[pagina].nombre}</a></li>`;
+    }
+
+    menuFooterMobile.innerHTML += `
     <div class="menuFooterColumn column">
       <div class="footerTitle" onclick="toggleMenuFooter(${menuItemMobile})">
         <div class="titleUnderline">
@@ -432,52 +523,52 @@ for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
       </ul>
     </div>
   `;
-}
+  }
 
-function toggleMenuFooter(index) {
-  const menuList = document.getElementById(`menuFooterColumnList${index}`);
-  const iconFlechaFooter = document.getElementById(`iconFlechaFooter${index}`);
+  function toggleMenuFooter(index) {
+    const menuList = document.getElementById(`menuFooterColumnList${index}`);
+    const iconFlechaFooter = document.getElementById(`iconFlechaFooter${index}`);
 
-  if (menuList) {
-    if (menuList.classList.contains('show')) {
-      menuList.style.maxHeight = menuList.scrollHeight + "px";
-      requestAnimationFrame(() => {
-        menuList.style.maxHeight = "0px";
-      });
-      menuList.classList.remove('show');
-      if (iconFlechaFooter) {
-        iconFlechaFooter.classList.remove('rotate');
-      }
-    } else {
-      menuList.classList.add('show');
-      menuList.style.maxHeight = menuList.scrollHeight + "px";
-      requestAnimationFrame(() => {
-        menuList.style.maxHeight = "500px";
-      });
-      if (iconFlechaFooter) {
-        iconFlechaFooter.classList.add('rotate');
+    if (menuList) {
+      if (menuList.classList.contains('show')) {
+        menuList.style.maxHeight = menuList.scrollHeight + "px";
+        requestAnimationFrame(() => {
+          menuList.style.maxHeight = "0px";
+        });
+        menuList.classList.remove('show');
+        if (iconFlechaFooter) {
+          iconFlechaFooter.classList.remove('rotate');
+        }
+      } else {
+        menuList.classList.add('show');
+        menuList.style.maxHeight = menuList.scrollHeight + "px";
+        requestAnimationFrame(() => {
+          menuList.style.maxHeight = "500px";
+        });
+        if (iconFlechaFooter) {
+          iconFlechaFooter.classList.add('rotate');
+        }
       }
     }
   }
-}
 
-for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
-  contactateList.innerHTML += `
+  for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
+    contactateList.innerHTML += `
   <div class="rowAlign ga-05">
     <div class="${contactate[contactateItemMobile].icon} bgImgContain"></div>
     <p class="contactateText text-white">${contactate[contactateItemMobile].texto}</p>
   </div>
   `;
-}
-
-// Footer Desktop
-for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
-  let paginasFucaDesktop = "";
-  for (let pagina = 0; pagina < menu[menuItemDesktop].paginas.length; pagina++) {
-    paginasFucaDesktop += `<li><a href="${menu[menuItemDesktop].paginas[pagina].link}" class="text-white">${menu[menuItemDesktop].paginas[pagina].nombre}</a></li>`;
   }
 
-  menuFooterDesktop.innerHTML += `
+  // Footer Desktop
+  for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) {
+    let paginasFucaDesktop = "";
+    for (let pagina = 0; pagina < menu[menuItemDesktop].paginas.length; pagina++) {
+      paginasFucaDesktop += `<li><a href="${menu[menuItemDesktop].paginas[pagina].link}" class="text-white">${menu[menuItemDesktop].paginas[pagina].nombre}</a></li>`;
+    }
+
+    menuFooterDesktop.innerHTML += `
     <div class="menuFooterColumn column">
       <div class="titleUnderline">
         <p class="text-white font-weight-bold">${menu[menuItemDesktop].titulo}</p>
@@ -488,13 +579,13 @@ for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) 
       </ul>
     </div>
   `;
-}
+  }
 
-for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
-  contactateListDesktop.innerHTML += `
+  for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
+    contactateListDesktop.innerHTML += `
   <div class="rowAlign ga-05">
     <div class="${contactate[contactateItemDesktop].icon} bgImgContain"></div>
     <p class="contactateText text-white">${contactate[contactateItemDesktop].texto}</p>
   </div>
   `;
-}
+  }

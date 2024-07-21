@@ -1118,26 +1118,30 @@ h1 span {
     display: flex;
     gap: 3rem;
     list-style: none;
+    margin-top: 1rem;
   }
 
   .menuDesktopItem {
     position: relative;
     padding-bottom: 0.75rem;
+    transition: all 0.3s;
   }
 
   .underlineNavDesktop {
-    visibility: hidden;
     width: 4.5rem;
     border: 2px solid white;
+    opacity: 0;
     margin-top: 0.75rem;
+    transition: opacity 200ms ease-in-out;
+    transition-delay: 100ms;
   }
 
   .menuDesktopItem:hover .submenuDesktop {
-    display: flex;
+    opacity: 1;
   }
 
   .menuDesktopItem:hover .underlineNavDesktop {
-    visibility:visible;
+    opacity: 1;
   }
 
   .menuDesktopItem p {
@@ -1150,18 +1154,38 @@ h1 span {
     top: 100%;
     left: 0;
     background: white;
-    display: none;
+    display: flex;
     flex-direction: column;
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s;
+    opacity: 0;
+    transition: opacity 200ms;
+    transition-delay: 100ms;
   }
 
-  .submenuDesktop li a {
-    color: black;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
+  .subMenuLink a {
     display: block;
+    position: relative;
+    color: var(--color-primario);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.75rem 2rem 0.75rem 1rem;
+  }
+
+  .subMenuLink a::after {
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    content: '';
+    transform: translateY(-50%);
+    background-image: url("/content/images/Icon-Flecha-Novedad-Verde.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
 
@@ -1202,7 +1226,7 @@ h1 span {
   /* Header */
 
   header {
-    padding: 1.875rem 3rem;
+    padding: 1.5rem 3rem;
   }
 
   .logoHeader {
