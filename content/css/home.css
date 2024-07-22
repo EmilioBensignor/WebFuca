@@ -1,0 +1,797 @@
+/* FUCA HOME */
+
+/* Hero */
+
+.imgHero {
+  height: 10rem;
+  background-image: url("/content/images/Img-Hero.png");
+}
+
+.heroContent {
+  background: var(--fondo-gris);
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 span {
+  color: var(--color-primario);
+}
+
+.iconRedes {
+  width: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.iconRedes:hover {
+  background-color: var(--color-secundario);
+}
+
+.iconRedes:hover svg path {
+  fill: white;
+}
+
+/* Nuestros Pilares */
+
+.h2NuestrosPilares span {
+  width: 6.5rem;
+}
+
+.centroInvestigacionesOncologicas {
+  background-image: url("/content/images/Centro-Investigaciones-Oncologicas.jpeg");
+}
+
+.educacionMedicaOncologia {
+  background-image: url("/content/images/Educacion-Medica-Oncologia.jpeg");
+}
+
+.aulasAbiertasConcientizacion {
+  background-image: url("/content/images/Aulas-Abiertas-Concientizacion.jpeg");
+}
+
+.bibliotecaBiomedicaProfesionalesSalud {
+  background-image: url("/content/images/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
+}
+
+.pilar {
+  height: 12.5rem;
+  padding: 4.5rem 1.09rem 1.5rem 1.09rem;
+}
+
+.pilar p {
+  font-weight: bold;
+}
+
+/* Novedades */
+
+.novedades {
+  background-color: #f2f2f2;
+}
+
+.h2Novedades span {
+  width: 5.5rem;
+}
+
+.temasDestacados p {
+  display: none;
+}
+
+.filtrosNovedades {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtroNovedad {
+  border: 1px solid var(--color-primario);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--color-primario);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.78rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.filtroNovedad:hover {
+  box-shadow: 2px 2px 2px var(--color-primario);
+}
+
+.filtroNovedad.selected {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.novedad {
+  justify-content: space-between;
+}
+
+.headerNovedades {
+  line-height: 1;
+  padding: 0.75rem 1rem;
+}
+
+.headerNovedades p {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.headerNovedades p:nth-child(2) {
+  font-size: 2.25rem;
+}
+
+.contentNovedades {
+  color: #000000CC;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0.75rem 1rem;
+}
+
+.novedadesBtn {
+  position: relative;
+  font-size: 1rem;
+  padding: 0.75rem 3.5rem 0.75rem 2rem;
+  transition: all 0.3s;
+}
+
+.novedadesBtn::after {
+  width: 1rem;
+  height: 1rem;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  background-image: url("/content/images/Icon-Flecha-Novedad-Blanco.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+.novedadesBtn:hover::after {
+  background-image: url("/content/images/Icon-Flecha-Novedad-Verde.png");
+}
+
+/* Recursos - Objetivos */
+
+.recursosObjetivos {
+  background: linear-gradient(96.42deg, #17AF95 0.27%, #1A8A97 100.94%);
+}
+
+.curvasContainer {
+  background-image: url("/content/images/Curva-Grafico-Arriba.svg"), url("/content/images/Curva-Grafico-Abajo.svg");
+  background-size: contain, contain;
+  background-position-x: right, left;
+  background-position-y: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.graficoContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.datosGrafico {
+  width: 50%;
+}
+
+.datosGrafico :first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.datosGrafico :last-child {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.enFuca {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.btnDona,
+.btnActualiza {
+  width: 100%;
+  border-radius: 99px;
+  border: 3px solid #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.95rem 0;
+  transition: all 0.3s;
+}
+
+.btnDona {
+  background-color: #ffffff;
+  color: var(--color-primario);
+}
+
+.btnDona:hover {
+  background-color: var(--color-secundario);
+  border: 3px solid var(--color-secundario);
+  color: white;
+}
+
+.btnActualiza {
+  background-color: transparent;
+  color: white;
+}
+
+.btnActualiza:hover {
+  background-color: white;
+  color: var(--color-primario);
+}
+
+.h2NosAcompanan span {
+  width: 7rem;
+}
+
+.slideAcompanan {
+  border-radius: 9px;
+  padding: 1rem 1.7rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.slideAcompanan img {
+  height: 3rem;
+}
+
+/* Newsletter */
+
+.suscribete h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.suscribete p {
+  font-size: 0.875rem;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+}
+
+.inputText {
+  width: 100%;
+  border-radius: 99px;
+  border: none;
+  background-color: #F2F2F2;
+  color: #00000080;
+  padding: 0.875rem 1.5rem 0.875rem 3.125rem;
+}
+
+.inputText:focus-visible {
+  outline: var(--color-primario) auto 1px;
+}
+
+.inputContainer::before {
+  width: 1.5rem;
+  height: 1.25rem;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  background-image: url("/content/images/Icon-Email-Gris.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.btnNewsletter {
+  font-size: 1rem;
+}
+
+.miraYoutube svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.miraYoutube a {
+  color: var(--color-primario);
+  font-size: 0.875rem;
+}
+
+.miraYoutube a:hover {
+  color: #6080E0;
+}
+
+@media only screen and (min-width: 480px) {
+
+  /* Hero */
+  .imgHero {
+    height: 15.5rem;
+  }
+
+  .iconRedes {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* Nuestros pilares */
+  .h2NuestrosPilares span {
+    width: 27.5%;
+  }
+
+  .pilar p {
+    font-size: 1.2rem;
+  }
+
+  /* Novedades */
+  .h2Novedades span {
+    width: 25%;
+  }
+
+  /* Recursos - Objetivos */
+  .enFucaBtns {
+    max-width: 330px;
+  }
+
+  .h2NosAcompanan span {
+    width: 10rem;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) {
+  /* Hero */
+
+  .imgHero {
+    height: 19rem;
+  }
+
+  /* Nuestros pilares */
+  .pilar {
+    height: 13rem;
+  }
+
+  .pilar p {
+    font-size: 1.4rem;
+  }
+
+  /* Novedaes */
+  .h2Novedades span {
+    width: 7rem;
+  }
+
+  .filtroNovedad {
+    font-size: 0.9rem;
+  }
+
+  .contentNovedades {
+    font-size: 0.9rem;
+  }
+
+  /* Recursos - Objetivos */
+
+  .curvasContainer {
+    background-image: url(/content/images/Curva-Grafico-Abajo.svg);
+    background-size: contain;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+  }
+
+  .graficoContainer {
+    width: 70%;
+  }
+
+  .graficoContainer img {
+    width: 40%;
+  }
+
+  .datosGrafico :first-child {
+    font-size: 1.75rem;
+  }
+
+  .enFucaContainer {
+    margin: 0 1.5rem;
+  }
+
+  .datosGrafico :last-child {
+    font-size: 1rem;
+  }
+
+  .enFuca {
+    font-size: 1rem;
+  }
+
+  .enFucaBtns a {
+    font-size: 1rem;
+  }
+
+  .acompananContainer {
+    margin-left: 1.5rem;
+  }
+
+  /* Newsletter */
+  .suscribeteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suscribete h2 {
+    font-size: 1.3rem;
+  }
+
+  .suscribete p {
+    font-size: 1rem;
+  }
+
+  form {
+    width: 400px;
+  }
+
+  .miraYoutube a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .imgHero {
+    height: 22rem;
+  }
+
+  .iconRedes {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  /* Nuestros pilares */
+
+  .h2NuestrosPilares span {
+    width: 9rem;
+  }
+
+  .pilares {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pilar {
+    height: 16rem;
+    width: 48.5%;
+    justify-content: flex-end;
+  }
+
+  /* Novedades */
+  .novedadesContainer {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .novedad {
+    width: 48%;
+  }
+
+  /* Recursos - Objetivos */
+  .enFucaContainer {
+    margin-top: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .imgHero {
+    height: 24rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1080px) {
+
+  /* Hero */
+
+  .heroContent {
+    height: 27rem;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("/content/images/Img-Hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .contactoHero {
+    width: auto;
+    height: auto;
+    flex-direction: row;
+  }
+
+  .iconRedes {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* Nuestros pilares */
+
+  .pilar {
+    height: 18rem;
+    width: 49.25%;
+  }
+
+  .pilar p {
+    font-size: 1.75rem;
+  }
+
+  /* Novedades */
+  .temasDestacados {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .temasDestacados p {
+    display: block;
+    color: #000000CC;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .filtroNovedad {
+    font-size: 1rem;
+  }
+
+  .novedad {
+    width: 23%;
+  }
+
+  .novedadesContainer .novedadesBtn {
+    font-size: 1rem;
+    padding: 0.875rem 3rem 0.875rem 1.5rem;
+  }
+
+  .novedadesBtn::after {
+    right: 1.5rem;
+  }
+
+  /* Recursos - Objetivos */
+  .curvasContainer {
+    background-image: url("/content/images/Curva-Desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .graficoEnFuca {
+    display: flex;
+    justify-content: center;
+  }
+
+  .graficoContainer {
+    width: 40%;
+    margin: 0;
+  }
+
+  .graficoContainer img {
+    width: 70%;
+    margin-right: 2rem;
+  }
+
+  .enFucaContainer {
+    width: 45%;
+  }
+
+  .enFucaBtns {
+    max-width: 100%;
+  }
+
+  .graficoContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .datosGrafico {
+    align-self: center;
+  }
+
+  .datosGrafico p {
+    text-align: start;
+  }
+
+  .datosGrafico :first-child {
+    font-size: 2rem;
+  }
+
+  .datosGrafico :last-child {
+    font-size: 1rem;
+  }
+
+  .enFucaContainer {
+    align-items: flex-start;
+  }
+
+  .enFuca {
+    text-align: start;
+  }
+
+  .enFucaBtns {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .enFucaBtns a:first-of-type {
+    width: 90%;
+  }
+
+  .enFucaBtns a {
+    font-size: 1rem;
+  }
+
+  .acompananContainer {
+    margin-left: 3rem;
+  }
+
+  /* Newsletter */
+
+  .suscribeteContainer {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .suscribeteContainer form {
+    width: 85%;
+    position: relative;
+  }
+
+  .inputContainer::before {
+    top: 58%;
+    left: 2rem;
+  }
+
+  .inputText {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem 1rem 4.25rem;
+  }
+
+  .suscribeteContainer .btnNewsletter {
+    position: absolute;
+    top: 34%;
+    right: 1%;
+    padding: 0.5rem 2.25rem;
+  }
+
+  .miraYoutube {
+    align-items: flex-end;
+  }
+
+  .miraYoutube a {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+
+  /* Hero */
+  .heroContent {
+    height: 30rem;
+  }
+
+  /* Nuestros pilares */
+  .pilar {
+    width: 49.4%;
+  }
+
+  /* Novedades */
+  .novedad {
+    width: 23.25%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  /* Hero */
+
+  .heroContent {
+    height: 37.5rem;
+    padding-left: 4.94rem;
+  }
+
+  /* Nuestros pilares */
+
+  .pilar {
+    width: 49.5%;
+    height: 18.75rem;
+    padding: 7.625rem 3.9rem 1.5rem 3.9rem;
+  }
+
+  .pilar p {
+    font-size: 2rem;
+  }
+
+  /* Novedades */
+  .h2Novedades span {
+    width: 8rem;
+  }
+
+  .headerNovedades p {
+    font-size: 1rem;
+  }
+
+  .headerNovedades p:nth-child(2) {
+    font-size: 3rem;
+  }
+
+  /* Recursos - Objetivos */
+  .graficoContainer img {
+    width: 82.5%;
+  }
+
+  .enFuca {
+    text-align: start;
+    font-size: 2rem;
+  }
+
+  .enFucaBtns a {
+    padding: 0.875rem 2.25rem;
+  }
+
+  .acompananContainer {
+    margin-left: 4.9rem;
+  }
+
+  /* Newsletter */
+
+  .suscribete h2 {
+    font-size: 2rem;
+  }
+
+  .suscribete p {
+    font-size: 1.25rem;
+  }
+
+  .inputContainer::before {
+    top: 59%;
+  }
+
+  .inputText {
+    font-size: 1.25rem;
+  }
+
+  .suscribeteContainer .btnNewsletter {
+    top: 30.5%;
+    right: 0.5%;
+    font-size: 1.25rem;
+    padding: 0.7rem 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .novedadesContainer {
+    justify-content: space-between;
+  }
+
+  .recursosObjetivos {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .contentNovedades {
+    font-size: 1rem;
+  }
+
+  .datosGrafico :last-child {
+    font-size: 1.1rem;
+  }
+
+  .graficoContainer img {
+    margin-left: 1rem;
+  }
+}
