@@ -2,11 +2,6 @@
 const mobileMenu = document.getElementById("mobile-menu");
 const desktopMenu = document.getElementById("desktop-menu");
 const menuDesktopList = document.getElementById("menuDesktopList");
-const redes = document.getElementById("redes");
-const pilares = document.getElementById("pilares");
-const filtrosNovedades = document.getElementById("filtrosNovedades");
-const novedadesContainer = document.getElementById("novedadesContainer");
-const acompanan = document.getElementById("acompanan");
 const redesFooter = document.getElementById("redesFooter");
 const menuFooterMobile = document.getElementById("menuFooterMobile");
 const contactateList = document.getElementById("contactateList");
@@ -14,7 +9,7 @@ const contactateListDesktop = document.getElementById("contactateListDesktop");
 const menuFooterDesktop = document.getElementById("menuFooterDesktop");
 const menuFooterColumnList = document.getElementById("menuFooterColumnList");
 
-//Arrays
+// Arrays
 const menu = [
   {
     titulo: "EDUCACIÓN MÉDICA",
@@ -172,7 +167,7 @@ const menu = [
     ],
   },
 ];
-const iconosRedes = [
+const iconosRedesFooter = [
   {
     img: "<svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59297 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00704 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19699 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.00101 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23116 8.73601 8.82814 8.41801 8.94874 8.07001C9.07538 7.72201 9.07538 7.42801 9.03317 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z' fill='#17AF95'/></svg>",
     alt: "Icono Whatsapp",
@@ -194,99 +189,6 @@ const iconosRedes = [
     alt: "Icono Youtube",
   },
 ];
-const nuestrosPilares = [
-  {
-    fondo: "centroInvestigacionesOncologicas",
-    titulo: "Centro de Investigaciones Oncológicas (CIO)",
-    text: "Nuestros investigadores trabajan para innovar en los tratamientos para el cáncer.",
-  },
-  {
-    fondo: "educacionMedicaOncologia",
-    titulo: "Educación médica y especialización en oncología",
-    text: "Programas de especialización médica en Oncología. Conocé a nuestros becarios y ex becarios.",
-  },
-  {
-    fondo: "aulasAbiertasConcientizacion",
-    titulo: "Aulas abiertas y concientización de la comunidad",
-    text: "Clases presenciales y virtuales, materiales informativos, charlas y talleres, vivos en Instagram.",
-  },
-  {
-    fondo: "bibliotecaBiomedicaProfesionalesSalud",
-    titulo: "Biblioteca biomédica para profesionales de la salud",
-    text: "Un servicio de información científica diseñado como biblioteca activa y esencial.",
-  },
-];
-const filtros = [
-  "Cáncer de mama",
-  "Investigaciones CIO",
-  "Redio",
-  "Campus virtual",
-  "Cena a beneficio"
-];
-const novedades = [
-  {
-    mes: "MAYO",
-    dia: "06",
-    anio: "2024",
-    texto: "El próximo 6 de mayo a las 18s h te invitamos a participar del vivo deInstagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
-    cta: "INSCRIBIRME",
-  },
-  {
-    mes: "JUNIO",
-    dia: "20",
-    anio: "2024",
-    texto: "El próximo 20 de junio a las 20 hs te invitamos a participar del vivo de Instagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
-    cta: "LEER MÁS",
-  },
-  {
-    mes: "AGOSTO",
-    dia: "15",
-    anio: "2024",
-    texto: "El próximo 15 de agosto a las 18 hs te invitamos a participar del vivo de Instagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
-    cta: "INFÓRMATE",
-  },
-  {
-    mes: "SEPTIEMBRE",
-    dia: "28",
-    anio: "2024",
-    texto: "El próximo 28 de septiembre a las 18 hs te invitamos a participar del vivo de Instagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
-    cta: "INSCRIBIRME",
-  },
-];
-// Cambiar nombres
-const nosAcompanan = [
-  {
-    img: "Logo-AAOC.png",
-    link: "#",
-    alt: "Logo"
-  },
-  {
-    img: "Logo-SAMastologia.png",
-    link: "#",
-    alt: "Logo"
-  },
-  {
-    img: "Logo-Salesforce.png",
-    link: "#",
-    alt: "Logo"
-  },
-  {
-    img: "Logo-AAOC.png",
-    link: "#",
-    alt: "Logo"
-  },
-  {
-    img: "Logo-SAMastologia.png",
-    link: "#",
-    alt: "Logo"
-  },
-  {
-    img: "Logo-Salesforce.png",
-    link: "#",
-    alt: "Logo"
-  },
-];
-const acompananDuplicados = [...nosAcompanan, ...nosAcompanan, ...nosAcompanan]
 const contactate = [
   {
     icon: "iconEmail",
@@ -434,113 +336,14 @@ donaHoyDesktop.textContent = "DONÁ HOY";
 
 desktopMenu.appendChild(donaHoyDesktop);
 
-// Redes Hero
-for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
-  redes.innerHTML += `
-    <div class="iconRedes columnAlignCenter bg-white">
-      ${iconosRedes[iconRed].img}
-    </div>
-  `;
-}
-
-// Nuestros pilares
-for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
-  pilares.innerHTML += `
-  <div class="pilar column ga-05 bgImgCover ${nuestrosPilares[pilar].fondo}">
-    <h3 class="text-white">${nuestrosPilares[pilar].titulo}</h3>
-    <p class="text-white">${nuestrosPilares[pilar].text}</p>
-  </div>
-  `;
-}
-
-// Filtros novedades
-for (let filtro = 0; filtro < filtros.length; filtro++) {
-  filtrosNovedades.innerHTML += `
-    <button class="filtroNovedad">
-      ${filtros[filtro]}
-    </button>
-  `;
-}
-
-document.querySelectorAll('.filtroNovedad').forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('selected')
-  })
-});
-
-// Novedades
-for (let novedad = 0; novedad < novedades.length; novedad++) {
-  novedadesContainer.innerHTML += `
-    <div class="novedad column">
-      <div>
-        <div class="headerNovedades bg-primary">
-          <p class="text-white">${novedades[novedad].mes}</p>
-          <p class="text-white">${novedades[novedad].dia}</p>
-          <p class="text-white">${novedades[novedad].anio}</p>
-        </div>
-        <p class="contentNovedades">${novedades[novedad].texto}</p>
-      </div>
-      <div>
-        <button class="novedadesBtn primaryButton">${novedades[novedad].cta}</button>
-      </div>
-    </div>
-  `;
-}
-
 // Redes Footer
-for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
+for (let iconRed = 0; iconRed < iconosRedesFooter.length; iconRed++) {
   redesFooter.innerHTML += `
     <div class="iconRedesFooter columnAlignCenter bg-white">
-      ${iconosRedes[iconRed].img}
+      ${iconosRedesFooter[iconRed].img}
     </div>
   `;
 }
-
-// Slider Acompanan
-for (let logo = 0; logo < nosAcompanan.length; logo++) {
-  acompanan.innerHTML += `
-    <div class="slideAcompanan flexCenter bg-white">
-      <a href="${nosAcompanan[logo].link}">
-        <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
-      </a>
-    </div>
-  `;
-}
-
-$("#acompanan").slick({
-  infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  arrows: false,
-  dots: false,
-  autoplay: true,
-  autoplaySpeed: 1000,
-  speed: 500,
-  swipeToSlide: false,
-  variableWidth: true,
-  responsive: [
-    {
-      breakpoint: 770,
-      setting: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        centerMode: true,
-
-      }
-    },
-    {
-      breakpoint: 480,
-      setting: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        centerMode: true,
-        
-      }
-    }
-  ],
-});
 
 // Footer Mobile
 for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {

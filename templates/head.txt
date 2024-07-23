@@ -1,0 +1,2 @@
+<link href="ico/favicon.png" rel="shortcut icon">
+<link rel="stylesheet" href="/content/css/main.css">
