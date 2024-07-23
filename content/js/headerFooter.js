@@ -242,7 +242,7 @@ for (let navItemMobile = 0; navItemMobile < menu.length; navItemMobile++) {
           <span class="underlineNav greenUnderlineTitle"></span>
         </div>
         <div class="iconFlecha iconFlechaNav flexCenter bg-white">
-          <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlechaNav${navItemMobile}" />
+          <img src="/content/img/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlechaNav${navItemMobile}" />
         </div>
       </div>
       <ul id="menuNavColumnList${navItemMobile}" class="menuNavColumnList">
@@ -360,7 +360,7 @@ for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
           <span class="underlineFooter whiteUnderlineTitle"></span>
         </div>
         <div class="iconFlecha flexCenter bg-white">
-          <img src="/content/images/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlechaFooter${menuItemMobile}" />
+          <img src="/content/img/Icon-Flecha-Desplegable.svg" alt="Flecha Toggle Desplegable" id="iconFlechaFooter${menuItemMobile}" />
         </div>
       </div>
       <ul id="menuFooterColumnList${menuItemMobile}" class="menuFooterColumnList">

@@ -487,19 +487,19 @@ header {
 .iconDondeEstamos {
   width: 0.81rem;
   height: 1rem;
-  background-image: url("/content/images/Icon-Donde-Estamos.svg");
+  background-image: url("/content/img/Icon-Donde-Estamos.svg");
 }
 
 .iconEmail {
   width: 1rem;
   height: 0.9rem;
-  background-image: url("/content/images/Icon-Email-Blanco.svg");
+  background-image: url("/content/img/Icon-Email-Blanco.svg");
 }
 
 .iconTelefono {
   width: 1rem;
   height: 1rem;
-  background-image: url("/content/images/Icon-Telefono.svg");
+  background-image: url("/content/img/Icon-Telefono.svg");
 }
 
 .contactateText {
@@ -746,7 +746,7 @@ header {
   .flechaLink {
     width: 0.75rem;
     height: 0.75rem;
-    background-image: url("/content/images/Icon-Flecha-Novedad-Verde.png");
+    background-image: url("/content/img/Icon-Flecha-Novedad-Verde.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

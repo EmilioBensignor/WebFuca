@@ -4,7 +4,7 @@
 
 .imgHero {
   height: 10rem;
-  background-image: url("/content/images/Img-Hero.png");
+  background-image: url("/content/img/Img-Hero.png");
 }
 
 .heroContent {
@@ -43,19 +43,19 @@ h1 span {
 }
 
 .centroInvestigacionesOncologicas {
-  background-image: url("/content/images/Centro-Investigaciones-Oncologicas.jpeg");
+  background-image: url("/content/img/Centro-Investigaciones-Oncologicas.jpeg");
 }
 
 .educacionMedicaOncologia {
-  background-image: url("/content/images/Educacion-Medica-Oncologia.jpeg");
+  background-image: url("/content/img/Educacion-Medica-Oncologia.jpeg");
 }
 
 .aulasAbiertasConcientizacion {
-  background-image: url("/content/images/Aulas-Abiertas-Concientizacion.jpeg");
+  background-image: url("/content/img/Aulas-Abiertas-Concientizacion.jpeg");
 }
 
 .bibliotecaBiomedicaProfesionalesSalud {
-  background-image: url("/content/images/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
+  background-image: url("/content/img/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
 }
 
 .pilar {
@@ -146,7 +146,7 @@ h1 span {
   position: absolute;
   top: 50%;
   right: 2rem;
-  background-image: url("/content/images/Icon-Flecha-Novedad-Blanco.png");
+  background-image: url("/content/img/Icon-Flecha-Novedad-Blanco.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -155,7 +155,7 @@ h1 span {
 }
 
 .novedadesBtn:hover::after {
-  background-image: url("/content/images/Icon-Flecha-Novedad-Verde.png");
+  background-image: url("/content/img/Icon-Flecha-Novedad-Verde.png");
 }
 
 /* Recursos - Objetivos */
@@ -165,7 +165,7 @@ h1 span {
 }
 
 .curvasContainer {
-  background-image: url("/content/images/Curva-Grafico-Arriba.svg"), url("/content/images/Curva-Grafico-Abajo.svg");
+  background-image: url("/content/img/Curva-Grafico-Arriba.svg"), url("/content/img/Curva-Grafico-Abajo.svg");
   background-size: contain, contain;
   background-position-x: right, left;
   background-position-y: top, bottom;
@@ -281,7 +281,7 @@ h1 span {
   position: absolute;
   top: 50%;
   left: 1rem;
-  background-image: url("/content/images/Icon-Email-Gris.svg");
+  background-image: url("/content/img/Icon-Email-Gris.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -375,7 +375,7 @@ h1 span {
   /* Recursos - Objetivos */
 
   .curvasContainer {
-    background-image: url(/content/images/Curva-Grafico-Abajo.svg);
+    background-image: url(/content/img/Curva-Grafico-Abajo.svg);
     background-size: contain;
     background-position-x: left;
     background-position-y: bottom;
@@ -500,7 +500,7 @@ h1 span {
     height: 27rem;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("/content/images/Img-Hero.png");
+    background-image: url("/content/img/Img-Hero.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -561,7 +561,7 @@ h1 span {
 
   /* Recursos - Objetivos */
   .curvasContainer {
-    background-image: url("/content/images/Curva-Desktop.svg");
+    background-image: url("/content/img/Curva-Desktop.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

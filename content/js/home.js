@@ -180,7 +180,7 @@ for (let logo = 0; logo < nosAcompanan.length; logo++) {
   acompanan.innerHTML += `
     <div class="slideAcompanan flexCenter bg-white">
       <a href="${nosAcompanan[logo].link}">
-        <img src="/content/images/${nosAcompanan[logo].img}" alt="/content/images/${nosAcompanan[logo].alt}" />
+        <img src="/content/img/${nosAcompanan[logo].img}" alt="/content/img/${nosAcompanan[logo].alt}" />
       </a>
     </div>
   `;
