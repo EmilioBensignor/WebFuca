@@ -11,10 +11,6 @@
   background: var(--fondo-gris);
 }
 
-h1 {
-  text-align: center;
-}
-
 h1 span {
   color: var(--color-primario);
 }
