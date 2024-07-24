@@ -142,7 +142,7 @@ h1 span {
   position: absolute;
   top: 50%;
   right: 2rem;
-  background-image: url("/content/img/Icon-Flecha-Novedad-Blanco.png");
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ h1 span {
 }
 
 .novedadesBtn:hover::after {
-  background-image: url("/content/img/Icon-Flecha-Novedad-Verde.png");
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
 }
 
 /* Recursos - Objetivos */
@@ -161,7 +161,7 @@ h1 span {
 }
 
 .curvasContainer {
-  background-image: url("/content/img/Curva-Grafico-Arriba.svg"), url("/content/img/Curva-Grafico-Abajo.svg");
+  background-image: url("/content/img/home/Curva-Grafico-Arriba.svg"), url("/content/img/home/Curva-Grafico-Abajo.svg");
   background-size: contain, contain;
   background-position-x: right, left;
   background-position-y: top, bottom;
@@ -171,6 +171,10 @@ h1 span {
 .graficoContainer {
   width: 60%;
   margin: 0 auto;
+}
+
+.graficoContainer img {
+  width: 90%;
 }
 
 .datosGrafico {
@@ -277,7 +281,7 @@ h1 span {
   position: absolute;
   top: 50%;
   left: 1rem;
-  background-image: url("/content/img/Icon-Email-Gris.svg");
+  background-image: url("/content/img/home/Icon-Email-Gris.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -329,6 +333,10 @@ h1 span {
   }
 
   /* Recursos - Objetivos */
+  .graficoContainer img {
+    width: 70%;
+  }
+  
   .enFucaBtns {
     max-width: 330px;
   }
@@ -371,7 +379,7 @@ h1 span {
   /* Recursos - Objetivos */
 
   .curvasContainer {
-    background-image: url(/content/img/Curva-Grafico-Abajo.svg);
+    background-image: url(/content/img/home/Curva-Grafico-Abajo.svg);
     background-size: contain;
     background-position-x: left;
     background-position-y: bottom;
@@ -383,7 +391,7 @@ h1 span {
   }
 
   .graficoContainer img {
-    width: 40%;
+    width: 50%;
   }
 
   .datosGrafico :first-child {
@@ -485,6 +493,10 @@ h1 span {
   .imgHero {
     height: 24rem;
   }
+
+  .graficoContainer img {
+    width: 40%;
+  }
 }
 
 /* Desktop */
@@ -496,7 +508,7 @@ h1 span {
     height: 27rem;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("/content/img/Img-Hero.png");
+    background-image: url("/content/img/home/banner_hero.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -557,7 +569,7 @@ h1 span {
 
   /* Recursos - Objetivos */
   .curvasContainer {
-    background-image: url("/content/img/Curva-Desktop.svg");
+    background-image: url("/content/img/home/Curva-Desktop.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -574,8 +586,8 @@ h1 span {
   }
 
   .graficoContainer img {
-    width: 70%;
-    margin-right: 2rem;
+    width: 40%;
+    margin: 0 2rem;
   }
 
   .enFucaContainer {
@@ -725,8 +737,9 @@ h1 span {
   }
 
   /* Recursos - Objetivos */
-  .graficoContainer img {
-    width: 82.5%;
+
+  .datosGrafico:first-of-type {
+    width: 23%;
   }
 
   .enFuca {
@@ -775,6 +788,10 @@ h1 span {
 
   .recursosObjetivos {
     padding: 2rem 0;
+  }
+
+  .graficoContainer img {
+    width: 35%;
   }
 }
 

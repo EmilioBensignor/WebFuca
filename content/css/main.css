@@ -488,23 +488,31 @@ header {
 .iconDondeEstamos {
   width: 0.81rem;
   height: 1rem;
-  background-image: url("/content/img/Icon-Donde-Estamos.svg");
+  background-image: url("/content/img/header-footer/Icon-Donde-Estamos.svg");
 }
 
 .iconEmail {
   width: 1rem;
   height: 0.9rem;
-  background-image: url("/content/img/Icon-Email-Blanco.svg");
+  background-image: url("/content/img/header-footer/Icon-Email-Blanco.svg");
 }
 
 .iconTelefono {
   width: 1rem;
   height: 1rem;
-  background-image: url("/content/img/Icon-Telefono.svg");
+  background-image: url("/content/img/header-footer/Icon-Telefono.svg");
 }
 
 .contactateText {
   font-size: 0.875rem;
+}
+
+.programasFleming {
+  justify-content: flex-start;
+}
+
+.flemingMobile {
+  width: 25%;
 }
 
 .derechos {
@@ -554,6 +562,10 @@ header {
   .donaFucaFooter {
     max-width: 230px;
   }
+
+  .flemingMobile {
+    width: 20%;
+  }
 }
 
 /* Tablet */
@@ -602,6 +614,10 @@ header {
   .underlineNav {
     width: 3.5rem;
   }
+
+  .flemingMobile {
+    width: 15%;
+  }
 }
 
 @media only screen and (min-width: 770px) {
@@ -620,6 +636,10 @@ header {
     width: 2.3rem;
     height: 2.3rem;
   }
+
+  .flemingMobile {
+    width: 12%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -631,6 +651,10 @@ header {
 
   header .hamburger {
     width: 3%;
+  }
+
+  .flemingMobile {
+    width: 10%;
   }
 }
 
@@ -907,6 +931,10 @@ header {
   #desktop-menu {
     gap: 5rem;
   }
+
+  .fleming {
+    width: 25%;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1012,5 +1040,17 @@ header {
 
   .menuDesktopItem p {
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .fleming {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .fucaDesarrolla p {
+    width: 70%;
   }
 }
