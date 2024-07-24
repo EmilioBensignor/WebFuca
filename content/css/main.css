@@ -671,6 +671,10 @@ header {
     border: 3px solid white;
   }
 
+  .menuFooterColumn .titleUnderline .whiteUnderlineTitle,
+  .fucaDesarrollaDerecha .titleUnderline .whiteUnderlineTitle {
+    border: 2px solid white;
+  }
 
   #mobile-menu {
     display: none;
