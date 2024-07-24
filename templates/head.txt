@@ -1,2 +1,2 @@
-<link href="ico/favicon.png" rel="shortcut icon">
+<link href="/content/img/favicon-fuca.svg" rel="shortcut icon">
 <link rel="stylesheet" href="/content/css/main.css">

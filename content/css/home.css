@@ -4,7 +4,7 @@
 
 .imgHero {
   height: 10rem;
-  background-image: url("/content/img/Img-Hero.png");
+  background-image: url("/content/img/home/banner_hero.webp");
 }
 
 .heroContent {
@@ -39,19 +39,19 @@ h1 span {
 }
 
 .centroInvestigacionesOncologicas {
-  background-image: url("/content/img/Centro-Investigaciones-Oncologicas.jpeg");
+  background-image: url("/content/img/home/cio.webp");
 }
 
 .educacionMedicaOncologia {
-  background-image: url("/content/img/Educacion-Medica-Oncologia.jpeg");
+  background-image: url("/content/img/home/educacion_medica.webp");
 }
 
 .aulasAbiertasConcientizacion {
-  background-image: url("/content/img/Aulas-Abiertas-Concientizacion.jpeg");
+  background-image: url("/content/img/home/aulas_abiertas.webp");
 }
 
 .bibliotecaBiomedicaProfesionalesSalud {
-  background-image: url("/content/img/Biblioteca-Biomedica-Profesionales-Salud.jpeg");
+  background-image: url("/content/img/home/biblioteca.webp");
 }
 
 .pilar {
