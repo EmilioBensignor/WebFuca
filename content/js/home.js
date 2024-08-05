@@ -95,37 +95,62 @@ const novedades = [
 // Cambiar nombres
 const nosAcompanan = [
   {
-    img: "Logo-AAOC.png",
-    link: "#",
-    alt: "Logo"
+    img: "racing_solidario",
+    link: "https://www.racingclub.com.ar/racingsolidario/",
+    alt: "Racing Solidario"
   },
   {
-    img: "Logo-SAMastologia.png",
-    link: "#",
-    alt: "Logo"
+    img: "salesforce",
+    link: "https://www.salesforce.com/es/",
+    alt: "Salesforce"
   },
   {
-    img: "Logo-Salesforce.png",
-    link: "#",
-    alt: "Logo"
+    img: "sam",
+    link: "https://www.samas.org.ar/",
+    alt: "Sam"
   },
   {
-    img: "Logo-AAOC.png",
-    link: "#",
-    alt: "Logo"
+    img: "vietur",
+    link: "https://vietur.com.ar/",
+    alt: "Vietur"
   },
   {
-    img: "Logo-SAMastologia.png",
-    link: "#",
-    alt: "Logo"
+    img: "vmedios",
+    link: "https://vmedios.com.ar/",
+    alt: "Vmedios"
   },
   {
-    img: "Logo-Salesforce.png",
-    link: "#",
-    alt: "Logo"
+    img: "aaoc",
+    link: "https://www.aaoc.org.ar/",
+    alt: "AAOC"
+  },
+  {
+    img: "benteveo",
+    link: "https://www.benteveo.com/",
+    alt: "Benteveo"
+  },
+  {
+    img: "iaf",
+    link: "https://alexanderfleming.org/",
+    alt: "IAF"
+  },
+  {
+    img: "inc",
+    link: "https://www.argentina.gob.ar/salud/inc",
+    alt: "INC"
+  },
+  {
+    img: "inverclub",
+    link: "https://www.instagram.com/inverclub.sa/",
+    alt: "Inverclub"
+  },
+  {
+    img: "palo_santo",
+    link: "https://www.youtube.com/channel/UCZxtQux93hfwjstdvNPYpug/videos",
+    alt: "Palo Santo"
   },
 ];
-const acompananDuplicados = [...nosAcompanan, ...nosAcompanan, ...nosAcompanan]
+const acompananDuplicados = [...nosAcompanan, ...nosAcompanan, ...nosAcompanan, ...nosAcompanan]
 
 // Redes Hero
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
@@ -185,7 +210,7 @@ for (let logo = 0; logo < nosAcompanan.length; logo++) {
   acompanan.innerHTML += `
     <div class="slideAcompanan flexCenter bg-white">
       <a href="${nosAcompanan[logo].link}">
-        <img src="/content/img/${nosAcompanan[logo].img}" alt="/content/img/${nosAcompanan[logo].alt}" />
+        <img src="/content/img/home/nos-acompanan/${nosAcompanan[logo].img}_blanco.svg" alt="${nosAcompanan[logo].alt}" />
       </a>
     </div>
   `;
