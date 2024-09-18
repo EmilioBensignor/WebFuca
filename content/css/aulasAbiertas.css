@@ -1,0 +1,116 @@
+main {
+  background-color: white;
+  padding: 1.5rem 0;
+}
+
+main>img {
+  padding-left: 1rem;
+}
+
+/* Introduccion Dictado */
+
+.introDictado {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.introduccion {
+  margin: 1rem 0 0.75rem 0;
+}
+
+.introduccion p {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.dictadoClases {
+  border: 1px solid rgb(23, 175, 149);
+}
+
+/* Aulas Abiertas */
+
+.aulasAbiertas {
+  padding: 1.5rem 1rem;
+}
+
+.aulasAbiertasList {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.aulasAbiertasList li {
+  list-style: inherit;
+}
+
+.contenidoAulasAbiertas {
+  padding: 1.5rem 1rem;
+}
+
+.contenidoAulasAbiertas>p {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 2rem 0;
+}
+
+.contenidoAulasAbiertas ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.contenidoAulasAbiertas ul li {
+  list-style: inherit;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Cita */
+
+.seccionCita {
+  background: linear-gradient(96.42deg, #1A8A97 0.27%, #17AF95 100.94%);
+  padding: 2.25rem 2rem;
+}
+
+/* Inscribi Tu Colegio */
+
+.inscribiTuColegio {
+  padding: 1.5rem 1rem;
+}
+
+.caracteristicasContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.caracteristica {
+  width: 47%;
+  border-radius: 18px;
+  border: 1px solid rgba(96, 128, 224, 1);
+  padding: 1rem 0.75rem;
+}
+
+.caracteristica img {
+  width: 3rem;
+}
+
+.inscribiColegioBtn {
+  position: relative;
+  font-size: 1rem;
+  padding: 0.75rem 3.5rem 0.75rem 2rem;
+  transition: all 0.3s;
+}
+
+.inscribiColegioBtn::after {
+  width: 1rem;
+  height: 1rem;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
