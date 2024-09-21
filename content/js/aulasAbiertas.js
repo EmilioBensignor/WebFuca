@@ -3,6 +3,7 @@ const caracteristicasContainer = document.getElementById("caracteristicasContain
 const colegiosContainer = document.getElementById("colegiosContainer");
 const linksContainer = document.getElementById("linksContainer");
 const trabajosAlumnosContenedor = document.getElementById("trabajosAlumnosContenedor");
+const trabajosAlumnosDesktop = document.getElementById("trabajosAlumnosDesktop");
 const acompananContenedor = document.getElementById("acompananContenedor");
 
 // Arrays
@@ -33,8 +34,7 @@ const caracteristicas = [
   },
 ];
 const colegios = [
-  "Boston College",
-  "Chaltel College",
+  "Boston College", "Chaltel College",
   "Colegio Acción Educativa Personalizada",
   "Colegio Ana María Mogas",
   "Colegio Argentina del Oeste",
@@ -42,7 +42,108 @@ const colegios = [
   "Colegio Belgrano Uno",
   "Colegio Boston College",
   "Colegio Buen Consejo",
-  "Colegio Buenos Aires"
+  "Colegio Buenos Aires",
+  "Colegio Comercial N ° 31",
+  "Colegio Del Arce",
+  "Colegio Divina Providencia",
+  "Colegio Esclavas del Sagrado Corazón",
+  "Colegio Highland",
+  "Colegio Hijas de Jesús",
+  "Colegio Hipólito Vieytes",
+  "Colegio Horacio Watson",
+  "Colegio Hull Cordell - Highest College",
+  "Colegio Inglés Horacio Watson",
+  "Colegio Inmaculada Concepción de María",
+  "Colegio Leonardo Sworn",
+  "Colegio Liceo Nº 11 'Cornelio Saavedra'",
+  "Colegio Liceo Nº 4",
+  "Colegio Lincoln Hall",
+  "Colegio Marianista",
+  "Colegio Master College",
+  "Colegio Nuestra Señora de la Merced",
+  "Colegio Nuestra Señora de los Milagros",
+  "Colegio Río de la Plata",
+  "Colegio San Agustín",
+  "Colegio San Gregorio El Ilumniador",
+  "Colegio Santa Teresa de Jesús",
+  "Colegio Scholem Aleijem",
+  "Colegio Schönthal",
+  "Colegio Santa Catalina de Belgrano",
+  "Colegio Sarmiento",
+  "Colegio Victoria S. A.",
+  "E.N.E.T Sarmiento",
+  "Escuela Argentina del Oeste",
+  "Escuela Argentina General Belgrano",
+  "Escuela Cangallo Schule",
+  "Escuela Corazón Eucarístico de Jesús",
+  "Escuela Comercial Nº 31 Naciones Unidas",
+  "Escuela Del Pacífico",
+  "Escuela de Enseñanza Media Nº 6 - Ituzaingó",
+  "Escuela de Comercio N° 2 'Dr. Antonio Bermejo'",
+  "Escuela de Comercio Nº 15 'Dra. Cecilia Grierson'",
+  "Escuela Lenguas Vivas",
+  "Escuela Manuel Belgrano H.H.M.M.",
+  "Escuela Media de Ituzaingó N",
+  "Escuela Nac. de Comercio Nº 32 'Dr. José L. Suárez'",
+  "Escuela Normal Superior Nº 4",
+  "Escuela Normal Superior Nº 5",
+  "Escuela Normal Superior Nº 7 José María Torres",
+  "Escuela Normal Superior Nº 12 de 15",
+  "Escuela Normal Superior Nº 10 'Juan B. Alberdi'",
+  "Escuela Normal Superior 'Estanislao S. Zeballos'",
+  "Escuela Superior de Comercio Nº 3 'Hipólito Vieytes'",
+  "Escuela Propuesta Actual",
+  "Escuela Raggio",
+  "Escuela Santa Catalina",
+  "Escuela Sec. Integral Scholem Aleijem",
+  "Instituto I.P.E.M. Nº 292, Adelia María (Córdoba)",
+  "Instituto Adveniat",
+  "Instituto Anunciación de María",
+  "Instituto Ballester",
+  "Instituto Beata Imelda",
+  "Instituto Bede",
+  "Instituto Carlos Pellegrini",
+  "Instituto Casa de Jesús",
+  "Instituto Colegio de Nuestra Señora",
+  "Instituto Compañía de María",
+  "Instituto Corazón Eucarístico de Jesús",
+  "Instituto Corazón de Jesús",
+  "Instituto de Educación Superior Toratenu",
+  "Instituto de Vanguardia",
+  "Instituto Dr. José Ingenieros",
+  "Instituto Educacional Duayén",
+  "Instituto Esquiú",
+  "Instituto Espíritu Santo",
+  "Instituto Euskal - Echea",
+  "Instituto Jesús María de San Vicente de Paul",
+  "Instituto José Hernández",
+  "Instituto León XIII",
+  "Instituto Madre del Buen Consejo",
+  "Instituto Manuel Belgrano - Hnos. Maristas",
+  "Instituto Marin",
+  "Instituto Nuestra Señora de la Misericordia",
+  "Instituto Nuevos Aires",
+  "Instituto Patrocinio de San José",
+  "Instituto San Ambrosio",
+  "Instituto San Juan Iluminador",
+  "Instituto San Nicolás",
+  "Instituto San Rafael Hermanos",
+  "Instituto Santa Rosa",
+  "Instituto Sara C. de Eccleston",
+  "Instituto Sarmiento",
+  "Instituto Secundario Propuesta Actual",
+  "Instituto Social Militar 'Dr. Dámaso Centeno'",
+  "Instituto Técnico Don Orione",
+  "Instituto Tomás Devoto",
+  "Instituto Virgen del Valle",
+  "Instituto Virgen Niña",
+  "Saint Brendan's College",
+  "Saint Edward's College",
+  "Saint Gregory School",
+  "Saint Leonard's College",
+  "Saint Martin in the Fields School",
+  "Saint Nicholas School",
+  "Saint Peter's School"
 ];
 const links = [
   {
@@ -144,6 +245,12 @@ for (let trabajo = 0; trabajo < trabajosAlumnos.length; trabajo++) {
     <div class="swiper-slide">
       <img src="/content/img/aulasAbiertas/Dibujo-Alumnos-${trabajosAlumnos[trabajo]}.png" alt="Trabajo Alumnos" />
     </div>
+  `;
+}
+
+for (let trabajoDesktop = 0; trabajoDesktop < trabajosAlumnos.length; trabajoDesktop++) {
+  trabajosAlumnosDesktop.innerHTML += `
+    <img class="trabajoAlumnoDesktop" src="/content/img/aulasAbiertas/Dibujo-Alumnos-${trabajosAlumnos[trabajoDesktop]}.png" alt="Trabajo Alumnos" />
   `;
 }
 
