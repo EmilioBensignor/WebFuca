@@ -155,6 +155,11 @@ html {
   display: flex;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .column {
   display: flex;
   flex-direction: column;

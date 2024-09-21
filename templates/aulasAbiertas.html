@@ -13,6 +13,7 @@
   <meta name="keywords" content="">
   <!--head-->
   <link href="/content/img/favicon-fuca.svg" rel="shortcut icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/content/css/main.css">
   <link rel="stylesheet" href="/content/css/aulasAbiertas.css">
 </head>
@@ -102,6 +103,35 @@
         INSCRIBÍ A TU COLEGIO EN AULAS ABIERTAS
       </a>
     </section>
+    <section class="colegiosParticiparon">
+      <h2 class="titleUnderline">
+        Colegios que participaron
+        <span class="greenUnderlineTitle"></span>
+      </h2>
+      <div id="colegiosContainer" class="colegiosContainer"></div>
+      <div class="center">
+        <button type="button" class="w-100 primaryButton">CARGAR MÁS</button>
+      </div>
+    </section>
+    <section class="inscribiSolicita">
+      <div id="linksContainer" class="linksContainer column"></div>
+    </section>
+    <section class="trabajosAcompanan">
+      <h2 class="titleUnderline">
+        Trabajos realizado por los alumnos
+        <span class="w-45 greenUnderlineTitle"></span>
+      </h2>
+      <div class="swiperTrabajosAlumnos">
+        <div id="trabajosAlumnosContenedor" class="swiper-wrapper"></div>
+      </div>
+      <h2 class="titleUnderline">
+        Acompañan
+        <span class="w-45 greenUnderlineTitle"></span>
+      </h2>
+      <div class="swiperAcompanan">
+        <div id="acompananContenedor" class="swiper-wrapper"></div>
+      </div>
+    </section>
   </main>
   <!--footer-->
   <footer>
@@ -186,6 +216,7 @@
     </div>
   </footer>
   <!--finbody-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/content/js/headerFooter.js"></script>
   <script src="/content/js/aulasAbiertas.js"></script>
 </body>

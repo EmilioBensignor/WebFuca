@@ -115,3 +115,113 @@ main>img {
   transform: translateY(-50%);
   transition: all 0.3s;
 }
+
+/* Colegios Participaron */
+
+.colegiosParticiparon {
+  background-color: #F2F2F2;
+  padding: 1.5rem 1rem;
+}
+
+.colegiosParticiparon .greenUnderlineTitle {
+  width: 43%;
+  border-width: 4px;
+}
+
+.colegiosContainer {
+  margin-top: 2rem;
+}
+
+.colegiosContainer p {
+  font-weight: 500;
+  line-height: 1.4rem;
+}
+
+.colegiosParticiparon button {
+  margin-top: 0.75rem;
+}
+
+/* Inscribi - Solicita */
+
+.inscribiSolicita {
+  padding: 1.5rem 1rem;
+}
+
+.linksContainer {
+  gap: 0.75rem;
+}
+
+.linkContainer div:first-child {
+  width: 18rem;
+  height: 9.375rem;
+}
+
+.inscribiImg {
+  background-image: url("/content/img/aulasAbiertas/Inscribi-Tu-Colegio.png");
+}
+
+.solicitaImg {
+  background-image: url("/content/img/aulasAbiertas/Guia-Actividades-Docentes.png");
+}
+
+.linkBody {
+  gap: 1rem;
+  padding: 1.5rem 2rem 1.5rem 1rem;
+}
+
+.linkBody img:first-child {
+  width: 3rem;
+  height: 3rem;
+}
+
+.linkBody div:first-of-type {
+  display: flex;
+  align-items: end;
+  gap: 3rem;
+}
+
+.linkBody div:first-of-type p {
+  font-weight: 700;
+}
+
+.iconFlecha {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Trabajos - Acompanan */
+
+.trabajosAcompanan {
+  position: relative;
+  padding: 1.5rem 1rem;
+}
+
+.swiperTrabajosAlumnos {
+  position: relative;
+  height: 10rem;
+  overflow: hidden;
+  z-index: 1;
+  margin: 1.5rem 0;
+}
+
+.swiperTrabajosAlumnos .swiper-slide {
+  width: 10rem;
+}
+
+.swiperTrabajosAlumnos img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.swiperAcompanan {
+  margin-top: 1.5rem;
+}
+
+.swiperAcompanan .swiper-slide {
+  width: 7.188rem;
+}
+
+.swiperAcompanan img {
+  height: 4rem;
+}
