@@ -86,7 +86,7 @@ for (let caracteristica = 0; caracteristica < caracteristicas.length; caracteris
   caracteristicasContainer.innerHTML += `
     <article class="caracteristica column ga-15">
       <img src="/content/img/aulasAbiertas/${caracteristicas[caracteristica].img}-icono.svg" alt="${caracteristicas[caracteristica].alt}">
-      <div>
+      <div class="caracteristicaBody">
         <p>${caracteristicas[caracteristica].texto}</p>
         <p class="font-weight-bold">${caracteristicas[caracteristica].dato}</p>
       </div>
