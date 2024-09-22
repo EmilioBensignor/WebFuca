@@ -247,38 +247,3 @@ for (let logo = 0; logo < nosAcompanan.length; logo++) {
     </div>
   `;
 }
-
-// $("#acompanan").slick({
-//   infinite: true,
-//   slidesToShow: 5,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   dots: false,
-//   autoplay: true,
-//   autoplaySpeed: 1000,
-//   speed: 500,
-//   swipeToSlide: false,
-//   variableWidth: true,
-//   responsive: [
-//     {
-//       breakpoint: 770,
-//       setting: {
-//         slidesToShow: 4,
-//         slidesToScroll: 1,
-//         initialSlide: 0,
-//         centerMode: true,
-
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       setting: {
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         initialSlide: 0,
-//         centerMode: true,
-        
-//       }
-//     }
-//   ],
-// });
