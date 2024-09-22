@@ -116,6 +116,10 @@ main {
   transition: all 0.3s;
 }
 
+.inscribiColegioBtn:hover::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
 /* Colegios Participaron */
 
 .colegiosParticiparon {

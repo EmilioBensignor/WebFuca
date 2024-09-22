@@ -1,10 +1,13 @@
 // Constantes
 const caracteristicasContainer = document.getElementById("caracteristicasContainer");
 const colegiosContainer = document.getElementById("colegiosContainer");
+const cargarMas = document.getElementById("cargarMas");
 const linksContainer = document.getElementById("linksContainer");
 const trabajosAlumnosContenedor = document.getElementById("trabajosAlumnosContenedor");
 const trabajosAlumnosDesktop = document.getElementById("trabajosAlumnosDesktop");
 const acompananContenedor = document.getElementById("acompananContenedor");
+
+let colegiosMostrados = 10;
 
 // Arrays
 const caracteristicas = [
@@ -196,11 +199,25 @@ for (let caracteristica = 0; caracteristica < caracteristicas.length; caracteris
 }
 
 // Colegios
-for (let colegio = 0; colegio < colegios.length; colegio++) {
-  colegiosContainer.innerHTML += `
-    <p>${colegios[colegio]}</p>
-  `;
+function mostrarColegios(inicio, fin) {
+  for (let i = inicio; i < fin && i < colegios.length; i++) {
+    const p = document.createElement('p');
+    p.textContent = colegios[i];
+    colegiosContainer.appendChild(p);
+  }
 }
+
+mostrarColegios(0, colegiosMostrados);
+
+cargarMas.addEventListener('click', () => {
+  const colegiosRestantes = colegios.length - colegiosMostrados;
+
+  if (colegiosRestantes > 0) {
+    mostrarColegios(colegiosMostrados, colegios.length);
+    colegiosMostrados = colegios.length;
+    cargarMas.style.display = 'none';
+  }
+});
 
 // Links
 for (let link = 0; link < links.length; link++) {
