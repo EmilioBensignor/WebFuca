@@ -221,7 +221,6 @@ for (let link = 0; link < links.length; link++) {
 // Swiper
 
 document.addEventListener('DOMContentLoaded', function () {
-
   if (document.querySelector('.swiperTrabajosAlumnos')) {
     const swiperTrabajosAlumnos = new Swiper('.swiperTrabajosAlumnos', {
       slidesPerView: "auto",
@@ -235,8 +234,6 @@ document.addEventListener('DOMContentLoaded', function () {
       spaceBetween: 16,
     });
   }
-
-  // Rest of your code
 });
 
 

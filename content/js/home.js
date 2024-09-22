@@ -92,7 +92,6 @@ const novedades = [
     cta: "INSCRIBIRME",
   },
 ];
-// Cambiar nombres
 const nosAcompanan = [
   {
     img: "racing_solidario",
@@ -150,7 +149,6 @@ const nosAcompanan = [
     alt: "Palo Santo"
   },
 ];
-const acompananDuplicados = [...nosAcompanan, ...nosAcompanan, ...nosAcompanan, ...nosAcompanan]
 
 // Redes Hero
 for (let iconRed = 0; iconRed < iconosRedes.length; iconRed++) {
@@ -205,10 +203,29 @@ for (let novedad = 0; novedad < novedades.length; novedad++) {
   `;
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.querySelector('.swiperAcompananHome')) {
+    const swiperAcompananHome = new Swiper('.swiperAcompananHome', {
+      slidesPerView: 2,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      spaceBetween: 16,
+      breakpoints: {
+        600: {
+          slidesPerView: 3,
+        }
+      }
+    })
+  }
+})
+
 // Slider Acompanan
 for (let logo = 0; logo < nosAcompanan.length; logo++) {
   acompanan.innerHTML += `
-    <div class="slideAcompanan flexCenter bg-white">
+    <div class="swiper-slide flexCenter bg-white">
       <a href="${nosAcompanan[logo].link}">
         <img src="/content/img/home/nos-acompanan/${nosAcompanan[logo].img}_blanco.svg" alt="${nosAcompanan[logo].alt}" />
       </a>
@@ -216,37 +233,37 @@ for (let logo = 0; logo < nosAcompanan.length; logo++) {
   `;
 }
 
-$("#acompanan").slick({
-  infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  arrows: false,
-  dots: false,
-  autoplay: true,
-  autoplaySpeed: 1000,
-  speed: 500,
-  swipeToSlide: false,
-  variableWidth: true,
-  responsive: [
-    {
-      breakpoint: 770,
-      setting: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        centerMode: true,
+// $("#acompanan").slick({
+//   infinite: true,
+//   slidesToShow: 5,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   dots: false,
+//   autoplay: true,
+//   autoplaySpeed: 1000,
+//   speed: 500,
+//   swipeToSlide: false,
+//   variableWidth: true,
+//   responsive: [
+//     {
+//       breakpoint: 770,
+//       setting: {
+//         slidesToShow: 4,
+//         slidesToScroll: 1,
+//         initialSlide: 0,
+//         centerMode: true,
 
-      }
-    },
-    {
-      breakpoint: 480,
-      setting: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        centerMode: true,
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       setting: {
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         initialSlide: 0,
+//         centerMode: true,
         
-      }
-    }
-  ],
-});
+//       }
+//     }
+//   ],
+// });

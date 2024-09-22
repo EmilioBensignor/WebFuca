@@ -235,15 +235,19 @@ h1 span {
   width: 7rem;
 }
 
-.slideAcompanan {
-  border-radius: 9px;
-  padding: 0.5rem 0.85rem;
-  margin: 0 0.5rem 1rem 0.5rem;
+.swiperAcompananHome {
+  overflow: hidden;
 }
 
-.slideAcompanan img {
+.swiperAcompananHome .swiper-slide {
+  width: 6.938rem;
+  border-radius: 9px;
+  padding: 0.5rem 0.85rem;
+}
+
+.swiperAcompananHome .swiper-slide img {
   width: 100%;
-  height: 4.5rem;
+  height: 4rem;
 }
 
 /* Newsletter */
