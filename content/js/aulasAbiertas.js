@@ -7,8 +7,6 @@ const trabajosAlumnosContenedor = document.getElementById("trabajosAlumnosConten
 const trabajosAlumnosDesktop = document.getElementById("trabajosAlumnosDesktop");
 const acompananContenedor = document.getElementById("acompananContenedor");
 
-let colegiosMostrados = 10;
-
 // Arrays
 const caracteristicas = [
   {
@@ -199,6 +197,9 @@ for (let caracteristica = 0; caracteristica < caracteristicas.length; caracteris
 }
 
 // Colegios
+let colegiosMostrados = 10;
+let mobileColegios = window.innerWidth < 1080;
+
 function mostrarColegios(inicio, fin) {
   for (let i = inicio; i < fin && i < colegios.length; i++) {
     const p = document.createElement('p');
@@ -207,7 +208,15 @@ function mostrarColegios(inicio, fin) {
   }
 }
 
-mostrarColegios(0, colegiosMostrados);
+function inicializarVistaColegios() {
+  if (mobileColegios) {
+    mostrarColegios(0, colegiosMostrados);
+    cargarMas.style.display = 'block';
+  } else {
+    mostrarColegios(0, colegios.length);
+    cargarMas.style.display = 'none';
+  }
+}
 
 cargarMas.addEventListener('click', () => {
   const colegiosRestantes = colegios.length - colegiosMostrados;
@@ -218,6 +227,8 @@ cargarMas.addEventListener('click', () => {
     cargarMas.style.display = 'none';
   }
 });
+
+inicializarVistaColegios();
 
 // Links
 for (let link = 0; link < links.length; link++) {
@@ -242,6 +253,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiperTrabajosAlumnos = new Swiper('.swiperTrabajosAlumnos', {
       slidesPerView: "auto",
       spaceBetween: 16,
+      breakpoints: {
+        700: {
+          spaceBetween: 80,
+        }
+      },
     });
   }
 

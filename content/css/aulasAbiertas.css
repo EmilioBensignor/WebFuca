@@ -41,6 +41,10 @@ main {
   padding: 1.5rem 1rem;
 }
 
+.h2NuestrosPilares span {
+  width: 7.688rem;
+}
+
 .contenidoAulasAbiertas>p {
   color: rgba(0, 0, 0, 0.8);
   margin: 2rem 0;
@@ -127,9 +131,8 @@ main {
   padding: 1.5rem 1rem;
 }
 
-.colegiosParticiparon .greenUnderlineTitle {
-  width: 43%;
-  border-width: 4px;
+.h2Colegios span {
+  width: 7.375rem;
 }
 
 .colegiosContainer {
@@ -156,7 +159,7 @@ main {
 }
 
 .linkContainer div:first-child {
-  width: 18rem;
+  width: 100%;
   height: 9.375rem;
 }
 
@@ -200,6 +203,10 @@ main {
   padding: 1.5rem 1rem;
 }
 
+.h2TrabajosRealizados span, .h2Acompanan span {
+  width: 7.688rem;
+}
+
 .trabajosAlumnosDesktop {
   display: none;
 }
@@ -233,6 +240,16 @@ main {
 
 .swiperAcompanan img {
   height: 4rem;
+}
+
+@media (width >=480px) {
+  .caracteristica {
+    width: 48%;
+  }
+
+  .linkContainer div:first-child {
+    height: 12rem;
+  }
 }
 
 @media (width >=700px) {
@@ -274,6 +291,30 @@ main {
   .objetivosContainer>p {
     margin: 0 0 1rem 0;
   }
+
+  .caracteristicasContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .linksContainer {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .linkBody div:first-of-type {
+    gap: 1rem;
+  }
+
+  .swiperTrabajosAlumnos {
+    height: 14rem;
+  }
+}
+
+@media (width >=800px) {
+  .linkBody div:first-of-type {
+    gap: 10rem;
+  }
 }
 
 @media (width >=1080px) {
@@ -306,7 +347,7 @@ main {
   .introDictado h1 {
     margin: 1.5rem 0 0.375rem 0;
   }
-  
+
   .dictadoClasesText {
     gap: 2rem;
   }
@@ -357,11 +398,6 @@ main {
 
   .inscribiTuColegio {
     padding: 3rem 2rem;
-  }
-
-  .caracteristicasContainer {
-    flex-direction: row;
-    flex-wrap: nowrap;
   }
 
   .caracteristica img {
@@ -416,13 +452,7 @@ main {
     padding: 3rem 0;
   }
 
-  .linksContainer {
-    flex-direction: row;
-    gap: 2rem;
-  }
-
   .linkContainer div:first-child {
-    width: 100%;
     height: 18.75rem;
   }
 
@@ -433,6 +463,10 @@ main {
   .linkBody img:first-child {
     width: 4.5rem;
     height: 4.5rem;
+  }
+
+  .linkBody div:first-of-type {
+    gap: 6rem;
   }
 
   .linkBody div:first-of-type p {
@@ -451,7 +485,7 @@ main {
   .swiperTrabajosAlumnos {
     display: none;
   }
-  
+
   .trabajosAlumnosDesktop {
     display: flex;
     flex-wrap: wrap;
@@ -461,13 +495,13 @@ main {
   }
 
   .trabajoAlumnoDesktop {
-    width: 14.75rem;
-    height: 14.75rem;
+    width: 23.5%;
+    height: 23.5%;
     border-radius: 9px;
   }
 
   .h2Acompanan span {
-    width: 12.5rem;
+    width: 9.5rem;
   }
 
   .swiperAcompanan .swiper-slide {
@@ -487,6 +521,11 @@ main {
 
   .dictadoClasesText {
     gap: 0.5rem;
+  }
+
+  .linkBody div:first-of-type {
+    justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -519,5 +558,21 @@ main {
 
   .contenidoAulasAbiertas ul li {
     width: 47%;
+  }
+
+  .colegiosContainer p {
+    width: 20rem;
+  }
+
+  .linkContainer div:first-child {
+    height: 21rem;
+  }
+
+  .trabajosAlumnosDesktop {
+    gap: 0.5rem;
+  }
+
+  .trabajoAlumnoDesktop {
+    width: 11.5%;
   }
 }
