@@ -1,0 +1,200 @@
+/* Recibos */
+
+.recibos {
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.recibos p {
+  text-align: center;
+}
+
+.recibos>p:first-of-type {
+  font-weight: 700;
+}
+
+.recibos>div>p {
+  font-size: 0.875rem;
+}
+
+.mailDonaciones {
+  color: var(--color-primario);
+}
+
+.greenUnderlineTitle {
+  width: 6rem;
+}
+
+/* Formas */
+
+.otrasFormas {
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.otrasFormas>div:first-of-type p {
+  font-size: 0.875rem;
+}
+
+.formas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.forma {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #F2F2F2;
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.formaIcon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.banco {
+  background-image: url("/content/img/donaciones/Banco-Icon.svg");
+}
+
+.ayudar {
+  background-image: url("/content/img/donaciones/Ayudar-Icon.svg");
+}
+
+.cheque {
+  background-image: url("/content/img/donaciones/Cheque-Icon.svg");
+}
+
+.homeBanking {
+  background-image: url("/content/img/donaciones/Home-Banking-Icon.svg");
+}
+
+.mercadoPago {
+  background-image: url("/content/img/donaciones/Mercado-Pagao-Icon.svg");
+}
+
+.forma div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.forma h3 {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.forma ul {
+  list-style: inside;
+  padding-left: 1.5rem;
+}
+
+.forma ul li {
+  list-style-type: inherit;
+  font-size: 0.875rem;
+}
+
+.forma a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+.forma button {
+  border: none;
+  background: none;
+  color: var(--color-primario);
+  cursor: pointer;
+}
+
+.forma div p {
+  font-size: 0.875rem;
+}
+
+/* QR */
+
+.qrModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 2.75rem;
+}
+
+.contenidoModalQr {
+  gap: 1rem;
+  background-color: white;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+}
+
+.qrImagen {
+  width: 100%;
+  height: 100%;
+}
+
+.cerrarQR {
+  width: 85%;
+  background-color: #00bfa5;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.875rem;
+}
+
+.close-btn:hover {
+  background-color: #008c7a;
+}
+
+
+/* Porque Donar */
+
+.porqueDonar {
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.porqueDonar div {
+  gap: 1.5rem;
+}
+
+.porqueDonar div img {
+  width: 100%;
+  height: 100%;
+}
+
+.porqueDonar div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.porqueDonar div p {
+  font-size: 0.875rem;
+}
+
+.porqueDonar div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: inside;
+  padding-left: 1.5rem;
+}
+
+.porqueDonar div ul li {
+  list-style-type: inherit;
+  font-size: 0.875rem;
+}
