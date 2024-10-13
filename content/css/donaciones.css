@@ -198,3 +198,79 @@
   list-style-type: inherit;
   font-size: 0.875rem;
 }
+
+.blank {
+  display: none;
+}
+
+@media (width >=1080px) {
+  .greenUnderlineTitle {
+    width: 7.5rem;
+    border-width: 4.5px;
+  }
+
+  .recibos {
+    padding: 1.5rem 14.375rem;
+  }
+
+  .recibos>p, .recibos>div>p {
+    font-size: 1.25rem;
+  }
+
+  .otrasFormas {
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .otrasFormas>div:first-of-type p {
+    font-size: 1rem;
+  }
+
+  .formas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .forma {
+    width: 20rem;
+  }
+
+  .porqueDonar {
+    gap: 0;
+    padding: 0;
+  }
+
+  .porqueDonar > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  .porqueDonar > div:first-of-type {
+    flex-direction: row-reverse;
+  }
+
+  .porqueDonar > div > div {
+    padding: 2rem;
+  }
+
+  .porqueDonar div div {
+    width: 94%;
+    gap: 2rem;
+  }
+
+  .porqueDonar h2 {
+    font-size: 1.25rem;
+  }
+
+  .porqueDonar div ul li, .porqueDonar div p {
+    font-size: 1rem;
+  }
+
+  .blank {
+    display: block;
+    height: 3rem;
+    background-color: white;
+  }
+}

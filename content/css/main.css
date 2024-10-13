@@ -758,6 +758,21 @@ header {
     padding: 2.25rem 3rem;
   }
 
+  .heroGradient {
+    padding: 1.5rem 0;
+  }
+
+  .heroGradient>div {
+    height: 25rem;
+    background-image: url("/content/img/donaciones/Fuca-Vector-Desktop.svg");
+    padding: 0 3rem;
+  }
+
+  .heroGradient>div>h1 {
+    width: 100%;
+    font-size: 3rem;
+  }
+
   /* Fuca */
 
   h1 {
