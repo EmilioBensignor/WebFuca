@@ -3,6 +3,10 @@ const modalConfigs = {
     modalText: "Dejá tus datos para poder inscribir a tu colegio en Aulas Abiertas.",
     buttonText: "INSCRIBIR A MI COLEGIO"
   },
+  bibliotecaBiometica: {
+    modalText: "Dejá tus datos para poder inscribir a tu colegio en Aulas Abiertas.",
+    buttonText: "INSCRIBIR A MI COLEGIO"
+  },
 };
 
 function createModal(configKey) {

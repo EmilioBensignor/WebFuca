@@ -1,4 +1,7 @@
 const accionesContainer = document.getElementById("accionesContainer");
+const linksRedioContainer = document.getElementById("linksRedioContainer");
+const equipoContainer = document.getElementById("equipoContainer");
+const colaboradoresContainer = document.getElementById("colaboradoresContainer");
 
 let acciones = [
   {
@@ -26,6 +29,59 @@ let acciones = [
     texto: "Colaboración y participación docente en programas propios o de distintos Departamentos del Instituto.",
   },
 ];
+let linksRedio = [
+  {
+    link: "#",
+    meses: "ENERO-FEBRERO",
+    anio: "2024",
+  },
+  {
+    link: "#",
+    meses: "OCTUBRE-DICIEMBRE",
+    anio: "2023",
+  },
+  {
+    link: "#",
+    meses: "JULIO-SEPTIEMBRE",
+    anio: "2023",
+  },
+  {
+    link: "#",
+    meses: "ABRIL-JUNIO",
+    anio: "2023",
+  },
+];
+let equipo = [
+  {
+    nombre: "Prof. María Luisa Poljak",
+    rol: "Coordinadora general",
+  },
+  {
+    nombre: "DG. Daniela Callegari",
+    rol: "Coordinadora en comunicación",
+  },
+  {
+    nombre: "Dr. Reinaldo Chacón",
+    rol: "Asesor académico",
+  },
+  {
+    nombre: "Dr. José Mordoh",
+    rol: "Asesor científico",
+  },
+];
+let colaboradores = [
+  {
+    nombre: "Dr. Martín Ángel",
+    rol: "Asesor médico y representante formación médica",
+  },
+  {
+    nombre: "Dra. Ayelén Pesce Viglietti",
+    rol: "Representante Centro de Investigaciones Oncológicas CIO",
+  },
+  {
+    nombre: "Servicios del Instituto Alexander Fleming",
+  },
+];
 
 for (let accion = 0; accion < acciones.length; accion++) {
   accionesContainer.innerHTML += `
@@ -34,4 +90,39 @@ for (let accion = 0; accion < acciones.length; accion++) {
       <p>${acciones[accion].texto}</p>
     </div>
   `;
+}
+
+for (let link = 0; link < linksRedio.length; link++) {
+  linksRedioContainer.innerHTML += `
+    <a href="${linksRedio[link].link}" target="_blank">
+      <p>${linksRedio[link].meses}</p>
+      <p>${linksRedio[link].anio}</p>
+    </a>
+  `;
+}
+
+for (let profesional = 0; profesional < equipo.length; profesional++) {
+  equipoContainer.innerHTML += `
+    <div class="w-100 equipo">
+      <p>${equipo[profesional].nombre}</p>
+      <p>${equipo[profesional].rol}</p>
+    </div>
+  `;
+}
+
+for (let colaborador = 0; colaborador < colaboradores.length; colaborador++) {
+  if (colaboradores[colaborador].rol) {
+    colaboradoresContainer.innerHTML += `
+      <div class="w-100 colaborador">
+        <p>${colaboradores[colaborador].nombre}</p>
+        <p>${colaboradores[colaborador].rol}</p>
+      </div>
+    `;
+  } else {
+    colaboradoresContainer.innerHTML += `
+      <div class="w-100 colaborador">
+        <p>${colaboradores[colaborador].nombre}</p>
+      </div>
+    `;
+  }
 }
