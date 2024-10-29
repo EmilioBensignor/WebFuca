@@ -1,0 +1,513 @@
+/* Introduccion */
+
+.introBiblioteca {
+  padding: 1.5rem 1rem;
+}
+
+.introBiblioteca p {
+  font-size: 0.875rem;
+}
+
+/* Mision */
+
+.misionBiblioteca {
+  gap: 1.5rem;
+  background-color: #088896;
+  padding: 1.5rem 1rem;
+}
+
+.misionBiblioteca img {
+  object-fit: cover;
+}
+
+.misionBiblioteca div {
+  gap: 0.75rem;
+}
+
+.misionBiblioteca div ul {
+  gap: 1.5rem;
+  list-style: inside;
+  padding-left: 1.25rem;
+}
+
+.misionBiblioteca div ul li {
+  color: rgba(256, 256, 256, 0.8);
+  font-size: 0.875rem;
+  list-style-type: inherit;
+}
+
+/* Lineas Accion */
+
+.lineasAccion {
+  gap: 2rem;
+  background-color: #F2F2F2;
+  padding: 1.5rem 1rem;
+}
+
+.accionesContainer {
+  gap: 0.75rem;
+}
+
+.accionesContainer>div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: white;
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.accionesContainer>div p {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.iconoAccion {
+  width: 3rem;
+  height: 3rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.AccionRedes {
+  background-image: url("/content/img/bibliotecaBiomedica/Accion-Redes.svg");
+}
+
+.AccionLibros {
+  background-image: url("/content/img/bibliotecaBiomedica/Accion-Libros.svg");
+}
+
+.AccionCompartir {
+  background-image: url("/content/img/bibliotecaBiomedica/Accion-Compartir.svg");
+}
+
+.AccionArchivos {
+  background-image: url("/content/img/bibliotecaBiomedica/Accion-Archivos.svg");
+}
+
+.AccionRed {
+  background-image: url("/content/img/bibliotecaBiomedica/Accion-Red.svg");
+}
+
+.AccionDialogo {
+  background-image: url("/content/img/bibliotecaBiomedica/Accion-Dialogo.svg");
+}
+
+/* Servicios Tecnologias */
+
+.tecNone {
+  display: none;
+}
+
+.serviciosTecnologias {
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.serviciosTecnologias>div {
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.serviciosTecnologias>div>div {
+  gap: 0.75rem;
+}
+
+.serviciosTecnologias>div>div>ul {
+  gap: 0.75rem;
+  list-style: inside;
+  padding-left: 1.25rem;
+}
+
+.serviciosTecnologias>div>div>ul li {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.875rem;
+  list-style-type: inherit;
+}
+
+/* Redio */
+
+.redio {
+  gap: 1.5rem;
+  background-color: #F2F2F2;
+  padding: 1.5rem 1rem;
+}
+
+.redio>div:first-of-type {
+  gap: 1.5rem;
+}
+
+.redio>div:first-of-type p {
+  font-size: 0.875rem;
+}
+
+.linksRedioContainer {
+  gap: 0.75rem;
+}
+
+.linksRedioContainer>button {
+  width: 100%;
+  border: 1px solid var(--color-primario);
+  border-radius: 9px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+
+.linksRedioContainer>button p {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-primario);
+}
+
+.linksRedioContainer>button p:last-of-type {
+  font-size: 2.25rem;
+}
+
+/* Informacion Cientifica */
+
+.informacionCientifica {
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.informacionCientifica>div,
+.informacionCientifica>div>div {
+  gap: 1.5rem;
+}
+
+.informacionCientifica>div:first-of-type p {
+  font-size: 0.875rem;
+}
+
+.ingresarLinkedin,
+.solicitarMembresia {
+  width: max-content;
+  align-self: center;
+  position: relative;
+  font-size: 1rem;
+  padding: 0.875rem 3rem 0.75rem 2.5rem;
+  transition: all 0.3s;
+}
+
+.ingresarLinkedin::after,
+.solicitarMembresia::after {
+  width: 1rem;
+  height: 1rem;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+.ingresarLinkedin::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+}
+
+.ingresarLinkedin:hover::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
+.equipoColaboradores,
+.equipoColaboradores>div,
+.equipoContainer,
+.colaboradoresContainer,
+.colaboradoresContainer>div {
+  gap: 1.5rem;
+}
+
+.equipoContainer div p,
+.colaboradoresContainer div p {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.equipoContainer div p:first-of-type,
+.colaboradoresContainer div p:first-of-type {
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+/* Tu crecimiento */
+
+.tuCrecimiento {
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.tuCrecimiento>div {
+  gap: 1rem;
+}
+
+.solicitarMembresia {
+  padding: 0.875rem 3rem 0.75rem 2.5rem;
+}
+
+.solicitarMembresia::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
+.solicitarMembresia:hover::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+}
+
+@media (width >=600px) {
+  .accionesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .accionesContainer>div {
+    height: 100%;
+  }
+
+  .linksRedioContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (width >=700px) {
+
+  .introBiblioteca,
+  .misionBiblioteca,
+  .lineasAccion,
+  .serviciosTecnologias,
+  .redio,
+  .informacionCientifica,
+  .tuCrecimiento {
+    padding: 2rem 1.5rem;
+  }
+
+  .introBiblioteca p,
+  .misionBiblioteca div ul li,
+  .accionesContainer>div p,
+  .serviciosTecnologias>div>div>ul li,
+  .redio>div:first-of-type p,
+  .linksRedioContainer>button p,
+  .informacionCientifica>div:first-of-type p,
+  .equipoContainer div p,
+  .colaboradoresContainer div p {
+    font-size: 1rem;
+  }
+
+  .misionBiblioteca img,
+  .serviciosTecnologias>div img,
+  .linkedinEquipoColaboradores>div>img {
+    max-height: 440px;
+    object-fit: cover;
+  }
+}
+
+@media (width >=1080px) {
+  .introBiblioteca {
+    padding: 3rem 2rem;
+  }
+
+  .misionBiblioteca {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .misionBiblioteca h2 {
+    font-size: 1.5rem;
+  }
+
+  .misionBiblioteca div {
+    width: 100%;
+    gap: 1rem;
+    padding-right: 2rem;
+  }
+
+  .lineasAccion {
+    padding: 3rem 2rem;
+  }
+
+  .accionesContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .accionesContainer>div {
+    height: 16.25rem;
+    padding: 1.5rem;
+  }
+
+  .serviciosTecnologias {
+    gap: 0;
+    padding: 0;
+  }
+
+  .tecNone {
+    display: block;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .misionBiblioteca img,
+  .serviciosTecnologias>div img,
+  .linkedinEquipoColaboradores>div>img {
+    max-height: 100%;
+  }
+
+  .serviciosTecnologias img {
+    width: 50%;
+    height: 44.5rem;
+    object-fit: cover;
+  }
+
+  .serviciosTecnologias>div {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .serviciosTecnologias>div>div {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .redio {
+    padding: 3rem 2rem;
+  }
+
+  .redio>div:first-of-type {
+    gap: 2rem;
+  }
+
+  .redio>div:first-of-type p {
+    font-size: 1rem;
+  }
+
+  .linksRedioContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .linksRedioContainer>button p {
+    font-size: 1rem;
+  }
+
+  .informacionCientifica {
+    gap: 0;
+    padding: 0;
+  }
+
+  .informacionCientifica>div:first-of-type {
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .informacionCientifica .linkedinEquipoColaboradores {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .linkedinEquipoColaboradores>div:first-of-type {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+
+  .equipoColaboradores {
+    width: 92.5%;
+    padding: 0 2rem 3rem 2rem;
+  }
+
+  .equipoColaboradores,
+  .equipoColaboradores>div,
+  .equipoContainer,
+  .colaboradoresContainer,
+  .colaboradoresContainer>div {
+    gap: 2rem;
+  }
+
+  .equipoContainer div p,
+  .colaboradoresContainer div p {
+    font-size: 1rem;
+  }
+
+  .ingresarLinkedin {
+    align-self: flex-end;
+    padding: 0.875rem 3rem 0.875rem 2.5rem;
+  }
+
+  .tuCrecimiento {
+    align-items: flex-start;
+    padding: 3rem 2rem;
+  }
+
+  .solicitarMembresia {
+    align-self: flex-start;
+  }
+}
+
+@media (width >=1280px) {
+
+  .introBiblioteca {
+    padding: 5rem 2rem;
+  }
+
+  .introBiblioteca p,
+  .misionBiblioteca div ul li,
+  .accionesContainer>div p,
+  .serviciosTecnologias>div>div>ul li,
+  .redio>div:first-of-type p,
+  .linksRedioContainer>button p,
+  .informacionCientifica>div:first-of-type p,
+  .equipoContainer div p,
+  .colaboradoresContainer div p,
+  .tuCrecimiento p,
+  .tecNone {
+    font-size: 1.125rem;
+  }
+}
+
+@media (width >=1440px) {
+
+  .introBiblioteca,
+  .lineasAccion,
+  .redio,
+  .tuCrecimiento,
+  .informacionCientifica>div:first-of-type {
+    padding: 4rem 4.93rem;
+  }
+
+  .misionBiblioteca div,
+  .serviciosTecnologias>div>div,
+  .equipoColaboradores {
+    padding-right: 4.93rem;
+  }
+}
+
+@media (width >=1600px) {
+
+  .introBiblioteca {
+    padding: 6rem 4.93rem;
+  }
+
+  .introBiblioteca p,
+  .misionBiblioteca div ul li,
+  .accionesContainer>div p,
+  .serviciosTecnologias>div>div>ul li,
+  .redio>div:first-of-type p,
+  .linksRedioContainer>button p,
+  .informacionCientifica>div:first-of-type p,
+  .equipoContainer div p,
+  .colaboradoresContainer div p,
+  .tecNone,
+  .tuCrecimiento p {
+    font-size: 1.25rem;
+  }
+
+  .serviciosTecnologias>div>div {
+    gap: 1.25rem;
+  }
+}
