@@ -1,0 +1,137 @@
+/* Generales */
+
+.introEducacion,
+.formacionesExcelencia {
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.introEducacion p,
+.medicosBecarios p,
+.forma p,
+.apoyaEducacion p {
+  font-size: 0.875rem;
+}
+
+/* Medicos Becarios */
+
+.medicosBecarios {
+  background-color: #088896;
+}
+
+.medicosBecarios div {
+  gap: 1.5rem;
+}
+
+/* Formaciones Excelencia */
+
+.formacionesExcelencia {
+  background-color: #F2F2F2;
+}
+
+.formacionesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.forma {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: white;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0.75rem;
+}
+
+.forma div {
+  width: 3rem;
+  height: 3rem;
+}
+
+.oncoClinica {
+  background-image: url("/content/img/educacionMedica/OncoClinica.svg");
+}
+
+.mastologia {
+  background-image: url("/content/img/educacionMedica/Mastologia.svg");
+}
+
+.hematologia {
+  background-image: url("/content/img/educacionMedica/Hematologia.svg");
+}
+
+.urologia {
+  background-image: url("/content/img/educacionMedica/Urologia.svg");
+}
+
+.ortopedia {
+  background-image: url("/content/img/educacionMedica/Ortopedia.svg");
+}
+
+.torax {
+  background-image: url("/content/img/educacionMedica/Torax.svg");
+}
+
+.psico {
+  background-image: url("/content/img/educacionMedica/Psico.svg");
+}
+
+.dxi {
+  background-image: url("/content/img/educacionMedica/DXI.svg");
+}
+
+/* Apoya Educacion */
+
+.apoyaEducacion {
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+}
+
+.apoyaEducacion div {
+  gap: 0.5rem;
+}
+
+@media (width >=1080px) {
+
+  .introEducacion,
+  .medicosBecarios,
+  .formacionesExcelencia {
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .introEducacion p,
+  .medicosBecarios p {
+    font-size: 1rem;
+  }
+
+  .medicosBecarios {
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+  }
+
+  .medicosBecarios div {
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .formacionesContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .apoyaEducacion {
+    gap: 1.5rem;
+    padding: 3rem;
+  }
+
+  .apoyaEducacion p {
+    font-size: 1.25rem;
+  }
+
+}

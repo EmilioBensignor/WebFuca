@@ -42,3 +42,12 @@ let formas = [
     texto: "Residencia en DXI",
   },
 ];
+
+for (let forma = 0; forma < formas.length; forma++) {
+  formacionesContainer.innerHTML += `
+    <a class="forma" href="${formas[forma].link}">
+      <div class="bgImgContain ${formas[forma].img}"></div>
+      <p>${formas[forma].texto}</p>
+    </a>
+  `;
+}
