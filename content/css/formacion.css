@@ -1,0 +1,58 @@
+main {
+  background-color: white;
+}
+
+.formacion {
+  gap: 0.75rem;
+  border-bottom: 1px solid #F2F2F2;
+  padding: 1.5rem 0;
+  margin: 0 1rem;
+}
+
+.formacion ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: inside;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.formacion ul li {
+  font-weight: 400;
+  list-style-type: inherit;
+}
+
+.formacion ul li, .formacion p {
+  font-size: 0.875rem;
+}
+
+.formacion h3 {
+  font-size: 1rem;
+}
+
+.formacion:last-of-type {
+  border-bottom: none;
+}
+
+@media (width >=1080px) {
+  .formacion {
+    gap: 2rem;
+    padding: 2.25rem 0;
+    margin: 0 2rem;
+  }
+
+  .formacion ul {
+    gap: 1rem;
+    padding-left: 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .formacion ul li, .formacion p {
+    font-size: 1rem;
+  }
+
+  .formacion h3 {
+    font-size: 1.25rem;
+  }
+}
