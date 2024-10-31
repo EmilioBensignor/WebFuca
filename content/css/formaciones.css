@@ -27,18 +27,25 @@ main {
   font-size: 0.875rem;
 }
 
-.formacion h3 {
-  font-size: 1rem;
-}
-
 .formacion:last-of-type {
   border-bottom: none;
+}
+
+@media (width >=700px) {
+  .formacion {
+    padding: 2rem 0;
+    margin: 0 1.5rem;
+  }
+
+  .formacion ul li, .formacion p {
+    font-size: 1rem;
+  }
 }
 
 @media (width >=1080px) {
   .formacion {
     gap: 2rem;
-    padding: 2.25rem 0;
+    padding: 3rem 0;
     margin: 0 2rem;
   }
 
@@ -47,12 +54,22 @@ main {
     padding-left: 1.75rem;
     margin-top: 1.5rem;
   }
+}
 
-  .formacion ul li, .formacion p {
-    font-size: 1rem;
+@media (width >=1440px) {
+  .formacion {
+    padding: 4rem 0;
+    margin: 0 4.93rem;
   }
 
-  .formacion h3 {
+  .formacion ul li, .formacion p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (width >=1600px) {
+
+  .formacion ul li, .formacion p {
     font-size: 1.25rem;
   }
 }

@@ -1,7 +1,8 @@
 /* Generales */
 
 .introEducacion,
-.formacionesExcelencia {
+.formacionesExcelencia,
+.medicosBecarios {
   gap: 1.5rem;
   padding: 1.5rem 1rem;
 }
@@ -17,6 +18,11 @@
 
 .medicosBecarios {
   background-color: #088896;
+}
+
+.medicosBecarios img {
+  max-height: 375px;
+  object-fit: cover;
 }
 
 .medicosBecarios div {
@@ -96,6 +102,27 @@
   gap: 0.5rem;
 }
 
+@media (width >=700px) {
+
+  .introEducacion,
+  .medicosBecarios,
+  .formacionesExcelencia {
+    padding: 2rem 1.5rem;
+  }
+
+  .introEducacion p,
+  .medicosBecarios p,
+  .forma p,
+  .apoyaEducacion p {
+    font-size: 1rem;
+  }
+
+  .medicosBecarios img {
+    max-height: 500px;
+  }
+
+}
+
 @media (width >=1080px) {
 
   .introEducacion,
@@ -103,11 +130,6 @@
   .formacionesExcelencia {
     gap: 2rem;
     padding: 3rem 2rem;
-  }
-
-  .introEducacion p,
-  .medicosBecarios p {
-    font-size: 1rem;
   }
 
   .medicosBecarios {
@@ -134,4 +156,36 @@
     font-size: 1.25rem;
   }
 
+}
+
+@media (width >=1440px) {
+
+  .introEducacion,
+  .formacionesExcelencia,
+  .medicosBecarios div {
+    padding: 4rem 4.93rem;
+  }
+
+  .introEducacion p,
+  .medicosBecarios p,
+  .forma p,
+  .apoyaEducacion p {
+    font-size: 1.125rem;
+  }
+
+}
+
+@media (width >=1600px) {
+
+  .introEducacion {
+    padding: 6rem 4.93rem;
+  }
+
+  .introEducacion p,
+  .medicosBecarios p,
+  .forma p,
+  .apoyaEducacion p {
+    font-size: 1.25rem;
+
+  }
 }
