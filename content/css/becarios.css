@@ -1,0 +1,49 @@
+.becarios {
+  padding: 1.5rem 1rem;
+}
+
+.becarios p, .donacionVidas p {
+  font-size: 0.875rem;
+}
+
+.buttonsBecarios {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btnBecarios {
+  border: 1px solid var(--color-primario);
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.78rem 0.75rem;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.inactive {
+  background-color: white;
+  color: var(--color-primario);
+}
+
+.becarionContainer {
+  display: none;
+  padding-top: 1.5rem;
+}
+
+.becarionContainer.activeContent {
+  display: block;
+}
+
+.donacionVidas {
+  background-color: #F2F2F2;
+  padding: 1.5rem 1rem;
+}
+
+.donacionVidas a {
+  margin-top: 0.75rem;
+}
