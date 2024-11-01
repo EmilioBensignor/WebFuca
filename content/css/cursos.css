@@ -1,0 +1,22 @@
+.campusCurso {
+  padding: 1.5rem 1rem;
+}
+
+.campusCurso > div, .campusCurso a {
+  width: 100%;
+  background-color: #F2F2F2;
+  text-decoration: none;
+}
+
+.campusCurso > div div, .campusCurso > a div {
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.campusCurso > div a {
+  margin-top: 0.5rem;
+}
+
+.campusCurso {
+  gap: 0.75rem;
+}
