@@ -36,15 +36,17 @@
       </div>
     </section>
     <section class="campusCurso columnAlignCenter">
-      <div>
+      <div class="campus column">
         <img class="w-100" src="/content/img/cursos/Campus-Virtual.png" alt="Campus Virtual Fuca">
         <div class="column">
           <h2>Campus</h2>
           <p>Campus virtual de capacitación para profesionales especializados en oncología.</p>
+          <a class="primaryButton ingresarCampus" href="#" target="_blank">INGRESAR AL CAMPUS</a>
         </div>
-        <a class="primaryButton" href="#">INGRESAR AL CAMPUS</a>
       </div>
-      <a href="#">
+      <a class="curso column"
+      target="_blank"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSf8NQ8c1r9TDOLCEKKnD0GiHJ9l-mG3ewndh3LYCM8RbrKO5w/viewform">
         <img class="w-100" src="/content/img/cursos/Curso-Oncologia-Molecular.png" alt="Curso Oncologia Molecular">
         <div class="column">
           <h2>Curso de Oncología Molecular</h2>
@@ -56,16 +58,24 @@
         </p>
       </a>
     </section>
-    <section>
-      Acompanan
+    <section class="acompanan column">
+      <h2 class="w-100 titleUnderline">
+        Acompañan
+        <span class="greenUnderlineTitle"></span>
+      </h2>
+      <div class="swiperAcompananCursos">
+        <div id="acompananCursos" class="swiper-wrapper mt-15"></div>
+      </div>
     </section>
-    <section>
-      <h2>Tu crecimiento profesional, nuestro compromiso</h2>
-      <p>
-        Unite a nuestra biblioteca biomédica. Como miembro, tendrás acceso a material científico de relevancia y
-        recursos de información para investigadores y profesionales médicos.
-      </p>
-      <button>SOLICITAR MEMBRESÍA</button>
+    <section class="tuCrecimiento columnAlignCenter">
+      <div class="column">
+        <h2>Tu crecimiento profesional, nuestro compromiso</h2>
+        <p>
+          Unite a nuestra biblioteca biomédica. Como miembro, tendrás acceso a material científico de relevancia y
+          recursos de información para investigadores y profesionales médicos.
+        </p>
+      </div>
+      <button onclick="createModal('cursos')" class="secondaryButton solicitarMembresia">SOLICITAR MEMBRESÍA</button>
     </section>
   </main>
   <!--footer-->
@@ -154,7 +164,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/content/js/headerFooter.js"></script>
   <script src="/content/js/pages.js"></script>
-  <script src="/content/js/cursos.js"></script>
+  <script type="module" src="/content/js/cursos.js"></script>
 </body>
 
 </html>

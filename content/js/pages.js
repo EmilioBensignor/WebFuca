@@ -7,6 +7,10 @@ const modalConfigs = {
     modalText: "Dejá tus datos para poder unirte a nuestra Biblioteca Biomédica.",
     buttonText: "UNIRME A LA BIBLIOTECA"
   },
+  cursos: {
+    modalText: "Dejá tus datos para poder unirte a nuestra Biblioteca Biomédica.",
+    buttonText: "UNIRME A LA BIBLIOTECA"
+  },
 };
 
 function createModal(configKey) {

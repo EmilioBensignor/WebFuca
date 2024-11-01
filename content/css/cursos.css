@@ -1,22 +1,158 @@
-.campusCurso {
+/* Campus - Curso */
+
+.campusCurso,
+.tuCrecimiento {
+  gap: 1.5rem;
   padding: 1.5rem 1rem;
 }
 
-.campusCurso > div, .campusCurso a {
+.campus,
+.curso {
   width: 100%;
+  gap: 1.5rem;
   background-color: #F2F2F2;
   text-decoration: none;
 }
 
-.campusCurso > div div, .campusCurso > a div {
-  gap: 1rem;
-  padding: 0 1rem;
+.campus img,
+.curso img {
+  object-fit: cover;
 }
 
-.campusCurso > div a {
+.campus div,
+.curso div {
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.curso div {
+  color: black;
+}
+
+.campus p,
+.curso p,
+.tuCrecimiento p {
+  font-size: 0.875rem;
+}
+
+.ingresarCampus {
   margin-top: 0.5rem;
 }
 
-.campusCurso {
-  gap: 0.75rem;
+.ingresarCampus,
+.solicitarMembresia {
+  width: max-content;
+  align-self: center;
+  position: relative;
+  font-size: 1rem;
+  padding: 0.875rem 2.5rem 0.75rem 1.5rem;
+  transition: all 0.3s;
+}
+
+.ingresarCampus::after,
+.solicitarMembresia::after {
+  width: 1rem;
+  height: 1rem;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+.ingresarCampus::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+}
+
+.ingresarCampus:hover::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
+/* Acompanan */
+
+.acompanan {
+  padding-bottom: 1.5rem;
+}
+
+.acompanan h2 {
+  padding-left: 1rem;
+}
+
+.swiperAcompananCursos {
+  overflow: hidden;
+}
+
+.swiperAcompananCursos .swiper-slide {
+  width: 6.938rem;
+  background-color: #F2F2F2;
+  border-radius: 9px;
+  padding: 0.5rem 0.85rem;
+}
+
+.swiperAcompananCursos .swiper-slide img {
+  width: 100%;
+  height: 4rem;
+}
+
+/* Tu crecimiento */
+
+.tuCrecimiento {
+  background-color: #17AF95;
+  color: white;
+}
+
+.tuCrecimiento div {
+  gap: 1rem;
+}
+
+.solicitarMembresia {
+  padding: 0.875rem 3.25rem 0.75rem 2.25rem;
+}
+
+.solicitarMembresia::after {
+  right: 1.5rem;
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
+.solicitarMembresia:hover::after {
+  background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+}
+
+@media (width >=1080px) {
+  .campusCurso {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .ingresarCampus,
+  .solicitarMembresia {
+    align-self: flex-start;
+  }
+
+  .ingresarCampus {
+    margin-top: 1rem;
+  }
+
+  .campus p,
+  .curso p,
+  .tuCrecimiento p {
+    font-size: 1rem;
+  }
+
+  .acompanan {
+    padding-bottom: 3rem;
+  }
+
+  .acompanan h2 {
+    padding-left: 2rem;
+  }
+
+  .tuCrecimiento {
+    padding: 3rem 2rem;
+  }
 }
