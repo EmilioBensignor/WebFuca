@@ -2,7 +2,8 @@
   padding: 1.5rem 1rem;
 }
 
-.becarios p, .donacionVidas p {
+.becarios p,
+.donacionVidas p {
   font-size: 0.875rem;
 }
 
@@ -30,14 +31,60 @@
   color: var(--color-primario);
 }
 
-.becarionContainer {
+.becariosContainer {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   padding-top: 1.5rem;
 }
 
-.becarionContainer.activeContent {
-  display: block;
+.becariosContainer.activeContent {
+  display: flex;
 }
+
+.becariosContainer h2,
+.becariosContainer h3 {
+  width: 100%;
+  border-top: 1px solid #F2F2F2;
+  padding-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.becariosContainer h3 {
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.becariosContainer h2:first-of-type,
+.becariosContainer h3:first-of-type {
+  border: none;
+  padding: 0;
+}
+
+.becarioCard {
+  gap: 0.75rem;
+}
+
+.becarioInfo {
+  gap: 0.5rem;
+}
+
+.nombre {
+  font-weight: 700;
+}
+
+.anios {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.lugar {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Donacion Vidas */
 
 .donacionVidas {
   background-color: #F2F2F2;
@@ -46,4 +93,24 @@
 
 .donacionVidas a {
   margin-top: 0.75rem;
+}
+
+@media (width >=1080px) {
+  .becarios {
+    padding: 3rem 2rem;
+  }
+
+  .buttonsBecarios {
+    gap: 1rem;
+  }
+
+  .btnBecarios {
+    font-size: 1rem;
+    padding: 0.688rem 1.5rem;
+  }
+
+  .becariosContainer {
+    gap: 3rem;
+    padding-top: 3rem;
+  }
 }

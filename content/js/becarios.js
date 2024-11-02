@@ -13,17 +13,16 @@ const actuales = [
         becarios: [
           {
             img: "Ejemplo-Becario.png",
-            alt: "Foto de Dr. Cielo Vargas",
-            nombre: "Dr. Cielo Vargas",
-            anios: "2022-2025",
+            alt: "Foto de Dr. Gisela Vargas",
+            nombre: "Dr. Gisela Vargas",
+            anios: "2022-2026",
             lugar: "Instituto Alexander Fleming, CABA"
           },
           {
             img: "Ejemplo-Becario.png",
-            alt: "Foto de Dra. Dulce Amargura",
-            nombre: "Dra. Dulce Amargura",
+            alt: "Foto de Dra. Dulce Alzugaray",
+            nombre: "Dra. Dulce Alzugaray",
             anios: "2022-2026",
-            lugar: "Instituto Alexander Fleming, CABA"
           },
         ],
       },
@@ -32,23 +31,22 @@ const actuales = [
         becarios: [
           {
             img: "Ejemplo-Becario.png",
-            alt: "Foto de Dr. Carlos Ramírez",
-            nombre: "Dr. Carlos Ramírez",
-            anios: "2022-2025",
+            alt: "Foto de Dr. Carlos Ramirez",
+            nombre: "Dr. Carlos Ramirez",
+            anios: "2022-2026",
+          },
+          {
+            img: "Ejemplo-Becario.png",
+            alt: "Foto de Dra. Romina Ferrari",
+            nombre: "Dra. Romina Ferrari",
+            anios: "2022-2026",
             lugar: "Instituto Alexander Fleming, CABA"
           },
           {
             img: "Ejemplo-Becario.png",
-            alt: "Foto de Dra. Renata Ferrari",
-            nombre: "Dra. Renata Ferrari",
-            anios: "2022-2025",
-            lugar: "Instituto Alexander Fleming, CABA"
-          },
-          {
-            img: "Ejemplo-Becario.png",
-            alt: "Foto de Dr. Carlos Palmes",
-            nombre: "Dr. Carlos Palmes",
-            anios: "2022-2025",
+            alt: "Foto de Dr. Carlos Palmés",
+            nombre: "Dr. Carlos Palmés",
+            anios: "2022-2026",
             lugar: "Hospital Alta Complejidad"
           },
         ],
@@ -58,24 +56,22 @@ const actuales = [
         becarios: [
           {
             img: "Ejemplo-Becario.png",
-            alt: "Foto de Dra. Dana Nuñez",
-            nombre: "Dra. Dana Nuñez",
-            anios: "2022-2025",
-            lugar: "Hospital Alta Complejidad"
-          },
-          {
-            img: "Ejemplo-Becario.png",
-            alt: "Foto de Dr. Marcos Daniel Boric",
-            nombre: "Dr. Marcos Daniel Boric",
-            anios: "2022-2025",
-            lugar: "Hospital Alta Complejidad"
-          },
-          {
-            img: "Ejemplo-Becario.png",
-            alt: "Foto de Dra. Carla Cataldi",
-            nombre: "Dra. Carla Cataldi",
+            alt: "Foto de Dra. Dana Narvaez",
+            nombre: "Dra. Dana Narvaez",
             anios: "2022-2026",
-            lugar: "Instituto Alexander Fleming, CABA"
+            lugar: "Hospital Alta Complejidad"
+          },
+          {
+            img: "Ejemplo-Becario.png",
+            alt: "Foto de Dr. Marcos Daniel Bortz",
+            nombre: "Dr. Marcos Daniel Bortz",
+            anios: "2022-2026",
+          },
+          {
+            img: "Ejemplo-Becario.png",
+            alt: "Foto de Dra. Greta Cataldi",
+            nombre: "Dra. Greta Catani",
+            anios: "2022-2026",
           },
         ],
       },
@@ -89,14 +85,12 @@ const actuales = [
         alt: "Foto de Dra. Josefina Troccoli",
         nombre: "Dra. Josefina Troccoli",
         anios: "2023-2025",
-        lugar: "Instituto Alexander Fleming, CABA"
       },
       {
         img: "Ejemplo-Becario.png",
-        alt: "Foto de Dr. Juan Pérez",
-        nombre: "Dr. Juan Pérez",
-        anios: "2022-2024",
-        lugar: "Instituto Alexander Fleming, CABA"
+        alt: "Foto de Dra. Andrea Carolina Muñoz",
+        nombre: "Dra. Andrea Carolina Muñoz",
+        anios: "2023-2025",
       },
     ],
   },
@@ -106,9 +100,8 @@ const actuales = [
       {
         img: "Ejemplo-Becario.png",
         alt: "",
-        nombre: "",
-        anios: "",
-        lugar: ""
+        nombre: "Dr. Miguel Ángel Lima",
+        anios: "2023-2025",
       },
     ],
   },
@@ -118,16 +111,14 @@ const actuales = [
       {
         img: "Ejemplo-Becario.png",
         alt: "",
-        nombre: "",
-        anios: "",
-        lugar: ""
+        nombre: "Dra. Tatiana Ailen Letowski",
+        anios: "2023-2024",
       },
       {
         img: "Ejemplo-Becario.png",
         alt: "",
-        nombre: "",
-        anios: "",
-        lugar: ""
+        nombre: "Dr. Gastón Fernández Candia",
+        anios: "2023-2024",
       },
     ],
   },
@@ -137,9 +128,8 @@ const actuales = [
       {
         img: "Ejemplo-Becario.png",
         alt: "",
-        nombre: "",
-        anios: "",
-        lugar: ""
+        nombre: "Dr. Miguel Alfredo Beleño Cruz",
+        anios: "2022-2024",
       },
     ],
   },
@@ -149,9 +139,8 @@ const actuales = [
       {
         img: "Ejemplo-Becario.png",
         alt: "",
-        nombre: "",
-        anios: "",
-        lugar: ""
+        nombre: "Dra. María Belén Ancao",
+        anios: "2023-2025",
       },
     ],
   },
@@ -161,7 +150,6 @@ for (let actual of actuales) {
   becariosActualesContent.innerHTML += `
     <h2 class="w-100 titleUnderline">
       <span>${actual.titulo}</span>
-      Residencia Oncológica Clínica
       <span class="greenUnderlineTitle"></span>
     </h2>
     `;
@@ -169,30 +157,55 @@ for (let actual of actuales) {
     for (let categoria of actual.categorias) {
       becariosActualesContent.innerHTML += `<h3>${categoria.titulo}</h3>`;
       for (let becario of categoria.becarios) {
+        if (becario.lugar) {
+          becariosActualesContent.innerHTML += `
+            <div class="becarioCard columnAlignCenter">
+              <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+              <div class="becarioInfo columnAlignCenter">
+                <p class="nombre">${becario.nombre}</p>
+                <p class="anios">${becario.anios}</p>
+                <p class="lugar">${becario.lugar}</p>
+              </div>
+            </div>
+          `;
+        } else {
+          becariosActualesContent.innerHTML += `
+            <div class="becarioCard columnAlignCenter">
+              <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+              <div class="becarioInfo columnAlignCenter">
+                <p class="nombre">${becario.nombre}</p>
+                <p class="anios">${becario.anios}</p>
+              </div>
+            </div>
+          `;
+        }
+      }
+    }
+  } else {
+    for (let becario of actual.becarios) {
+      if (becario.lugar) {
         becariosActualesContent.innerHTML += `
-          <div class="becarioCard">
+          <div class="becarioCard columnAlignCenter">
             <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
-            <div class="becarioInfo">
+            <div class="becarioInfo columnAlignCenter">
               <p class="nombre">${becario.nombre}</p>
               <p class="anios">${becario.anios}</p>
               <p class="lugar">${becario.lugar}</p>
             </div>
           </div>
         `;
-      }
-    }
-  } else {
-    for (let becario of actual.becarios) {
-      becariosActualesContent.innerHTML += `
-        <div class="becarioCard">
-          <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
-          <div class="becarioInfo">
-            <p class="nombre">${becario.nombre}</p>
-            <p class="anios">${becario.anios}</p>
-            <p class="lugar">${becario.lugar}</p>
+      } else {
+        becariosActualesContent.innerHTML += `
+          <div class="becarioCard columnAlignCenter">
+            <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+            <div class="becarioInfo columnAlignCenter">
+              <p class="nombre">${becario.nombre}</p>
+              <p class="anios">${becario.anios}</p>
+            </div>
           </div>
-        </div>
-      `;
+        `;
+      }
+
     }
   }
 }
