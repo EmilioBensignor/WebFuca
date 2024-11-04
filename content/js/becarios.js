@@ -146,69 +146,69 @@ const actuales = [
   },
 ];
 
-for (let actual of actuales) {
-  becariosActualesContent.innerHTML += `
-    <h2 class="w-100 titleUnderline">
-      <span>${actual.titulo}</span>
-      <span class="greenUnderlineTitle"></span>
-    </h2>
-    `;
-  if (actual.multiple) {
-    for (let categoria of actual.categorias) {
-      becariosActualesContent.innerHTML += `<h3>${categoria.titulo}</h3>`;
-      for (let becario of categoria.becarios) {
-        if (becario.lugar) {
-          becariosActualesContent.innerHTML += `
-            <div class="becarioCard columnAlignCenter">
-              <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
-              <div class="becarioInfo columnAlignCenter">
-                <p class="nombre">${becario.nombre}</p>
-                <p class="anios">${becario.anios}</p>
-                <p class="lugar">${becario.lugar}</p>
-              </div>
-            </div>
-          `;
-        } else {
-          becariosActualesContent.innerHTML += `
-            <div class="becarioCard columnAlignCenter">
-              <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
-              <div class="becarioInfo columnAlignCenter">
-                <p class="nombre">${becario.nombre}</p>
-                <p class="anios">${becario.anios}</p>
-              </div>
-            </div>
-          `;
-        }
-      }
-    }
-  } else {
-    for (let becario of actual.becarios) {
-      if (becario.lugar) {
-        becariosActualesContent.innerHTML += `
-          <div class="becarioCard columnAlignCenter">
-            <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
-            <div class="becarioInfo columnAlignCenter">
-              <p class="nombre">${becario.nombre}</p>
-              <p class="anios">${becario.anios}</p>
-              <p class="lugar">${becario.lugar}</p>
-            </div>
-          </div>
-        `;
-      } else {
-        becariosActualesContent.innerHTML += `
-          <div class="becarioCard columnAlignCenter">
-            <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
-            <div class="becarioInfo columnAlignCenter">
-              <p class="nombre">${becario.nombre}</p>
-              <p class="anios">${becario.anios}</p>
-            </div>
-          </div>
-        `;
-      }
+// for (let actual of actuales) {
+//   becariosActualesContent.innerHTML += `
+//     <h2 class="w-100 titleUnderline">
+//       <span>${actual.titulo}</span>
+//       <span class="greenUnderlineTitle"></span>
+//     </h2>
+//     `;
+//   if (actual.multiple) {
+//     for (let categoria of actual.categorias) {
+//       becariosActualesContent.innerHTML += `<h3>${categoria.titulo}</h3>`;
+//       for (let becario of categoria.becarios) {
+//         if (becario.lugar) {
+//           becariosActualesContent.innerHTML += `
+//             <div class="becarioCard columnAlignCenter">
+//               <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+//               <div class="becarioInfo columnAlignCenter">
+//                 <p class="nombre">${becario.nombre}</p>
+//                 <p class="anios">${becario.anios}</p>
+//                 <p class="lugar">${becario.lugar}</p>
+//               </div>
+//             </div>
+//           `;
+//         } else {
+//           becariosActualesContent.innerHTML += `
+//             <div class="becarioCard columnAlignCenter">
+//               <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+//               <div class="becarioInfo columnAlignCenter">
+//                 <p class="nombre">${becario.nombre}</p>
+//                 <p class="anios">${becario.anios}</p>
+//               </div>
+//             </div>
+//           `;
+//         }
+//       }
+//     }
+//   } else {
+//     for (let becario of actual.becarios) {
+//       if (becario.lugar) {
+//         becariosActualesContent.innerHTML += `
+//           <div class="becarioCard columnAlignCenter">
+//             <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+//             <div class="becarioInfo columnAlignCenter">
+//               <p class="nombre">${becario.nombre}</p>
+//               <p class="anios">${becario.anios}</p>
+//               <p class="lugar">${becario.lugar}</p>
+//             </div>
+//           </div>
+//         `;
+//       } else {
+//         becariosActualesContent.innerHTML += `
+//           <div class="becarioCard columnAlignCenter">
+//             <img src="/content/img/becarios/${becario.img}" alt="${becario.alt}" class="becarioImg">
+//             <div class="becarioInfo columnAlignCenter">
+//               <p class="nombre">${becario.nombre}</p>
+//               <p class="anios">${becario.anios}</p>
+//             </div>
+//           </div>
+//         `;
+//       }
 
-    }
-  }
-}
+//     }
+//   }
+// }
 
 // Función para mostrar los becarios actuales y ocultar los ex becarios
 function mostrarBecariosActuales() {
