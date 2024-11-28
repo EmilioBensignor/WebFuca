@@ -25,6 +25,12 @@
   padding: 0 1rem 1rem 1rem;
 }
 
+.campus div .headerCampus {
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0;
+}
+
 .curso div {
   color: black;
 }
@@ -75,21 +81,18 @@
 /* Acompanan */
 
 .acompanan {
-  padding-bottom: 1.5rem;
-}
-
-.acompanan h2 {
-  padding-left: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .swiperAcompananCursos {
   overflow: hidden;
+  padding: 4px;
 }
 
 .swiperAcompananCursos .swiper-slide {
   width: 6.938rem;
-  background-color: #F2F2F2;
   border-radius: 9px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.08), 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 1px 4px -1px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0.85rem;
 }
 
@@ -106,6 +109,7 @@
 }
 
 .tuCrecimiento div {
+  width: 100%;
   gap: 1rem;
 }
 
@@ -122,10 +126,47 @@
   background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
 }
 
-@media (width >=1080px) {
+@media (width >=700px) {
   .campusCurso {
     flex-direction: row;
+    align-items: stretch;
     gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .campus,
+  .curso {
+    width: 50%;
+  }
+
+  .campus div {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .campus div .ingresarCampus {
+    align-self: flex-start;
+  }
+
+  .tuCrecimiento,
+  .acompanan {
+    padding: 2rem 1.5rem;
+  }
+
+  .swiperAcompananCursos .swiper-slide img {
+    height: 5rem;
+  }
+
+  .solicitarMembresia {
+    align-self: flex-start;
+  }
+}
+
+@media (width >=1080px) {
+
+  .campusCurso,
+  .acompanan,
+  .tuCrecimiento {
     padding: 3rem 2rem;
   }
 
@@ -147,12 +188,36 @@
   .acompanan {
     padding-bottom: 3rem;
   }
+}
 
-  .acompanan h2 {
-    padding-left: 2rem;
+@media (width >=1440px) {
+
+  .campusCurso,
+  .acompanan,
+  .tuCrecimiento {
+    padding: 4rem 4.93rem;
   }
 
+  .campus div,
+  .curso div {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .swiperAcompananCursos .swiper-slide img {
+    height: 6rem;
+  }
+}
+
+@media (width >=1600px) {
+  .campusCurso,
+  .acompanan,
   .tuCrecimiento {
-    padding: 3rem 2rem;
+    padding: 6rem 4.93rem;
+  }
+
+  .campus p,
+  .curso p,
+  .tuCrecimiento p {
+    font-size: 1.25rem;
   }
 }
