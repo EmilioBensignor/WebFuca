@@ -156,8 +156,9 @@ const menu = [
       },
       {
         nombre: "Espacio FUCA Online",
-        link: "#",
+        link: "https://fundacionfuca.mercadoshops.com.ar/",
         info: [],
+        target: true,
       },
       {
         nombre: "Contacto",
@@ -219,24 +220,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
   menuToggle.addEventListener('click', function () {
     if (mobileMenu.style.display === 'flex') {
-      mobileMenu.style.display = 'none';
-      overlay.style.display = 'none';
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      setTimeout(() => {
+        mobileMenu.style.display = 'none';
+        overlay.style.display = 'none';
+      }, 300); // Espera a que termine la transición
     } else {
       mobileMenu.style.display = 'flex';
       overlay.style.display = 'flex';
+      // Forzar un reflow para que la transición funcione
+      mobileMenu.offsetHeight;
+      overlay.offsetHeight;
+      mobileMenu.classList.add('active');
+      overlay.classList.add('active');
     }
   });
 
   overlay.addEventListener('click', function () {
-    mobileMenu.style.display = 'none';
-    overlay.style.display = 'none';
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    setTimeout(() => {
+      mobileMenu.style.display = 'none';
+      overlay.style.display = 'none';
+    }, 300);
   });
 });
 
 for (let navItemMobile = 0; navItemMobile < menu.length; navItemMobile++) {
   let paginasFucaMobile = "";
   for (let pagina = 0; pagina < menu[navItemMobile].paginas.length; pagina++) {
-    paginasFucaMobile += `<li><a href="${menu[navItemMobile].paginas[pagina].link}" class="navLink text-black">${menu[navItemMobile].paginas[pagina].nombre}</a></li>`;
+    if (menu[navItemMobile].paginas[pagina].target) {
+      paginasFucaMobile += `<li><a href="${menu[navItemMobile].paginas[pagina].link}" target="_blank" class="navLink text-black">${menu[navItemMobile].paginas[pagina].nombre}</a></li>`;
+    } else {
+      paginasFucaMobile += `<li><a href="${menu[navItemMobile].paginas[pagina].link}" class="navLink text-black">${menu[navItemMobile].paginas[pagina].nombre}</a></li>`;
+    }
   }
 
   mobileMenu.innerHTML += `
@@ -271,20 +289,36 @@ function toggleMenuNav(index) {
 
   if (menuList) {
     if (menuList.classList.contains('show')) {
-      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      const height = menuList.scrollHeight;
+      menuList.style.height = height + 'px';
+
       requestAnimationFrame(() => {
-        menuList.style.maxHeight = "0px";
+        menuList.style.height = '0px';
+        menuList.style.visibility = 'hidden';
       });
-      menuList.classList.remove('show');
+
+      menuList.addEventListener('transitionend', function handler() {
+        menuList.classList.remove('show');
+        menuList.removeEventListener('transitionend', handler);
+      });
+
       if (iconFlechaNav) {
         iconFlechaNav.classList.remove('rotate');
       }
     } else {
       menuList.classList.add('show');
-      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      menuList.style.visibility = 'visible';
+      const height = menuList.scrollHeight;
+
       requestAnimationFrame(() => {
-        menuList.style.maxHeight = "500px";
+        menuList.style.height = height + 'px';
       });
+
+      menuList.addEventListener('transitionend', function handler() {
+        menuList.style.height = 'auto';
+        menuList.removeEventListener('transitionend', handler);
+      });
+
       if (iconFlechaNav) {
         iconFlechaNav.classList.add('rotate');
       }
@@ -295,18 +329,20 @@ function toggleMenuNav(index) {
 // Nav Desktop
 for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
   let paginasFucaDesktop = "";
+
   for (let pagina = 0; pagina < menu[navItemDesktop].paginas.length; pagina++) {
     let infoPaginas = "";
     for (let info = 0; info < menu[navItemDesktop].paginas[pagina].info.length; info++) {
-      infoPaginas += `
-        <li>${menu[navItemDesktop].paginas[pagina].info[info]}</li>
-      `;
+      infoPaginas += `<li>${menu[navItemDesktop].paginas[pagina].info[info]}</li>`;
     }
+
     paginasFucaDesktop += `
       <li class="subMenuLink">
         <div class="subMenuList">
           <div class="navLinkFlecha">
-            <a href="${menu[navItemDesktop].paginas[pagina].link}" class="navLink text-black">
+            ${menu[navItemDesktop].paginas[pagina].target ?
+        `<a href="${menu[navItemDesktop].paginas[pagina].link}" target="_blank" class="navLink text-black">` :
+        `<a href="${menu[navItemDesktop].paginas[pagina].link}" class="navLink text-black">`}
               ${menu[navItemDesktop].paginas[pagina].nombre}
             </a>
             <div class="flechaLink"></div>
@@ -344,8 +380,8 @@ desktopMenu.appendChild(donaHoyDesktop);
 // Redes Footer
 for (let iconRed = 0; iconRed < iconosRedesFooter.length; iconRed++) {
   redesFooter.innerHTML += `
-    <a href="${iconosRedesFooter[iconRed].link}" target="_blank" class="iconRedesFooter columnAlignCenter bg-white">
-      ${iconosRedesFooter[iconRed].img}
+  <a href="${iconosRedesFooter[iconRed].link}" target="_blank" class="iconRedesFooter columnAlignCenter bg-white">
+    ${iconosRedesFooter[iconRed].img}
     </a>
   `;
 }
@@ -358,7 +394,7 @@ for (let menuItemMobile = 0; menuItemMobile < menu.length; menuItemMobile++) {
   }
 
   menuFooterMobile.innerHTML += `
-    <div class="menuFooterColumn column">
+  <div class="menuFooterColumn column" >
       <div class="footerTitle" onclick="toggleMenuFooter(${menuItemMobile})">
         <div class="titleUnderline">
           <p class="text-white font-weight-bold">${menu[menuItemMobile].titulo}</p>
@@ -381,20 +417,36 @@ function toggleMenuFooter(index) {
 
   if (menuList) {
     if (menuList.classList.contains('show')) {
-      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      const height = menuList.scrollHeight;
+      menuList.style.height = height + 'px';
+
       requestAnimationFrame(() => {
-        menuList.style.maxHeight = "0px";
+        menuList.style.height = '0px';
+        menuList.style.visibility = 'hidden';
       });
-      menuList.classList.remove('show');
+
+      menuList.addEventListener('transitionend', function handler() {
+        menuList.classList.remove('show');
+        menuList.removeEventListener('transitionend', handler);
+      });
+
       if (iconFlechaFooter) {
         iconFlechaFooter.classList.remove('rotate');
       }
     } else {
       menuList.classList.add('show');
-      menuList.style.maxHeight = menuList.scrollHeight + "px";
+      menuList.style.visibility = 'visible';
+      const height = menuList.scrollHeight;
+
       requestAnimationFrame(() => {
-        menuList.style.maxHeight = "500px";
+        menuList.style.height = height + 'px';
       });
+
+      menuList.addEventListener('transitionend', function handler() {
+        menuList.style.height = 'auto';
+        menuList.removeEventListener('transitionend', handler);
+      });
+
       if (iconFlechaFooter) {
         iconFlechaFooter.classList.add('rotate');
       }
@@ -404,7 +456,7 @@ function toggleMenuFooter(index) {
 
 for (let contactateItemMobile = 0; contactateItemMobile < contactate.length; contactateItemMobile++) {
   contactateList.innerHTML += `
-  <div class="rowAlign ga-05">
+  <div class="rowAlign ga-05" >
     <div class="${contactate[contactateItemMobile].icon} bgImgContain"></div>
     <p class="contactateText text-white">${contactate[contactateItemMobile].texto}</p>
   </div>
@@ -419,7 +471,7 @@ for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) 
   }
 
   menuFooterDesktop.innerHTML += `
-    <div class="menuFooterColumn column">
+  <div class="menuFooterColumn column" >
       <div class="titleUnderline">
         <p class="text-white font-weight-bold">${menu[menuItemDesktop].titulo}</p>
         <span class="underlineFooter whiteUnderlineTitle"></span>
@@ -433,7 +485,7 @@ for (let menuItemDesktop = 0; menuItemDesktop < menu.length; menuItemDesktop++) 
 
 for (let contactateItemDesktop = 0; contactateItemDesktop < contactate.length; contactateItemDesktop++) {
   contactateListDesktop.innerHTML += `
-  <div class="rowAlign ga-05">
+  <div class="rowAlign ga-05" >
     <div class="${contactate[contactateItemDesktop].icon} bgImgContain"></div>
     <p class="contactateText text-white">${contactate[contactateItemDesktop].texto}</p>
   </div>
