@@ -1,3 +1,15 @@
 <link href="/content/img/favicon-fuca.svg" rel="shortcut icon">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/content/css/main.css">
+<meta property="og:title" content="FUCA - Fundación Argentina de Cáncer | Prevención y Diagnóstico del Cáncer">
+<meta property="og:description" content="En FUCA promovemos la prevención y el diagnóstico temprano del cáncer a través de la educación, la investigación y la asistencia médica. Descubre nuestros programas y cómo puedes participar para salvar vidas.">
+<meta property="og:url" content="https://fuca.org.ar/">
+<meta property="og:image" content="https://fuca.org.ar/content/images/logo-fuca.jpg">
+<meta property="og:image:alt" content="Logo de FUCA - Fundación para la Investigación y Lucha contra el Cáncer">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="FUCA">
+<base href="/">
+

@@ -46,7 +46,7 @@ let linksRedio = [
     anio: "2023",
   },
   {
-    link: "/content/img/bibliotecaBiomedica/REDIO/REDIO-Julio-Septiembre-2023.pdf",
+    link: "/content/img/bibliotecaBiomedica/REDIO/Redio-Julio-Septiembre-2023.pdf",
     meses: "JULIO-SEPTIEMBRE",
     anio: "2023",
   },

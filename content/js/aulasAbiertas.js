@@ -10,25 +10,25 @@ const acompananContenedor = document.getElementById("acompananContenedor");
 // Arrays
 const caracteristicas = [
   {
-    img: "Aulas-Abiertas",
+    img: "aulas-abiertas",
     alt: "Creación aulas abiertas",
     texto: "Aulas abiertas fue creada en",
     dato: "1997",
   },
   {
-    img: "Alumnos-Participan",
+    img: "alumnos",
     alt: "Alumnos que participan",
     texto: "Alumnos que participaron",
     dato: "15.710",
   },
   {
-    img: "Colegios-Publicos-Privados",
+    img: "colegios",
     alt: "Colegios públicos y privados",
     texto: "Colegios públicos y privados",
     dato: "269",
   },
   {
-    img: "Docentes-Capacitados",
+    img: "docentes",
     alt: "Docentes Capacitados",
     texto: "Docentes que se capacitaron",
     dato: "658",
@@ -187,7 +187,7 @@ const acompanan = [
 for (let caracteristica = 0; caracteristica < caracteristicas.length; caracteristica++) {
   caracteristicasContainer.innerHTML += `
     <article class="caracteristica column ga-15">
-      <img src="/content/img/aulasAbiertas/${caracteristicas[caracteristica].img}-icono.svg" alt="${caracteristicas[caracteristica].alt}">
+      <img src="/content/img/aulasAbiertas/${caracteristicas[caracteristica].img}-icon.svg" alt="${caracteristicas[caracteristica].alt}">
       <div class="caracteristicaBody">
         <p>${caracteristicas[caracteristica].texto}</p>
         <p class="font-weight-bold">${caracteristicas[caracteristica].dato}</p>

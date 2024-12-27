@@ -21,10 +21,6 @@
   color: var(--color-primario);
 }
 
-.greenUnderlineTitle {
-  width: 6rem;
-}
-
 /* Formas */
 
 .otrasFormas {
@@ -253,6 +249,10 @@
     padding: 0;
   }
 
+  .porqueDonar div h2 span {
+    width: 25%;
+  }
+
   .porqueDonar>div {
     flex-direction: row;
     align-items: center;
@@ -300,17 +300,16 @@
 }
 
 @media (width >=850px) {
+  .porqueDonar div h2 span {
+    width: 20%;
+  }
+
   .porqueDonar div ul li:last-of-type {
     display: block;
   }
 }
 
 @media (width >=1080px) {
-  .greenUnderlineTitle {
-    width: 7.5rem;
-    border-width: 4.5px;
-  }
-
   .recibos {
     padding: 1.5rem 14.375rem;
   }
@@ -393,6 +392,10 @@
     font-size: 1rem;
   }
 
+  .porqueDonar div h2 span {
+    width: 15%;
+  }
+
   .porqueDonar div img {
     max-height: 420px;
   }
@@ -404,5 +407,11 @@
   .porqueDonar div ul li,
   .porqueDonar div p {
     font-size: 1.125rem;
+  }
+}
+
+@media (width >=1920px) {
+  .porqueDonar div h2 span {
+    width: 10%;
   }
 }

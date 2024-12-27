@@ -17,7 +17,7 @@ const menu = [
     paginas: [
       {
         nombre: "Biblioteca biomédica",
-        link: "#",
+        link: "/bibliotecaBiomedica",
         info: [
           "Presentación de la biblioteca",
           "REDIO",
@@ -25,8 +25,8 @@ const menu = [
         ],
       },
       {
-        nombre: "Formación Médica",
-        link: "#",
+        nombre: "Educación Médica",
+        link: "/educacionMedica",
         info: [
           "Residencia en Oncología Clínica",
           "Residencia en Mastología",
@@ -40,14 +40,14 @@ const menu = [
       },
       {
         nombre: "Becarios y Ex Becarios",
-        link: "#",
+        link: "/becarios",
         info: [
           "Nuestros Becarios y Ex Becarios"
         ],
       },
       {
         nombre: "Cursos",
-        link: "#",
+        link: "/cursos",
         info: [
           "Campus virtual",
           "Curso de Oncología Molecular",
@@ -79,7 +79,7 @@ const menu = [
     paginas: [
       {
         nombre: "Aulas Abiertas",
-        link: "#",
+        link: "/aulasAbiertas",
         info: [
           "Sobre Aulas Abiertas",
           "Inscribí a tu colegio"
@@ -146,7 +146,7 @@ const menu = [
       },
       {
         nombre: "Donaciones",
-        link: "#",
+        link: "/donaciones",
         info: [
           "Doná a FUCA",
           "Aumentá tu donación",
@@ -258,7 +258,7 @@ for (let navItemMobile = 0; navItemMobile < menu.length; navItemMobile++) {
 };
 
 const donaHoyMobile = document.createElement('a');
-donaHoyMobile.href = "#";
+donaHoyMobile.href = "/donaciones";
 donaHoyMobile.classList.add('primaryButton');
 donaHoyMobile.classList.add('btnNav');
 donaHoyMobile.textContent = "DONÁ HOY";
@@ -334,7 +334,7 @@ for (let navItemDesktop = 0; navItemDesktop < menu.length; navItemDesktop++) {
 }
 
 const donaHoyDesktop = document.createElement('a');
-donaHoyDesktop.href = "#";
+donaHoyDesktop.href = "/donaciones";
 donaHoyDesktop.classList.add('secondaryButton');
 donaHoyDesktop.classList.add('btnNavDesktop');
 donaHoyDesktop.textContent = "DONÁ HOY";

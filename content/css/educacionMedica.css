@@ -60,35 +60,35 @@
 }
 
 .oncoClinica {
-  background-image: url("/content/img/educacionMedica/OncoClinica.svg");
+  background-image: url("/content/img/educacionMedica/residencia_oncologia_clinica.webp");
 }
 
 .mastologia {
-  background-image: url("/content/img/educacionMedica/Mastologia.svg");
+  background-image: url("/content/img/educacionMedica/residencia_mastologia.webp");
 }
 
 .hematologia {
-  background-image: url("/content/img/educacionMedica/Hematologia.svg");
+  background-image: url("/content/img/educacionMedica/fellowship_onco_hematologia.webp");
 }
 
 .urologia {
-  background-image: url("/content/img/educacionMedica/Urologia.svg");
+  background-image: url("/content/img/educacionMedica/fellowship_urologia_oncologica.webp");
 }
 
 .ortopedia {
-  background-image: url("/content/img/educacionMedica/Ortopedia.svg");
+  background-image: url("/content/img/educacionMedica/fellowship_ortopedia_oncologica.webp");
 }
 
 .torax {
-  background-image: url("/content/img/educacionMedica/Torax.svg");
+  background-image: url("/content/img/educacionMedica/fellowship_cirugia_toracica.webp");
 }
 
 .psico {
-  background-image: url("/content/img/educacionMedica/Psico.svg");
+  background-image: url("/content/img/educacionMedica/residencia_psico_oncologia.webp");
 }
 
 .dxi {
-  background-image: url("/content/img/educacionMedica/DXI.svg");
+  background-image: url("/content/img/educacionMedica/residencia_dxi.webp");
 }
 
 /* Apoya Educacion */

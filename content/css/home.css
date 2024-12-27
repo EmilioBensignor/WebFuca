@@ -34,10 +34,6 @@ h1 span {
 
 /* Nuestros Pilares */
 
-.h2NuestrosPilares span {
-  width: 6.5rem;
-}
-
 .centroInvestigacionesOncologicas {
   background-image: url("/content/img/home/cio.webp");
 }
@@ -67,10 +63,6 @@ h1 span {
 
 .novedades {
   background-color: #f2f2f2;
-}
-
-.h2Novedades span {
-  width: 5.5rem;
 }
 
 .temasDestacados p {
@@ -231,10 +223,6 @@ h1 span {
   color: var(--color-primario);
 }
 
-.h2NosAcompanan span {
-  width: 7rem;
-}
-
 .swiperAcompananHome {
   overflow: hidden;
 }
@@ -324,17 +312,9 @@ h1 span {
   }
 
   /* Nuestros pilares */
-  .h2NuestrosPilares span {
-    width: 27.5%;
-  }
 
   .pilar p {
     font-size: 1.2rem;
-  }
-
-  /* Novedades */
-  .h2Novedades span {
-    width: 25%;
   }
 
   /* Recursos - Objetivos */
@@ -344,10 +324,6 @@ h1 span {
 
   .enFucaBtns {
     max-width: 330px;
-  }
-
-  .h2NosAcompanan span {
-    width: 10rem;
   }
 }
 
@@ -369,9 +345,6 @@ h1 span {
   }
 
   /* Novedaes */
-  .h2Novedades span {
-    width: 7rem;
-  }
 
   .filtroNovedad {
     font-size: 0.9rem;
@@ -458,10 +431,6 @@ h1 span {
   }
 
   /* Nuestros pilares */
-
-  .h2NuestrosPilares span {
-    width: 9rem;
-  }
 
   .pilares {
     flex-direction: row;
@@ -738,9 +707,6 @@ h1 span {
   }
 
   /* Novedades */
-  .h2Novedades span {
-    width: 8rem;
-  }
 
   .headerNovedades p {
     font-size: 1rem;
