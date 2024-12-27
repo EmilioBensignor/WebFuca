@@ -3,7 +3,7 @@ import { nosAcompanan } from "./nosAcompanan.js"
 // Constantes
 const redes = document.getElementById("redes");
 const pilares = document.getElementById("pilares");
-const filtrosNovedades = document.getElementById("filtrosNovedades");
+const linksNovedadesContainer = document.getElementById("linksNovedadesContainer");
 const novedadesContainer = document.getElementById("novedadesContainer");
 const acompanan = document.getElementById("acompanan");
 
@@ -57,41 +57,59 @@ const nuestrosPilares = [
     text: "Un servicio de información científica diseñado como biblioteca activa y esencial.",
   },
 ];
-const filtros = [
-  "Cáncer de mama",
-  "Investigaciones CIO",
-  "Redio",
-  "Campus virtual",
-  "Cena a beneficio"
+const linksNovedades = [
+  {
+    link: "https://youtu.be/4_Rcp2VjZ-8",
+    text: "Cáncer de mama",
+  },
+  {
+    link: "#",
+    text: "Investigaciones CIO",
+  },
+  {
+    link: "https://www.instagram.com/p/DCIDO1Pv_nv/?img_index=1",
+    text: "Redio",
+  },
+  {
+    link: "https://fucacampus.org/login/index.php",
+    text: "Campus virtual",
+  },
+  {
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScoDbl9OtMXsrt6mCcEpj5FxPFQmp75Lank0fM4dJHKhh4Www/viewform",
+    text: "Cena a beneficio",
+  },
 ];
 const novedades = [
   {
-    mes: "MAYO",
-    dia: "06",
-    anio: "2024",
-    texto: "El próximo 6 de mayo a las 18s h te invitamos a participar del vivo deInstagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
+    mes: "FEBRERO",
+    dia: "04",
+    anio: "2025",
+    texto: "Día mundial del Cáncer.",
     cta: "INSCRIBIRME",
+    link: "https://youtu.be/byV96VNM",
   },
   {
-    mes: "JUNIO",
-    dia: "20",
-    anio: "2024",
-    texto: "El próximo 20 de junio a las 20 hs te invitamos a participar del vivo de Instagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
+    mes: "MARZO",
+    dia: "04",
+    anio: "2025",
+    texto: "Día Internacional de la Concienciación sobre el VPH.",
     cta: "LEER MÁS",
   },
   {
-    mes: "AGOSTO",
-    dia: "15",
-    anio: "2024",
-    texto: "El próximo 15 de agosto a las 18 hs te invitamos a participar del vivo de Instagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
+    mes: "MARZO",
+    dia: "26",
+    anio: "2025",
+    texto: "Día Mundial de la Prevención del Cáncer de Cuello Uterino.",
     cta: "INFÓRMATE",
+    link: "https://studio.youtube.com/video/6g1HxlpKUSY/edit",
   },
   {
     mes: "SEPTIEMBRE",
-    dia: "28",
-    anio: "2024",
-    texto: "El próximo 28 de septiembre a las 18 hs te invitamos a participar del vivo de Instagram que realizaremos junto al Dr. GonzaloGiornelli sobre cáncer de ovario.",
+    dia: "30",
+    anio: "2025",
+    texto: "Cena a beneficio de FUCA.",
     cta: "INSCRIBIRME",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScoDbl9OtMXsrt6mCcEpj5FxPFQmp75Lank0fM4dJHKhh4Www/viewform",
   },
 ];
 
@@ -114,20 +132,14 @@ for (let pilar = 0; pilar < nuestrosPilares.length; pilar++) {
   `;
 }
 
-// Filtros novedades
-for (let filtro = 0; filtro < filtros.length; filtro++) {
-  filtrosNovedades.innerHTML += `
-    <button class="filtroNovedad">
-      ${filtros[filtro]}
-    </button>
+// Links novedades
+for (let link = 0; link < linksNovedades.length; link++) {
+  linksNovedadesContainer.innerHTML += `
+    <a href="${linksNovedades[link].link}" target="_blank" class="linkNovedad">
+      ${linksNovedades[link].text}
+    </a>
   `;
 }
-
-document.querySelectorAll('.filtroNovedad').forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('selected')
-  })
-});
 
 // Novedades
 for (let novedad = 0; novedad < novedades.length; novedad++) {
@@ -142,7 +154,7 @@ for (let novedad = 0; novedad < novedades.length; novedad++) {
         <p class="contentNovedades">${novedades[novedad].texto}</p>
       </div>
       <div>
-        <button class="novedadesBtn primaryButton">${novedades[novedad].cta}</button>
+        <a href="${novedades[novedad].link}" target="_blank" class="novedadesBtn primaryButton">${novedades[novedad].cta}</a>
       </div>
     </div>
   `;

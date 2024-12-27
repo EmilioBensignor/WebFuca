@@ -69,34 +69,36 @@ h1 span {
   display: none;
 }
 
-.filtrosNovedades {
+.linksNovedadesContainer {
   display: flex;
   flex-wrap: wrap;
 }
 
-.filtroNovedad {
+.linkNovedad {
   border: 1px solid var(--color-primario);
   border-radius: 9px;
   background: transparent;
   color: var(--color-primario);
   font-size: 0.875rem;
   font-weight: 600;
+  text-decoration: none;
   padding: 0.78rem 0.75rem;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
-.filtroNovedad:hover {
+.linkNovedad:hover {
   box-shadow: 2px 2px 2px var(--color-primario);
 }
 
-.filtroNovedad.selected {
+.linkNovedad.selected {
   background-color: var(--color-primario);
   color: white;
 }
 
 .novedad {
   justify-content: space-between;
+  gap: 0.75rem;
 }
 
 .headerNovedades {
@@ -123,6 +125,7 @@ h1 span {
 .novedadesBtn {
   position: relative;
   font-size: 1rem;
+  text-decoration: none;
   padding: 0.75rem 3.5rem 0.75rem 2rem;
   transition: all 0.3s;
 }
@@ -240,6 +243,13 @@ h1 span {
 
 /* Newsletter */
 
+.suscribeteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .suscribete h2 {
   font-weight: 700;
   font-size: 1.125rem;
@@ -346,7 +356,7 @@ h1 span {
 
   /* Novedaes */
 
-  .filtroNovedad {
+  .linkNovedad {
     font-size: 0.9rem;
   }
 
@@ -397,12 +407,6 @@ h1 span {
   }
 
   /* Newsletter */
-  .suscribeteContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .suscribete h2 {
     font-size: 1.3rem;
   }
@@ -524,7 +528,7 @@ h1 span {
     font-size: 1.5rem;
   }
 
-  .filtroNovedad {
+  .linkNovedad {
     font-size: 1rem;
   }
 
@@ -647,9 +651,6 @@ h1 span {
   }
 
   .suscribeteContainer .btnNewsletter {
-    position: absolute;
-    top: 32%;
-    right: 1%;
     padding: 0.75rem 2.25rem;
   }
 
