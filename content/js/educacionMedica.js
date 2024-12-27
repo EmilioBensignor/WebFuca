@@ -36,11 +36,6 @@ let formas = [
     img: "psico",
     texto: "Fellowship en Psico Oncología",
   },
-  {
-    link: "#",
-    img: "dxi",
-    texto: "Residencia en DXI",
-  },
 ];
 
 for (let forma = 0; forma < formas.length; forma++) {
