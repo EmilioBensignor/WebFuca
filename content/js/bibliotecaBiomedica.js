@@ -31,6 +31,11 @@ let acciones = [
 ];
 let linksRedio = [
   {
+    link: "/content/img/bibliotecaBiomedica/REDIO/REDIO-Julio-Septiembre-2024.pdf",
+    meses: "JULIO-SEPTIEMBRE",
+    anio: "2024",
+  },
+  {
     link: "/content/img/bibliotecaBiomedica/REDIO/REDIO-Abril-Junio-2024.pdf",
     meses: "ABRIL-JUNIO",
     anio: "2024",
@@ -43,11 +48,6 @@ let linksRedio = [
   {
     link: "/content/img/bibliotecaBiomedica/REDIO/REDIO-Octubre-Diciembre-2023.pdf",
     meses: "OCTUBRE-DICIEMBRE",
-    anio: "2023",
-  },
-  {
-    link: "/content/img/bibliotecaBiomedica/REDIO/Redio-Julio-Septiembre-2023.pdf",
-    meses: "JULIO-SEPTIEMBRE",
     anio: "2023",
   },
 ];
