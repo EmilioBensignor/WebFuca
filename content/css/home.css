@@ -11,10 +11,6 @@
   background: var(--fondo-gris);
 }
 
-h1 span {
-  color: var(--color-primario);
-}
-
 .iconRedes {
   width: 1.5rem;
   height: 1.5rem;
