@@ -287,7 +287,7 @@ html {
   list-style: circle;
 }
 
-.d-none{
+.d-none {
   display: none;
 }
 
@@ -550,6 +550,11 @@ header {
   z-index: 2;
 }
 
+/* Header */
+.logoHeader {
+  width: 8.5rem;
+}
+
 #menu-toggle {
   cursor: pointer;
 }
@@ -572,7 +577,7 @@ header {
   transform: translateY(0);
 }
 
-#mobile-menu > div {
+#mobile-menu>div {
   gap: 0.75rem;
 }
 
@@ -804,11 +809,6 @@ header {
     width: 20%;
   }
 
-  /* Header */
-  .logoHeader {
-    width: 40%;
-  }
-
   header .hamburger {
     width: 5%;
   }
@@ -907,7 +907,10 @@ header {
     width: 12%;
   }
 
-  .logoHeader,
+  .logoHeader {
+    width: 11.25rem;
+  }
+
   .logoFooter {
     width: 30%;
   }
@@ -933,7 +936,10 @@ header {
 
 @media only screen and (min-width: 992px) {
 
-  .logoHeader,
+  .logoHeader {
+    width: 16rem;
+  }
+
   .logoFooter {
     width: 25%;
   }
@@ -1190,10 +1196,6 @@ header {
     padding: 1.5rem 3rem;
   }
 
-  .logoHeader {
-    width: 11rem;
-  }
-
   /* Footer */
 
   .logoFooter {
@@ -1385,10 +1387,6 @@ header {
 
   .menuDesktopList {
     gap: 4rem;
-  }
-
-  .logoHeader {
-    width: 15rem;
   }
 
   /* Footer */
