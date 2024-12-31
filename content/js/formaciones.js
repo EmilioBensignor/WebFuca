@@ -31,15 +31,15 @@ const formaciones = {
         },
         actividadAsistencial: [
             {
-                nombre: "Internación",
+                nombre: "Internación:",
                 texto: "Durante el primer año, la actividad asistencial se basa en la atención de pacientes internados. Los residentes de primer año evalúan diariamente a los pacientes internados, participando en las discusiones de los casos en los pases de guardia; esta actividad es coordinada por el jefe de residentes y por los médicos especialistas en medicina interna, brindándoles además la posibilidad de interconsultar con médicos de distintas especialidades. De este modo adquieren experiencia en el manejo de las diferentes complicaciones clínicas y quirúrgicas de pacientes oncológicos: neutropenia febril, mucositis, emergencias metabólicas, hematológicas, traumatológicas, quirúrgicas y neurológicas.",
             },
             {
-                nombre: "Hospital de día",
+                nombre: "Hospital de día:",
                 texto: "En segundo año, los residentes se entrenan en la administración de tratamientos de quimioterapia ambulatorios y en el manejo de las toxicidades derivadas de estos tratamientos. El residente a cargo, con el apoyo del jefe de residentes, el oncólogo jefe de hospital de día y médicos del staff, realiza la valoración clínica y de laboratorio del paciente para determinar si se encuentra en condiciones de recibir el tratamiento indicado; así como también la evaluación y tratamiento de las toxicidades agudas y tardías relacionadas con administración de quimioterapia.",
             },
             {
-                nombre: "Consultorio de oncología",
+                nombre: "Consultorio de oncología:",
                 texto: "Durante segundo y tercer año, los residentes adquieren experiencia en el desarrollo de actividades de consultorio externo. Además, ejercen actividades de apoyo al consultorio de guardia externa, como oncólogos interconsultores de guardia pasiva.",
             },
         ],
@@ -175,7 +175,7 @@ const formaciones = {
             "Dominio de Idioma Inglés. Se evaluará la capacidad de lectura, comprensión y síntesis de literatura científica en idioma inglés.",
             "Conocimientos de búsquedas bibliográficas de literatura indexada.",
             "Los aspirantes a ocupar el cargo serán evaluados por medio de entrevistas con el Director Académico de IAF, el Director del Fellowship, el Comité de Docencia e Investigación y un representante de la Sociedad Argentina de Mastología si ésta así lo dispusiese.",
-            "Los profesionales interesados en recibir mayor información pueden escribir a fcolo@alexanderfleming.org",
+            "Los profesionales interesados en recibir mayor información pueden escribir a <span class='mailEscribir'>fcolo@alexanderfleming.org</span>",
         ],
     },
     "onco-hematologia": {
@@ -244,7 +244,7 @@ const formaciones = {
             "Edad: menor de 35.",
             "Enviar CV.",
             "Los aspirantes a ocupar el cargo serán evaluados por medio de una entrevista con las autoridades del servicio.",
-            "Los profesionales interesados en recibir mayor información pueden escribir a pochoa@alexanderfleming.org",
+            "Los profesionales interesados en recibir mayor información pueden escribir a <span class='mailEscribir'>pochoa@alexanderfleming.org</span>",
         ],
         duracion: "Un año con opción a dos.",
     },
@@ -270,19 +270,242 @@ if (formacionActual) {
     });
 
     if (formacionActual.objetivosActividades) {
-        const objetivosActividades = document.getElementById('objetivosActividades');
-        objetivosActividades.innerHTML += `<h2>${formacionActual.objetivosActividades.subtitulo}</h2>`;
+        const objetivosActividades = document.createElement('div');
+        objetivosActividades.classList.add('formacion', 'column');
+        objetivosActividades.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>${formacionActual.objetivosActividades.subtitulo}</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        const subtitulo = document.createElement('h3');
+        subtitulo.textContent = formacionActual.objetivosActividades.subtitulo;
+        objetivosActividades.appendChild(subtitulo);
+        const lista = document.createElement('ul');
         formacionActual.objetivosActividades.lista.forEach(texto => {
-            objetivosActividades.innerHTML += `<p>${texto}</p>`;
+            lista.innerHTML += `<li>${texto}</li>`;
         });
+        objetivosActividades.appendChild(lista);
+        formacionContainer.appendChild(objetivosActividades);
+    }
+
+    if (formacionActual.objetivos) {
+        const objetivos = document.createElement('div');
+        objetivos.classList.add('formacion', 'column');
+        objetivos.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Objetivos</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        const subtitulo = document.createElement('h3');
+        subtitulo.textContent = formacionActual.objetivos.subtitulo;
+        objetivos.appendChild(subtitulo);
+        const lista = document.createElement('ul');
+        formacionActual.objetivos.lista.forEach(texto => {
+            lista.innerHTML += `<li>${texto}</li>`;
+        });
+        objetivos.appendChild(lista);
+        formacionContainer.appendChild(objetivos);
+    }
+
+    if (formacionActual.actividades) {
+        const actividades = document.createElement('div');
+        actividades.classList.add('formacion', 'column');
+        actividades.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Actividades</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        formacionActual.actividades.forEach(actividad => {
+            const actividadElement = document.createElement('div');
+            actividadElement.classList.add('column');
+            actividadElement.innerHTML = `
+                <h3>${actividad.nombre}</h3>
+                `;
+            if (actividad.texto) {
+                actividadElement.innerHTML += `<p>${actividad.texto}</p>`;
+            }
+            if (actividad.lista) {
+                const lista = document.createElement('ul');
+                lista.classList.add('listaActividad');
+                actividad.lista.forEach(texto => {
+                    lista.innerHTML += `<li>${texto}</li>`;
+                });
+                actividadElement.appendChild(lista);
+            }
+            if (actividad.textos) {
+                actividad.textos.forEach(texto => {
+                    actividadElement.innerHTML += `<p>${texto}</p>`;
+                });
+            }
+            actividades.appendChild(actividadElement);
+        });
+        formacionContainer.appendChild(actividades);
+    }
+
+    if (formacionActual.objetivosGenerales) {
+        const objetivosGenerales = document.createElement('div');
+        objetivosGenerales.classList.add('formacion', 'column');
+        objetivosGenerales.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Objetivos generales</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        const lista = document.createElement('ul');
+        formacionActual.objetivosGenerales.forEach(texto => {
+            lista.innerHTML += `<li>${texto}</li>`;
+        });
+        objetivosGenerales.appendChild(lista);
+        formacionContainer.appendChild(objetivosGenerales);
+    }
+
+    if (formacionActual.actividadAsistencial) {
+        const actividadAsistencial = document.createElement('div');
+        actividadAsistencial.classList.add('formacion', 'column');
+        actividadAsistencial.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Actividad asistencial</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        formacionActual.actividadAsistencial.forEach(actividad => {
+            const actividadElement = document.createElement('div');
+            actividadElement.classList.add('column');
+            actividadElement.innerHTML = `
+                <h3>${actividad.nombre}</h3>
+                `;
+            if (actividad.texto) {
+                actividadElement.innerHTML += `<p>${actividad.texto}</p>`;
+            }
+            if (actividad.lista) {
+                const lista = document.createElement('ul');
+                lista.classList.add('listaActividad');
+                actividad.lista.forEach(texto => {
+                    lista.innerHTML += `<li>${texto}</li>`;
+                });
+                actividadElement.appendChild(lista);
+            }
+            actividadAsistencial.appendChild(actividadElement);
+        });
+        formacionContainer.appendChild(actividadAsistencial);
+    }
+
+    if (formacionActual.actividadAcademicaA) {
+        const actividadAcademicaA = document.createElement('div');
+        actividadAcademicaA.classList.add('formacion', 'column');
+        actividadAcademicaA.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Actividad académica</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        const subtitulo = document.createElement('h3');
+        subtitulo.textContent = formacionActual.actividadAcademicaA.subtitulo;
+        actividadAcademicaA.appendChild(subtitulo);
+        const lista = document.createElement('ul');
+        formacionActual.actividadAcademicaA.lista.forEach(texto => {
+            lista.innerHTML += `<li>${texto}</li>`;
+        });
+        actividadAcademicaA.appendChild(lista);
+        formacionContainer.appendChild(actividadAcademicaA);
+    }
+
+    if (formacionActual.actividadAcademicaB) {
+        const actividadAcademicaB = document.createElement('div');
+        actividadAcademicaB.classList.add('formacion', 'column');
+        actividadAcademicaB.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Actividad académica</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        formacionActual.actividadAcademicaB.forEach(actividad => {
+            const actividadElement = document.createElement('div');
+            actividadElement.classList.add('column');
+            actividadElement.innerHTML = `
+                <h3>${actividad.nombre}</h3>
+                `;
+            if (actividad.lista) {
+                actividad.lista.forEach(texto => {
+                    actividadElement.innerHTML += `<p>${texto}</p>`;
+                }
+                );
+            }
+            actividadAcademicaB.appendChild(actividadElement);
+        });
+        formacionContainer.appendChild(actividadAcademicaB);
+    }
+
+    if (formacionActual.rotaciones) {
+        const rotaciones = document.createElement('div');
+        rotaciones.classList.add('formacion', 'column');
+        rotaciones.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Rotaciones</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        const subtitulo = document.createElement('h3');
+        subtitulo.classList.add('subtituloSeparado');
+        subtitulo.textContent = formacionActual.rotaciones.subtitulo;
+        rotaciones.appendChild(subtitulo);
+        const lista = document.createElement('div');
+        lista.classList.add('column');
+        formacionActual.rotaciones.lista.forEach(rotacion => {
+            lista.innerHTML += `
+                <h3>${rotacion.nombre}</h3>
+                <p>${rotacion.texto}</p>
+            `;
+        });
+        rotaciones.appendChild(lista);
+        formacionContainer.appendChild(rotaciones);
+    }
+
+    if (formacionActual.aulasAbiertas) {
+        const aulasAbiertas = document.createElement('div');
+        aulasAbiertas.classList.add('formacion', 'column');
+        aulasAbiertas.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Aulas abiertas</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        formacionActual.aulasAbiertas.forEach(texto => {
+            aulasAbiertas.innerHTML += `<p>${texto}</p>`;
+        });
+        formacionContainer.appendChild(aulasAbiertas);
+    }
+
+    if (formacionActual.requisitos) {
+        const requisitos = document.createElement('div');
+        requisitos.classList.add('formacion', 'column');
+        requisitos.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Requisitos y proceso de admisión</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            `;
+        const lista = document.createElement('ul');
+        formacionActual.requisitos.forEach(texto => {
+            lista.innerHTML += `<li>${texto}</li>`;
+        });
+        requisitos.appendChild(lista);
+        formacionContainer.appendChild(requisitos);
+    }
+
+    if (formacionActual.duracion) {
+        const duracion = document.createElement('div');
+        duracion.classList.add('formacion', 'column');
+        duracion.innerHTML = `
+            <h2 class="w-100 titleUnderline">
+                <span>Duración</span>
+                <span class="greenUnderlineTitle"></span>
+            </h2>
+            <p>${formacionActual.duracion}</p>
+            `;
+        formacionContainer.appendChild(duracion);
     }
 }
-
-// Oncologia clinia
-// Si, Si, Si, si, si, si, si, si
-
-// Mastologia
-// si, si, no (objetivos, actividades), no, no, no, no, si
-
-// onco-hematologia
-// si, si, no (objetivos), si, si, no, no, si

@@ -9,7 +9,7 @@ main {
   margin: 0 1rem;
 }
 
-.formacion > div {
+.formacion div {
   gap: 0.75rem;
 }
 
@@ -33,6 +33,18 @@ main {
 
 .formacion:last-of-type {
   border-bottom: none;
+}
+
+.subtituloSeparado {
+  margin-bottom: 0.75rem;
+}
+
+.formacion .listaActividad {
+  margin-top: 0;
+}
+
+.mailEscribir {
+  color: var(--color-primario);
 }
 
 @media (width >=700px) {
