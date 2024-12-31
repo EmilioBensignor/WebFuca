@@ -62,10 +62,10 @@ const linksNovedades = [
     link: "https://youtu.be/4_Rcp2VjZ-8",
     text: "Cáncer de mama",
   },
-  {
-    link: "#",
-    text: "Investigaciones CIO",
-  },
+  // {
+  //   link: "#",
+  //   text: "Investigaciones CIO",
+  // },
   {
     link: "https://www.instagram.com/p/DCIDO1Pv_nv/?img_index=1",
     text: "Redio",
@@ -85,7 +85,7 @@ const novedades = [
     dia: "04",
     anio: "2025",
     texto: "Día mundial del Cáncer.",
-    cta: "INSCRIBIRME",
+    cta: "INFÓRMATE",
     link: "https://youtu.be/byV96VNM",
   },
   {
@@ -93,7 +93,8 @@ const novedades = [
     dia: "04",
     anio: "2025",
     texto: "Día Internacional de la Concienciación sobre el VPH.",
-    cta: "LEER MÁS",
+    cta: "INFÓRMATE",
+    link: "https://youtu.be/6g1HxlpKUSY"
   },
   {
     mes: "MARZO",
@@ -101,7 +102,7 @@ const novedades = [
     anio: "2025",
     texto: "Día Mundial de la Prevención del Cáncer de Cuello Uterino.",
     cta: "INFÓRMATE",
-    link: "https://studio.youtube.com/video/6g1HxlpKUSY/edit",
+    link: "https://youtu.be/6g1HxlpKUSY",
   },
   {
     mes: "SEPTIEMBRE",
