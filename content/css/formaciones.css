@@ -9,6 +9,10 @@ main {
   margin: 0 1rem;
 }
 
+.formacion > div {
+  gap: 0.75rem;
+}
+
 .formacion ul {
   display: flex;
   flex-direction: column;
