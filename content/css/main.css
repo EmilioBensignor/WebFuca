@@ -375,6 +375,23 @@ h3 {
   transform: rotate(180deg);
 }
 
+/* Max Content */
+
+body {
+  background-color: var(--color-primario);
+}
+
+header,
+main,
+footer {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: white;
+}
+
 /* Pages */
 
 .heroGradient {
@@ -520,23 +537,6 @@ h3 {
 input.error,
 textarea.error {
   border: 1px solid red;
-}
-
-/* Max Content */
-
-body {
-  background-color: #8a8a8a;
-}
-
-header,
-main,
-footer {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-section {
-  background-color: white;
 }
 
 /* Header */
