@@ -299,6 +299,7 @@
 .miraYoutube a {
   color: var(--color-primario);
   font-size: 0.875rem;
+  transition: all 0.3s;
 }
 
 .miraYoutube a:hover {
