@@ -209,7 +209,7 @@ window.onclick = (event) => {
 for (let item = 0; item < tesis.length; item++) {
     aniosTesis.innerHTML += `
         <button class="pill anioTesis column" data-anio="${item}">
-            <h3>${tesis[item].anio}</h3>
+            ${tesis[item].anio}
         </button>
     `;
 }
@@ -246,7 +246,7 @@ mostrarContenidoTesis(0);
 for (let item = 0; item < tesinas.length; item++) {
     aniosTesinas.innerHTML += `
         <button class="pill anioTesinas column" data-anio="${item}">
-            <h3>${tesinas[item].anio}</h3>
+            ${tesinas[item].anio}
         </button>
     `;
 }
@@ -277,7 +277,7 @@ mostrarContenidoTesinas(0);
 for (let item = 0; item < publicaciones.length; item++) {
     aniosPublicaciones.innerHTML += `
         <button class="pill anioPublicaciones column" data-anio="${item}">
-            <h3>${publicaciones[item].anio}</h3>
+            ${publicaciones[item].anio}
         </button>
     `;
 }
@@ -310,7 +310,7 @@ mostrarContenidoPublicaciones(0);
 for (let item = 0; item < premios.length; item++) {
     aniosPremios.innerHTML += `
         <button class="pill anioPremios column" data-anio="${item}">
-            <h3>${premios[item].anio}</h3>
+            ${premios[item].anio}
         </button>
     `;
 }
