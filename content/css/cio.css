@@ -242,10 +242,18 @@ p {
         padding: 0.875rem 1.75rem;
     }
 
+    .bodyTesis,
+    .bodyPublicaciones,
+    .bodyPremios {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .bodyTesis>div,
     .bodyTesinas,
     .bodyPremios>div,
     .bodyPublicaciones>div {
+        width: 49%;
         gap: 1.5rem;
         padding: 1.5rem;
     }
