@@ -937,7 +937,7 @@ header {
 @media only screen and (min-width: 992px) {
 
   .logoHeader {
-    width: 16rem;
+    width: 14rem;
   }
 
   .logoFooter {
@@ -1090,12 +1090,12 @@ header {
   #desktop-menu {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .menuDesktopList {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
     margin-top: 1rem;
   }
@@ -1193,6 +1193,7 @@ header {
   /* Header */
 
   header {
+    gap: 1rem;
     padding: 1.5rem 3rem;
   }
 

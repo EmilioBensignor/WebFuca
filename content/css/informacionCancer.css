@@ -1,3 +1,7 @@
+p {
+    font-size: 0.875rem;
+}
+
 /* Informacion */
 
 section {
@@ -5,23 +9,29 @@ section {
     padding: 1.5rem 1rem;
 }
 
-.informacion > div, .informacion > div > div > div {
+.informacion>div,
+.informacion>div>div>div {
     gap: 1.5rem;
 }
 
-.informacion > div > div {
+.informacion>div>div {
     gap: 0.75rem;
+}
+
+.informacion>div>img {
+    max-height: 375px;
+    object-fit: cover;
 }
 
 /* Proyectos */
 
-.proyectosContainer {
+.tiposContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.proyecto {
+.tipo {
     width: 47%;
     gap: 1.5rem;
     background-color: white;
@@ -31,11 +41,163 @@ section {
     padding: 1rem 0.75rem;
 }
 
-.proyecto img {
+.tipo img {
     width: 3rem;
     height: 3rem;
+    filter: none;
 }
 
-.proyecto h3 {
+.tipo h3 {
     text-align: start;
+}
+
+.tipoSeleccionado {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.tipoSeleccionado img {
+    filter: brightness(0) invert(1);
+}
+
+/* Informacion General */
+
+.opcionesContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.opcion {
+    border: 1px solid var(--color-primario);
+    border-radius: 999px;
+    background-color: white;
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 0.875rem;
+    cursor: pointer;
+    padding: 0.875rem 0.65rem;
+}
+
+.opcionSeleccionada {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.opcionBody {
+    gap: 1rem;
+    border: 1px solid var(--color-primario);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.opcionBody span {
+    font-weight: bold;
+}
+
+/* Modal */
+
+.modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+}
+
+.modalContent {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.closeBtn {
+    background-color: var(--color-primario);
+    border-radius: 999px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.875rem 4.5rem;
+}
+
+@media (width >=700px) {
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .informacion>div>img {
+        max-height: 500px;
+    }
+}
+
+@media (width >=1080px) {
+    section {
+        gap: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .informacion {
+        gap: 0;
+        padding: 0;
+    }
+
+    .informacion>div {
+        flex-direction: row-reverse;
+        gap: 0;
+    }
+
+    .informacion>div:nth-child(2) {
+        flex-direction: row;
+    }
+
+    .informacion>div>div,
+    .informacion>div>img {
+        width: 50%;
+    }
+
+    .informacion>div>div {
+        gap: 2rem;
+        padding: 3rem 2rem;
+    }
+
+    .tipo {
+        width: 32%;
+    }
+
+    .opcion {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .opcionBody {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (width >=1440px) {
+
+    section,
+    .informacion>div>div {
+        padding: 4rem 4.93rem;
+    }
 }
