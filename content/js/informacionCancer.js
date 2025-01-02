@@ -160,13 +160,13 @@ window.onclick = (event) => {
     }
 }
 
+/* Informacion General */
+
 for (let opcion = 0; opcion < opciones.length; opcion++) {
     opcionesContainer.innerHTML += `
         <button class="opcion">${opciones[opcion].titulo}</button>
     `;
 }
-
-/* Informacion General */
 
 const botonesOpciones = document.querySelectorAll('.opcion');
 
