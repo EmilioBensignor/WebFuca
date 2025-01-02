@@ -37,7 +37,7 @@ let formas = [
 for (let forma = 0; forma < formas.length; forma++) {
   if (formas[forma].link) {
     formacionesContainer.innerHTML += `
-    <a class="forma" href="/formaciones?seccion=${formas[forma].link}">
+    <a class="forma formaLink" href="/formaciones?seccion=${formas[forma].link}">
       <div class="bgImgContain ${formas[forma].img}"></div>
       <p>${formas[forma].texto}</p>
     </a>
