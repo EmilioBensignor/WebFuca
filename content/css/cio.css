@@ -218,6 +218,7 @@ p {
     }
 
     .estructuraCIO {
+        display: flex;
         padding: 0;
     }
 

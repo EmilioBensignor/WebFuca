@@ -181,6 +181,7 @@ section {
 
     .tipo {
         width: 32%;
+        padding: 1.5rem;
     }
 
     .opcion {

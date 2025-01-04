@@ -2,13 +2,13 @@ const verContainer = document.getElementById('verContainer');
 
 const ver = [
     {
-        link: "#",
+        link: "https://www.instagram.com/fundacion_fuca/",
         titulo: "Vivos en instagram",
         texto: "Invitamos a destacados profesionales para conversar sobre temas relevantes relacionados con el cáncer. Participá en tiempo real y realizá tus preguntas.",
         img: "Vivos-en-instagram",
     },
     {
-        link: "#",
+        link: "https://www.youtube.com/user/FundacionFUCA",
         titulo: "Charlas y talleres",
         texto: "Unite a nuestra comunidad en YouTube, allí encontrarás charlas, talleres y actividades exclusivas con nuestros destacados profesionales.",
         img: "Charlas-y-talleres",
@@ -23,7 +23,7 @@ ver.forEach((item) => {
                 <h2>${item.titulo}</h2>
                 <p>${item.texto}</p>
             </div>
-            <a href=${item.link} class="primaryButton">VER</a>
+            <a href=${item.link} target="_blank" class="primaryButton">VER</a>
         </div>
         `;
 });

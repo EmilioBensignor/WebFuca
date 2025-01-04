@@ -44,7 +44,6 @@ p {
     background-color: white;
     border-radius: 18px;
     border: none;
-    cursor: pointer;
     padding: 1rem;
 }
 
@@ -103,12 +102,19 @@ p {
     width: 100%;
     max-width: 280px;
     text-align: center;
+    padding: 0.875rem 2rem;
 }
 
 @media (width >=600px) {
     .objetivosContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width >=630px) {
+    .balances a {
+        width: max-content;
     }
 }
 
