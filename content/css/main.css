@@ -351,13 +351,13 @@ h3 {
 
 .greenUnderlineTitle {
   height: 0;
-  width: 25%;
+  width: 3rem;
   border: 2px solid var(--color-primario);
 }
 
 .whiteUnderlineTitle {
   height: 0;
-  width: 25%;
+  width: 3rem;
   border: 2px solid #ffffff;
 }
 
@@ -587,10 +587,6 @@ header {
   cursor: pointer;
 }
 
-.underlineNav {
-  width: 3rem;
-}
-
 .menuNavColumnList {
   height: 0;
   visibility: hidden;
@@ -700,10 +696,6 @@ header {
   cursor: pointer;
 }
 
-.underlineFooter {
-  width: 3rem;
-}
-
 .menuFooterColumnList {
   height: 0;
   visibility: hidden;
@@ -775,7 +767,7 @@ header {
 }
 
 .flemingMobile {
-  width: 25%;
+  width: 4.5rem;
 }
 
 .derechos {
@@ -808,11 +800,6 @@ header {
     font-size: 1rem;
   }
 
-  .greenUnderlineTitle,
-  .whiteUnderlineTitle {
-    width: 20%;
-  }
-
   header .hamburger {
     width: 5%;
   }
@@ -832,7 +819,7 @@ header {
   }
 
   .flemingMobile {
-    width: 20%;
+    width: 3rem;
   }
 }
 
@@ -865,7 +852,7 @@ header {
 
   .greenUnderlineTitle,
   .whiteUnderlineTitle {
-    width: 15%;
+    width: 3.5rem;
   }
 
   /* Modal */
@@ -890,25 +877,13 @@ header {
   .donaFucaFooter {
     max-width: 250px;
   }
-
-  .underlineFooter {
-    width: 3.5rem;
-  }
-
-  .underlineNav {
-    width: 3.5rem;
-  }
-
-  .flemingMobile {
-    width: 15%;
-  }
 }
 
 @media only screen and (min-width: 770px) {
 
   .greenUnderlineTitle,
   .whiteUnderlineTitle {
-    width: 12%;
+    width: 4rem;
   }
 
   .logoHeader {
@@ -932,10 +907,6 @@ header {
     width: 2.3rem;
     height: 2.3rem;
   }
-
-  .flemingMobile {
-    width: 12%;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -958,10 +929,6 @@ header {
 
   .heroGradient>div>h1 {
     font-size: 1.625rem;
-  }
-
-  .flemingMobile {
-    width: 10%;
   }
 }
 
@@ -1073,12 +1040,12 @@ header {
   }
 
   .greenUnderlineTitle {
-    width: 8%;
+    width: 5rem;
     border: 3px solid var(--color-primario);
   }
 
   .whiteUnderlineTitle {
-    width: 8%;
+    width: 5rem;
     border: 3px solid white;
   }
 
@@ -1110,7 +1077,7 @@ header {
   }
 
   .underlineNavDesktop {
-    width: 4.5rem;
+    width: 4rem;
     border: 2px solid white;
     margin-top: 0.75rem;
     opacity: 0;
@@ -1261,10 +1228,6 @@ header {
     width: 3rem;
   }
 
-  .titleUnderline .underlineNav {
-    width: 3rem;
-  }
-
   .menuFooterColumnList {
     height: auto;
     visibility: visible;
@@ -1298,16 +1261,21 @@ header {
   }
 
   .fucaDesarrolla {
-    width: 19%;
+    width: 20%;
   }
 
   .fleming {
-    width: 34%;
+    width: 3rem;
   }
 
   .fucaDesarrollaDerecha {
+    width: 80%;
     display: flex;
-    gap: 2.6rem;
+    gap: 2rem;
+  }
+
+  .fucaDesarrollaDerecha>div:first-of-type {
+    width: 25%;
   }
 
   .contactateList {
@@ -1337,10 +1305,6 @@ header {
 
   #desktop-menu {
     gap: 5rem;
-  }
-
-  .fleming {
-    width: 25%;
   }
 }
 
@@ -1413,10 +1377,6 @@ header {
     font-size: 0.875rem;
   }
 
-  .fleming {
-    width: 25%;
-  }
-
   .menuFooterColumn .titleUnderline p {
     font-size: 1rem;
   }
@@ -1450,17 +1410,11 @@ header {
   }
 }
 
-@media only screen and (min-width: 1750px) {
-  .fleming {
-    width: 20%;
-  }
-}
-
 @media only screen and (min-width: 1920px) {
 
   .greenUnderlineTitle,
   .whiteUnderlineTitle {
-    width: 5%;
+    width: 5rem;
   }
 
   .fucaDesarrolla p {
