@@ -859,7 +859,7 @@ header {
     font-size: 1.1rem;
   }
 
-  .primaryButton, .secondaryButton {
+  .primaryButton {
     font-size: 1.2rem;
   }
 
@@ -1347,8 +1347,7 @@ header {
 @media only screen and (min-width: 1440px) {
 
   /* Fuca */
-  .primaryButton, .secondaryButton {
-    font-size: 1.25rem;
+  .primaryButton {
     padding: 0.725rem 3rem;
   }
 
@@ -1375,6 +1374,10 @@ header {
 
   .whiteUnderlineTitle {
     border: 4px solid white;
+  }
+
+  .primaryButton {
+    font-size: 1.25rem;
   }
 
   .heroGradient>div {

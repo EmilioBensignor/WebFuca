@@ -64,6 +64,9 @@
 
 .containerBecariosCards {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -85,7 +88,7 @@
 }
 
 .becarioCard {
-  width: 19%;
+  width: max-content;
   gap: 0.75rem;
 }
 
@@ -126,9 +129,6 @@
   }
 
   .containerBecariosCards {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
     gap: 3rem;
   }
 
