@@ -1,0 +1,139 @@
+section {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+.verItem {
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.verItem img {
+    max-height: 375px;
+    object-fit: cover;
+}
+
+.verItem div {
+    gap: 1rem;
+    padding: 0 1rem 0.5rem 1rem;
+}
+
+.verItem a {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    padding: 0.875rem 4rem 0.875rem 3rem;
+}
+
+.registrateParticipa {
+    width: 100%;
+    max-width: 290px;
+    position: relative;
+    padding: 0.875rem 2.75rem 0.875rem 2.188rem;
+}
+
+.verItem a::after,
+.registrateParticipa::after {
+    width: 1rem;
+    height: 1rem;
+    content: '';
+    position: absolute;
+    top: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+
+.verItem a::after {
+    right: 4rem;
+    background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+}
+
+.registrateParticipa::after {
+    right: 1.5rem;
+    background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
+.verItem a:hover::after {
+    background-image: url("/content/img/home/Icon-Flecha-Novedad-Verde.png");
+}
+
+.registrateParticipa:hover::after {
+    background-image: url("/content/img/home/Icon-Flecha-Novedad-Blanco.png");
+}
+
+.sumate div {
+    gap: 1rem;
+}
+
+@media (width >=350px) {
+    .registrateParticipa::after {
+        right: 2rem;
+    }
+}
+
+@media (width >=700px) {
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .verContainer {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .verItem {
+        width: 50%;
+    }
+
+    .verItem img {
+        max-height: 500px;
+    }
+
+    .sumate {
+        align-items: flex-start;
+    }
+}
+
+@media (width >=1080px) {
+    section {
+        gap: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .verItem {
+        align-items: flex-start;
+        padding-bottom: 1.5rem;
+    }
+
+    .verItem div {
+        padding: 0 1.5rem;
+    }
+
+    .verItem a {
+        width: max-content;
+        margin: 0 1.5rem;
+    }
+
+    .verItem a::after {
+        right: 2.5rem;
+    }
+}
+
+@media (width >=1440px) {
+    section {
+        padding: 4rem 4.93rem;
+    }
+}
