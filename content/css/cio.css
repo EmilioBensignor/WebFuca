@@ -177,8 +177,15 @@ p {
 }
 
 .bodyTesis>div span,
-.bodyTesinas span {
+.bodyTesinas span,
+.bodyPublicaciones span {
     font-weight: bold;
+}
+
+.bodyPublicaciones a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: 600;
 }
 
 /* Apoya */
