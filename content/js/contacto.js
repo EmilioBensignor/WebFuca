@@ -1,4 +1,47 @@
-const contactForm = document.getElementById('contactForm')
+const contactForm = document.getElementById('contactForm');
+
+function modalExito() {
+    const body = document.body;
+
+    const modalHTML = `
+        <div class="modalPages">
+            <div class="columnAlignCenter">
+            <div class="headerPages rowSpaceBetween">
+                <p>Hemos recibido tu consulta. Te contactaremos vía correo electrónico.</p>
+                <button class="cerrarModal">
+                <div class="closeIconModal bgImgContain"></div>
+                </button>
+            </div>
+            <button type="submit" id="btnCerrar" class="btnActionModal">CERRAR</button>
+            </div>
+        </div>
+        `;
+
+    const modalContainer = document.createElement('div');
+    modalContainer.innerHTML = modalHTML;
+    const modal = modalContainer.firstElementChild;
+    body.appendChild(modal);
+
+    const closeButton = modal.querySelector('.cerrarModal');
+    const btnCerrar = modal.querySelector('#btnCerrar');
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        modal.remove();
+    };
+
+    closeButton.addEventListener('click', closeModal);
+    btnCerrar.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    return modal;
+}
+
 contactForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -8,6 +51,7 @@ contactForm.addEventListener('submit', function (event) {
 
     const nombreError = contactForm.querySelector('#nombreError');
     const mailError = contactForm.querySelector('#mailError');
+    const mensajeError = contactForm.querySelector('#mensajeError');
 
     let isValid = true;
 
@@ -42,13 +86,28 @@ contactForm.addEventListener('submit', function (event) {
         mail.classList.remove('error');
     }
 
+    if (mensaje.value.trim() === '') {
+        mensajeError.textContent = 'El mensaje no puede estar vacío';
+        mensajeError.style.display = 'block';
+        mensaje.classList.add('error');
+        isValid = false;
+    } else if (mensaje.value.trim().length < 10) {
+        mensajeError.textContent = 'El mensaje debe tener al menos 10 caracteres';
+        mensajeError.style.display = 'block';
+        mensaje.classList.add('error');
+        isValid = false;
+    } else {
+        mensajeError.style.display = 'none';
+        mensaje.classList.remove('error');
+    }
+
     if (isValid) {
         console.log({
             nombre: nombre.value,
             correo: mail.value,
             mensaje: mensaje.value
         });
+        contactForm.reset();
+        modalExito();
     }
-
-    contactForm.reset();
 });

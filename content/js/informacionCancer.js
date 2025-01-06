@@ -84,15 +84,15 @@ const opciones = [
             "La participación en un ensayo clínico es totalmente voluntaria y el paciente puede retirarse en cualquier momento y volver al tratamiento convencional.",
         ],
     },
-    {
-        titulo: "Cáncer hereditario",
-    },
-    {
-        titulo: "Hábitos saludables",
-    },
-    {
-        titulo: "Nutrición",
-    },
+    // {
+    //     titulo: "Cáncer hereditario",
+    // },
+    // {
+    //     titulo: "Hábitos saludables",
+    // },
+    // {
+    //     titulo: "Nutrición",
+    // },
     {
         titulo: "Psico-Oncología",
         contenido: [
@@ -105,9 +105,9 @@ const opciones = [
             "Otro objetivo importante es la elaboración de esta experiencia como un evento dentro de la línea temporal que implica la vida. (“Estoy - estuve enfermo”, NO “soy enfermo”) El desafío mayor para la Oncología y la Psicooncología es el trabajo con las personas que superaron la experiencia del cáncer y deben encarar su vida con este bagaje."
         ],
     },
-    {
-        titulo: "Glosario",
-    },
+    // {
+    //     titulo: "Glosario",
+    // },
 ];
 
 /* Tipos Cancer */
