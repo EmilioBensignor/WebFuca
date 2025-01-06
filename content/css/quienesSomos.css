@@ -62,8 +62,8 @@ li {
 
 .equipoPrimary,
 .equipo .equipoPrimary:first-of-type {
-    color: var(--color-primario);
-    font-weight: bold;
+    color: var(--color-primario) !important;
+    font-weight: bold !important;
 }
 
 .categoria {

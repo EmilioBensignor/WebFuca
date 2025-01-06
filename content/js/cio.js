@@ -11,23 +11,65 @@ const bodyPremios = document.getElementById('bodyPremios');
 const proyectos = [
     {
         img: "mama",
-        nombre: "Cáncer de mama"
+        nombre: "Cáncer de mama",
+        subtitulo: "El sistema inmunológico en la terapia del cáncer de mama HER2+",
+        body: [
+            "<span>Estudiamos cómo potenciar al sistema inmunológico para combatir tumores mamarios.</span>",
+            "En los últimos años se ha revalorizado el rol del sistema inmunológico en la progresión del cáncer de mama y en la respuesta a los tratamientos. La inmunoterapia es una alternativa promisoria, en particular para los subtipos de cáncer de mama HER2+ y/o Triple Negativo (designado por su sigla: CMTN).",
+            "En el CIO-FUCA determinamos que en el CMTN el sistema inmunológico se ve deteriorado, lo que le impide ejercer el control y eliminar el tumor. Por eso estudiamos diversas estrategias para estimular a las células inmunes con el objetivo de promover la eliminación de estos tumores.",
+            "<span>En el CIO-FUCA determinamos que en el CMTN el sistema inmunológico se ve deteriorado, lo que le impide ejercer el control y eliminar el tumor. Por eso estudiamos diversas estrategias para estimular a las células inmunes con el objetivo de promover la eliminación de estos tumores.</span>",
+            "A pesar de la mejora significativa de los resultados clínicos en el cáncer de mama HER2+ desde la introducción de la terapia con anticuerpos monoclonales (AcMs), todavía hay pacientes con enfermedad temprana que no responden en forma completa a esta terapia, lo que podría interpretarse como una resistencia al tratamiento.",
+            "El proyecto INMUNOHER nació del interés de médicos oncólogos y de científicos del CIO en refinar la elección de las terapias para las pacientes con cáncer de mama.",
+            "HER2+ y estudiar estrategias de combinación de quimioterapia con inmunoterapia, mediante la determinación de marcadores inmunológicos que generen información predictiva de utilidad clínica.",
+        ],
     },
     {
         img: "vejiga",
-        nombre: "Cáncer de vejiga"
+        nombre: "Cáncer de vejiga",
+        subtitulo: "Estamos investigando biomarcadores que nos permitan predecir la respuesta de pacientes con cáncer de vejiga superficial a la inmunoterapia con BCG",
+        body: [
+            "<span>El cáncer de vejiga superficial es el más frecuente de los tumores de vejiga y una cierta proporción de éstos puede progresar a un tipo más agresivo que invade el músculo de la vejiga.</span>",
+            "La administración intravesical del Bacilo de Calmette - Guerin (BCG) vivo atenuado es la principal opción terapéutica para estos pacientes, luego de la cirugía.",
+            "No obstante, sólo el 60% de los pacientes responden a esta terapia, muchos de ellos presentan recaídas locales por falla de la misma, y eventualmente progresan a tumores invasivos.",
+            "Actualmente, dado que no es posible distinguir o predecir quiénes responderán a la BCG, el tratamiento se aplica a todos los pacientes con tumores de vejiga superficiales luego de la cirugía del tumor primario.",
+            "Claramente, existe la necesidad de obtener una herramienta o biomarcador para identificar a los pacientes correctos que deberían ser tratados con BCG.",
+            "Investigadores del CIO-FUCA, conjuntamente con médicos de IAF, encaramos un proyecto para identificar posibles marcadores de respuesta a BCG (Biomarcadores), analizando las características inmunológicas de las biopsias tumorales de vejiga así como de las células inmunes en sangre de los pacientes. De hallar dichos biomarcadores los médicos podrían tratar a algunos pacientes con BCG y ofrecer a quienes presenten menor probabilidad de respuesta otros tratamientos, o bien la posibilidad de participar en estudios clínicos con nuevos fármacos.",
+        ],
     },
     {
         img: "melanoma",
-        nombre: "Melanoma"
+        nombre: "Melanoma",
+        subtitulo: "Inmunoterapia con vacunas",
+        body: [
+            "<span>La vacuna terapéutica que desarrollamos evita o retarda significativamente la aparición de metástasis a distancia de pacientes con melanoma en alto riesgo de recaída.</span>",
+            "En los últimos años se ha revalorizado la inmunoterapia, la que sumada a la cirugía, la quimioterapia y la radioterapia, se presenta como un arma poderosa para el tratamiento del cáncer. Una forma de inmunoterapia son las vacunas terapéuticas, que buscan entrenar a los linfocitos -los glóbulos blancos- del paciente para que reconozcan y eliminen las células tumorales evitando la aparición de metástasis.",
+            "El melanoma cutáneo es el más agresivo de los cánceres de piel; es difícil de tratar, pero responde a la inmunoterapia.",
+            "Nuestro equipo de investigación, liderado por el Dr. José Mordoh, ha desarrollado la vacuna CSF-470 para el melanoma cutáneo, la que aplicada a pacientes en alto riesgo de recaída después de la cirugía, ha mostrado en ensayos clínicos ser segura, bien tolerada y capaz de activar inmunidad antitumoral, controlando la aparición de metástasis a distancia.",
+            "Estamos aplicando herramientas de secuenciación de última generación para analizar en detalle las moléculas hacia las que se dirige la respuesta inmune inducida por la vacunación en los pacientes, la naturaleza y la dinámica de los linfocitos responsables de la acción antitumoral. También investigamos los mecanismos involucrados en la respuesta clínica observada y la combinación de nuestra vacuna con otras estrategias inmunoterapéuticas para potenciar su efecto.",
+        ],
     },
     {
         img: "biopsias-liquidas",
-        nombre: "Biopsias Líquidas"
+        nombre: "Biopsias Líquidas",
+        subtitulo: "Investigamos cómo detectar si hay trazas de material tumoral en biopsias líquidas, principalmente en muestras de sangre. Esto nos sirve para mejorar el diagnóstico, detectar recaídas en forma rápida, y evaluar la respuesta a los tratamientos.",
+        body: [
+            "Un desafío actual en el tratamiento del cáncer es establecer parámetros que permitan, por un lado, una detección temprana de los tumores y por otro, un seguimiento rápido de la respuesta clínica de los pacientes a los diferentes tratamientos disponibles.",
+            "Los tumores liberan en los fluidos corporales (biopsias líquidas) fragmentos de ácido nucleico (ADN), que contienen alteraciones propias del tumor. A partir de una muestra de sangre, se pueden analizar estos niveles de ADN tumoral circulante con técnicas de biología molecular altamente sensibles (PCR digital). La presencia de ADN circulante en biopsias líquidas permite detectar si hay un foco tumoral en alguna parte del cuerpo.",
+            "El melanoma cutáneo es el cáncer de piel de mayor riesgo. En esta primera etapa, nuestro objetivo principal es analizar los niveles de ADN circulante tumoral en biopsias líquidas y su utilidad clínica, en pacientes con melanoma cutáneo con enfermedad regional y avanzada.",
+            "El propósito es generar herramientas moleculares para complementar la práctica clínica habitual en los pacientes, de utilidad para la detección temprana y el seguimiento de la respuesta clínica de los pacientes con este tipo de cáncer.",
+            "<span>Esto contribuirá a una medicina más personalizada, optimizando la detección temprana del cáncer, la elección del tratamiento y su seguimiento.</span>",
+        ],
     },
     {
         img: "leucemia-mieloide-cronica",
-        nombre: "Leucemia Mieloide Crónica"
+        nombre: "Leucemia Mieloide Crónica",
+        subtitulo: "Lanzamos el primer ensayo clínico de Argentina para garantizar la discontinuación de drogas de alto costo en pacientes con Leucemia Mieloide Crónica.",
+        body: [
+            "<span>Actualmente, en Argentina y en el mundo, la Leucemia Mieloide Crónica (LMC) representa, por su alta prevalencia, un desafío clínico, científico y socio-económico muy relevante.</span>",
+            "La cuantificación por biología molecular del biomarcador genético BCR-ABL1 es fundamental para orientar la conducta terapéutica durante el seguimiento de los enfermos, ya que permite identificar aquellos pacientes que logran una normalización completa de los parámetros moleculares, sugiriendo una potencial cura. Sin embargo, no queda claro cuándo los pacientes pueden considerarse curados definitivamente.",
+            "Por eso, la suspensión del tratamiento es una decisión difícil para los pacientes, aunque es viable y podría beneficiarlos en su calidad de vida y pronóstico, y además permitiría optimizar los recursos económicos del sistema de salud, dado el alto costo de estas drogas. En este contexto, el objetivo primario de este estudio es garantizar el monitoreo molecular a los pacientes en forma intensiva y estandarizada durante la discontinuación del tratamiento por al menos 2 años.",
+            "El objetivo general es evaluar el impacto clínico y el pronóstico que podría tener la valoración del estado inmunológico del paciente, para predecir mejor la posibilidad de discontinuar la terapia.",
+        ],
     },
 ];
 const tesis = [
@@ -270,7 +312,8 @@ modal.innerHTML = `
             <span id="modalTitle"></span>
             <span class="greenUnderlineTitle"></span>
         </h2>
-        <div id="modalBody"></div>
+        <p id="subtitle" class="proyectoSubtitulo"></p>
+        <div id="modalBody" class="proyectoBody"></div>
         <button class="closeBtn">CERRAR</button>
     </div>
 `;
@@ -298,8 +341,27 @@ document.querySelectorAll('.proyecto').forEach(proyecto => {
         proyecto.classList.add('proyectoSeleccionado');
 
         const modalTitle = document.getElementById('modalTitle');
-        modalTitle.textContent = proyectos[index].nombre;
+        const subtitle = document.getElementById('subtitle');
+        const modalBody = document.getElementById('modalBody');
+        
         modal.style.display = 'flex';
+        
+        modalTitle.textContent = proyectos[index].nombre;
+        subtitle.textContent = proyectos[index].subtitulo;
+        modalBody.innerHTML = '';
+        
+        proyectos[index].body.forEach(text => {
+            const p = document.createElement('p');
+            p.innerHTML = text;
+            modalBody.appendChild(p);
+        });
+
+        setTimeout(() => {
+            modalBody.scrollTo({
+                top: 0,
+                behavior: 'instant'
+            });
+        }, 0);
     });
 });
 
