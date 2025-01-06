@@ -1,4 +1,5 @@
 const consejoContainer = document.getElementById('consejoContainer');
+const voluntarioContainer = document.getElementById('voluntarioContainer');
 
 const consejo = [
     {
@@ -57,6 +58,20 @@ const consejo = [
         rol: "Vocal Suplente",
     },
 ];
+const voluntarios = [
+    {
+        img: "voluntarios",
+        texto: "Nuestro equipo cuenta con un grupo de voluntarios, quienes con su tiempo, energía y aportes, colaboran en la tarea diaria de la organización."
+    },
+    {
+        img: "espacio-fuca",
+        texto: "El servicio permanente de los voluntarios se centra en la atención del “Espacio FUCA” en la recepción del Instituto Alexander Fleming (Crámer 1180, Colegiales, CABA)."
+    },
+    {
+        img: "eventos",
+        texto: "Otros voluntarios participan en eventos o bien, proponiendo acciones y alianzas con otras organizaciones o empresas."
+    },
+];
 
 for (let miembro = 0; miembro < consejo.length; miembro++) {
     consejoContainer.innerHTML += `
@@ -66,6 +81,15 @@ for (let miembro = 0; miembro < consejo.length; miembro++) {
                 <p class="text-center">${consejo[miembro].nombre}</p>
                 <p class="text-center">${consejo[miembro].rol}</p>
             </div>
+        </div>
+    `;
+}
+
+for (let voluntario = 0; voluntario < voluntarios.length; voluntario++) {
+    voluntarioContainer.innerHTML += `
+        <div class="voluntario column">
+            <img src="/content/img/quienesSomos/${voluntarios[voluntario].img}.svg" alt="${voluntarios[voluntario].img}">
+            <p class="text-center">${voluntarios[voluntario].texto}</p>
         </div>
     `;
 }

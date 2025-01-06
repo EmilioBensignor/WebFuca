@@ -1,9 +1,11 @@
-section {
+section,
+.voluntarioDistancia div:last-of-type {
     gap: 1.5rem;
     padding: 1.5rem 1rem;
 }
 
-p {
+p,
+li {
     font-size: 0.875rem;
 }
 
@@ -42,23 +44,151 @@ p {
     font-weight: 500;
 }
 
+/* Equipos */
+.equipo,
+.container {
+    gap: 0.75rem;
+}
+
+.equipo p:last-of-type {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+}
+
+.largeP,
+.equipoPrimary {
+    font-size: 1rem;
+}
+
+.equipoPrimary,
+.equipo .equipoPrimary:first-of-type {
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+.categoria {
+    border-top: 1px solid #00000066;
+    padding-top: 1.5rem;
+}
+
+.equipoSecundario p:first-of-type {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.fotoEquipo {
+    display: flex;
+    padding: 0;
+}
+
+.fotoEquipo img {
+    max-height: 375px;
+    object-fit: cover;
+}
+
+/* Ser voluntario */
+
+.voluntarioContainer {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.75rem;
+}
+
+.voluntario {
+    width: 100%;
+    gap: 1.5rem;
+    border: 1px solid var(--color-primario);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.voluntario img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.voluntario p {
+    text-align: start;
+}
+
+.sumate {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Voluntario distancia */
+
+.voluntarioDistancia {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+}
+
+.voluntarioDistancia div:first-of-type {
+    display: flex;
+}
+
+.voluntarioDistancia div img {
+    width: 50%;
+    max-height: 375px;
+    object-fit: cover;
+}
+
+.voluntarioDistancia div:last-of-type {
+    gap: 1.5rem;
+}
+
+.voluntarioDistancia ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.voluntarioDistancia ul li {
+    list-style: disc;
+}
+
 @media (width >=700px) {
-    section {
+
+    section,
+    .voluntarioDistancia div:last-of-type {
         padding: 3rem 2rem;
     }
 
     .miembro {
         width: 30%;
     }
+
+    .voluntario {
+        width: 32%;
+    }
 }
 
 @media (width >=1080px) {
-    section {
+
+    section,
+    .voluntarioDistancia div:last-of-type {
         gap: 2rem;
     }
 
-    p {
+    p,
+    li {
         font-size: 1rem;
+    }
+
+    .largeP,
+    .equipoPrimary,
+    .categoria p {
+        font-size: 1.25rem;
+    }
+
+    section .enBusqueda {
+        width: 100%;
+        text-align: center;
     }
 
     .consejoContainer {
@@ -66,12 +196,90 @@ p {
     }
 
     .miembro {
+        width: 22%;
+    }
+
+    .fotoEquipo img,
+    .voluntarioDistancia div img {
+        max-height: 500px;
+    }
+
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .container>div,
+    .equipo {
         width: 23%;
+    }
+
+    .equipo>.equipo {
+        width: 100%;
+    }
+
+    .equipoPrimary {
+        text-align: center;
+    }
+
+    .equipo .equipoPrimary {
+        text-align: start;
+    }
+
+    .containerSecundario {
+        justify-content: flex-start;
+    }
+
+    .containerSecundario .equipo:last-of-type p {
+        color: black;
+        font-weight: bold;
+    }
+
+    .categoria {
+        padding-top: 3rem;
+    }
+
+    .voluntarioContainer {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .voluntarioDistancia {
+        flex-direction: row;
+    }
+
+    .voluntarioDistancia>div {
+        width: 50%;
+    }
+
+    .voluntarioDistancia div:first-of-type {
+        flex-direction: column;
+    }
+
+    .voluntarioDistancia div img {
+        width: 100%;
+        max-height: 330px;
+    }
+
+    .voluntarioDistancia div:last-of-type {
+        justify-content: center;
     }
 }
 
 @media (width >=1440px) {
-    section {
+
+    section,
+    .voluntarioDistancia div:last-of-type {
         padding: 4rem 4.93rem;
+    }
+
+    .voluntarioDistancia div img {
+        max-height: 400px;
+    }
+
+    .fotoEquipo img {
+        max-height: 700px;
     }
 }
