@@ -1,5 +1,3 @@
-const { sub } = require("date-fns");
-
 const tipos = document.getElementById('tipos');
 const opcionesContainer = document.getElementById('opcionesContainer');
 const opcionBody = document.getElementById('opcionBody');
@@ -52,7 +50,7 @@ const tiposCancer = [
                 subtitulo: "¿Quién trata los cánceres de cabeza y cuello?",
                 textos: [
                     "Como ya se describió, estos tumores se originan e involucran diferentes órganos/estructuras de la anatomía que participan en diversas funciones fisiológicas (normales) esenciales, como son la respiración, la deglución, el habla; sentidos, como el olfato, la audición y la visión. Es de suponer, entonces, que su tratamiento requiere, la mayoría de las veces, con el fin de asegurar la mejor tolerancia al mismo y una recuperación más adecuada y con menores secuelas, de una interacción muy fluida entre diferentes especialidades de la medicina que están involucradas en el manejo de estos tumores.",
-                    "Este grupo de especialistas conforman lo que se denomina equipo multidisciplinario, requisito fundamental para el tratamiento de estos pacientes en centros especializados, e incluye: cirujanos (especialistas en cabeza y cuello), radioterapeutas (especialistas en tratamiento de radioterapia), oncólogos, especialistas en imágenes, odontólogos, nutricionistas, fonoaudiólogos / foniatras, patólogos, entre otros."
+                    "Este grupo de especialista conforman lo que se denomina equipo multidisciplinario, requisito fundamental para el tratamiento de estos pacientes en centros especializados, e incluye: cirujanos (especialista en cabeza y cuello), radioterapeutas (especialista en tratamiento de radioterapia), oncólogos, especialista en imágenes, odontólogos, nutricionistas, fonoaudiólogos / foniatras, patólogos, entre otros."
                 ],
             },
             {
@@ -512,7 +510,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "El cáncer de próstata ¿se puede prevenir?",
-                listas: [
+                lista: [
                     "El cáncer de próstata no se puede prevenir.",
                     "Durante mucho tiempo se recomendó realizar la detección precoz del cáncer de próstata con el uso de los valores de PSA en sangre y el tacto rectal realizado de forma periódica. Actualmente no se recomienda realizar estos exámenes a toda la población, ya que estudios realizados en miles de personas no demostraron su utilidad en la disminución de muertes por cáncer de próstata.",
                     "La decisión de realizar o no estudios para la detección precoz de cáncer de próstata tiene que ser discutida con su médico de cabecera (decisiones compartidas).",
@@ -537,7 +535,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "¿Qué puede causar el cáncer de pulmón?",
-                listas: [
+                lista: [
                     "Causas conocidas:",
                     "Tabaquismo.",
                     "Tabaquismo pasivo.",
@@ -546,7 +544,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Síntomas",
-                listas: [
+                lista: [
                     "Falta de aire.",
                     "Dolor con la respiración.",
                     "Tos crónica.",
@@ -555,7 +553,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Tabaquismo y cáncer de pulmón",
-                listas: [
+                lista: [
                     "El 80% cánceres de pulmón son causados por el tabaquismo.",
                     "Aumenta 10-20 veces el riesgo de padecer cáncer de pulmón.",
                     "Se asocia a otros 15 tipos de tumores.",
@@ -564,14 +562,14 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Beneficios de dejar de fumar",
-                listas: [
+                lista: [
                     "Disminuye el riesgo de todas las enfermedades asociadas al tabaco.",
                     "Se recomienda dejar de fumar SIEMPRE independientemente de la edad.",
                 ],
             },
             {
                 subtitulo: "Sugerencias",
-                listas: [
+                lista: [
                     "Consulta temprana ante la aparición de síntomas, sobre todo en tabaquistas.",
                     "Dejar de fumar.",
                     "Los fumadores pesados deben discutir los riesgos y beneficios de la tomografía computada con su médico de cabecera.",
@@ -610,7 +608,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Factores de riesgo para desarrollar cáncer de tiroides",
-                listas: [
+                lista: [
                     "Déficit de Yodo en la dieta.",
                     "Antecedentes de radiación en el cuello en la infancia.",
                     "Antecedentes de cáncer de tiroides en la familia.",
@@ -619,27 +617,27 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Síntomas del cáncer de tiroides",
-                listas: [
+                lista: [
                     "Casi en la totalidad de los casos se presenta con un nódulo tiroideo asintomático.",
                     "Puede manifestarse como masa palpable en el cuello, ganglios aumentados de tamaño en las regiones laterales del mismo.",
                 ],
             },
             {
                 subtitulo: "¿Cómo prevenir cáncer de tiroides?",
-                listas: [
+                lista: [
                     "Adecuado aporte de Yodo en la dieta (suplementación del agua en zonas de déficit).",
                 ],
             },
             {
                 subtitulo: "Exámenes de detección precoz del cáncer de tiroides",
-                listas: [
+                lista: [
                     "No existe actualmente una sistemática de estudio para detección precoz de esta patología, dada su baja frecuencia y mortalidad.",
                     "El diagnóstico suele ser incidental, por autopalpación de un nódulo en la región anterior del cuello, por detección del nódulo en un examen médico de rutina, o por imágenes realizadas por otros motivos.",
                 ],
             },
             {
                 subtitulo: "Tipos de cáncer de tiroides",
-                listas: [
+                lista: [
                     "Aprox. Un 95% de estos tumores está constituido por las “carcinomas diferenciados” que son el papilar y el folicular, con sus variantes y que conllevan mejor pronóstico.",
                     "Aprox. un 3% se trata de carcinomas medulares, de curso más agresivo que los diferenciados pero de todos modos con buen pronóstico.",
                     "Un bajo porcentaje (1,5%) está constituido por los “carcinomas anaplásicos”, de curso más agresivo y presentación en adultos mayores.",
@@ -647,7 +645,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "¿Cómo se trata el cáncer de tiroides?",
-                listas: [
+                lista: [
                     "En la gran mayoría de los casos el tratamiento inicial es quirúrgico, con remoción total o parcial de la glándula.",
                     "Según los factores de riesgo propios de cada tumor, luego de la cirugía, requerirá o no tratamiento con Yodo radioactivo.",
                     "Un reducido número de pacientes evolucionará con enfermedad recurrente o avanzada que requerirá tratamiento con drogas específicas.",
@@ -655,7 +653,7 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Incidencia y mortalidad del cáncer de tiroides",
-                listas: [
+                lista: [
                     "Son tumores de baja frecuencia (aprox. 3% de todos los tipos de cáncer).",
                     "Por lo general tienen buen pronóstico (0,4% de las muertes por cáncer).",
                     "Son más frecuentes en mujeres que en hombres (relación 3:1).",
@@ -664,8 +662,8 @@ const tiposCancer = [
             },
             {
                 subtitulo: "Puntos importantes para recordar",
-                listas: [
-                    "Como en muchos otros tipos de tumor, <span>es fundamental el abordaje multidisciplinario de esta patología, con equipo conformado por endocrinólogos, cirujanos de cabeza y cuello, especialistas en medicina nuclear, oncólogos, anatomopatólogos.</span>",
+                lista: [
+                    "Como en muchos otros tipos de tumor, <span>es fundamental el abordaje multidisciplinario de esta patología, con equipo conformado por endocrinólogos, cirujanos de cabeza y cuello, especialista en medicina nuclear, oncólogos, anatomopatólogos.</span>",
                     "Ante la aparición de un nódulo tiroideo, recordar que lo más probable es que sea benigno, pero de todos modos <span>consultar a su médico/a de confianza para su correcto estudio y derivación cuando corresponda.</span>",
                 ],
             },
@@ -833,7 +831,7 @@ const tiposCancer = [
                     "Pero también, en casos raros, se presenta sólo en el riñón y puede incluir ganglios linfáticos cercanos. Si existe la posibilidad de un linfoma, es posible que el médico realice una biopsia y recomiende hacer quimioterapia en vez de cirugía.",
                     "Además, en la evaluación que realiza el patólogo a través de la observación en el microscopio, determina el tipo de células tumorales, lo que es clave para decidir el tratamiento a seguir:",
                     "Células claras: representan aproximadamente el 70% de los cánceres de riñón. Las células claras pueden tener un crecimiento lento (grado 1) o rápido (grado 4). La inmunoterapia y la terapia dirigida son especialmente efectivas para tratar el cáncer de riñón de células claras (ver sección de “tratamientos”).",
-                    "Papilar: entre un 10% y un 15% de los pacientes padece este tipo de tumores, los que a su vez se dividen en dos subtipos distintos, tipo 1 y tipo 2.","El cáncer papilar de riñón localizado a menudo se trata con cirugía, en tanto que si se disemina o hace metástasis, se suele tratar con agentes de bloqueo de los vasos sanguíneos o terapias blanco.",
+                    "Papilar: entre un 10% y un 15% de los pacientes padece este tipo de tumores, los que a su vez se dividen en dos subtipos distintos, tipo 1 y tipo 2.", "El cáncer papilar de riñón localizado a menudo se trata con cirugía, en tanto que si se disemina o hace metástasis, se suele tratar con agentes de bloqueo de los vasos sanguíneos o terapias blanco.",
                     "Sarcomatoides: se denominan así cuando las células se asemejan a un sarcoma y el crecimiento del tumor puede ser más rápido.",
                     "Medular: es un tipo de cáncer raro y muy agresivo, más frecuente en las personas afrodescendientes.",
                     "Conductos colectores: comienza en los conductos colectores de los riñones, y se presenta con mayor frecuencia en personas de entre 20 y 30 años.",
@@ -1025,12 +1023,6 @@ const tiposCancer = [
             },
             {
                 subtitulo: "¿Qué eventos adversos pueden surgir durante el tratamiento?",
-                textos: [
-                    "",
-                ],
-            },
-            {
-                subtitulo: "¿Qué eventos adversos pueden surgir durante el tratamiento?",
                 textosDescriptivo: [
                     "El tratamiento de la LMA puede afectar los niveles de células sanguíneas y causar anemia, sangrados o infecciones. En estos casos podrían ser necesarias las transfusiones de glóbulos rojos y plaquetas, la realización de cultivos u otros estudios y el tratamiento antibiótico.",
                     "A su vez la quimioterapia puede tener muchos efectos secundarios como:",
@@ -1099,13 +1091,6 @@ const tiposCancer = [
                     "<span>Ecografía del corazón:</span> para evaluar su funcionalidad previo a recibir tratamiento.",
                 ],
                 textosFinales: [
-                    "",
-                    "",
-                ],
-            },
-            {
-                subtitulo: "¿Cuáles son los signos o síntomas que pueden aparecer?",
-                textos: [
                     "(*) proceso que se utiliza para identificar células sobre la base del tipo de antígenos o marcadores en la superficie de la célula. Este proceso se utiliza para diagnosticar el subtipo de LLA mediante la comparación de las células cancerosas con las células normales del sistema inmunitario.",
                     "(**) prueba de laboratorio en la que se observan las células de una muestra de sangre o médula ósea al microscopio para verificar ciertos cambios en los cromosomas de los linfocitos. Dentro de los estudios moleculares, la reacción de cadena de polimerasa (PCR) es una prueba que detecta y mide algunas mutaciones genéticas y cambios cromosómicos que son demasiado pequeños para verse. Esto permite a los médicos determinar la cantidad de células leucémicas que permanecen en el cuerpo después del tratamiento, lo que se denomina enfermedad residual mínima (ERM).",
                 ],
@@ -1131,7 +1116,7 @@ const tiposCancer = [
                 textosDescriptivo: [
                     "La LLA es una urgencia médica y como tal debe iniciarse el tratamiento de manera rápida. La elección del mismo tiene en cuenta los datos detallados en el punto anterior, y los esquemas de tratamiento por ende difieren. La meta es curar al paciente de la enfermedad. El tratamiento de la leucemia linfoblástica aguda tiene tres fases:",
                 ],
-                textos: [
+                lista: [
                     "Terapia de inducción",
                     "Terapia de consolidación (también denominada intensificación)",
                     "Terapia de mantenimiento",
@@ -1141,12 +1126,11 @@ const tiposCancer = [
                     "Farmacoterapia",
                     "Un trasplante de células madre",
                     "Nuevos enfoques de tratamiento y medicamentos en fase de estudio (ensayos clínicos)",
+                ],
+                textosFinales: [
                     "<span>Terapia de inducción:</span> es el primer ciclo de tratamiento con quimioterapia. Se administra en el hospital, en general los pacientes permanecen internados durante cuatro a seis semanas. El objetivo de esta parte del tratamiento es: 1) matar tantas células leucémicas; 2) normalizar las cantidades de células sanguíneas; 3) eliminar todos los signos de la enfermedad durante un período de tiempo prolongado. Habitualmente se administra quimioterapia intratecal, mediante la realización de una punción lumbar (PL), para prevenir la diseminación de las células leucémicas al encéfalo o erradicarlas en el caso que estén presentes en el líquido cefalorraquídeo.",
                     "<span>Terapia dirigida:</span> los medicamentos de terapia dirigida son tratamientos nuevos que pueden usarse para determinados tipos de leucemia. Es el caso de los pacientes que presenten células leucémicas con el cromosoma Filadelfia (Ph +), un cromosoma anómalo que se forma por el intercambio de sustancias entre los cromosomas 9 y 22, lo que forma un nuevo gen llamado BCR-ABL. Las células con el gen BCR-ABL producen una proteína anormal que estimula el crecimiento celular. Existen medicamentos que atacan esta proteína y son los inhibidores de tirosina quinasa (o TKIs): Imatinib, Dasatinib, Nilotinib, Bosutinib, Ponatinib. Se toman diariamente en forma de pastillas.",
                     "<span>Terapia posterior a la remisión:</span> es la segunda fase del tratamiento. Cuando conseguimos eliminar las células leucémicas como resultado del tratamiento se llama remisión. La meta de la terapia postremisión es destruir cualquier célula leucémica que haya quedado que puede no estar activa, pero que podría comenzar a crecer nuevamente y causar una recaída. Consta de una terapia de consolidación (intensificación) y una terapia de mantenimiento. La quimioterapia forma la base de esta fase del tratamiento. Para algunos pacientes con LLA, en esta fase del tratamiento es posible que pueda considerarse el trasplante de células madre. La terapia de consolidación se suele administrar en ciclos durante un período de 4 a 6 meses. La terapia de mantenimiento en cambio, suele administrarse durante unos dos años en el caso de los adultos, y de dos a tres años en el caso de los niños. Durante las terapias de consolidación y mantenimiento la mayoría de las personas reciben medicamentos diferentes de los que recibieron durante la terapia de inducción.",
-                    "",
-                    "",
-                    "",
                 ],
             },
             {
@@ -1458,7 +1442,7 @@ const tiposCancer = [
             {
                 subtitulo: "¿Quiénes estarán pendientes del tratamiento?",
                 textosDescriptivo: [
-                    "Los médicos especialistas estarán cuidando de su salud a lo largo del tratamiento, se realizarán los controles necesarios durante el mismo, tanto clínico como de laboratorio y por imágenes. En cada consulta usted podrá aclarar sus dudas y el médico a su vez remarcará los cuidados que debe tener. Si presenta algún antecedente relevante que pueda verse afectado durante el tratamiento o posteriormente se hará seguimiento del mismo con el médico especialista en el tema.",
+                    "Los médicos especialista estarán cuidando de su salud a lo largo del tratamiento, se realizarán los controles necesarios durante el mismo, tanto clínico como de laboratorio y por imágenes. En cada consulta usted podrá aclarar sus dudas y el médico a su vez remarcará los cuidados que debe tener. Si presenta algún antecedente relevante que pueda verse afectado durante el tratamiento o posteriormente se hará seguimiento del mismo con el médico especialista en el tema.",
                     "En todos los linfomas, lo que se busca lograr con el tratamiento es la remisión completa de la enfermedad (que no haya presencia de la misma en los estudios que se realizan para evaluarla), en ocasiones se puede lograr una remisión parcial (es decir la enfermedad no se fue completamente, sino de manera parcial) o en ocasiones la enfermedad puede permanecer estable con respecto al tratamiento y no haber respondido al mismo. Para cada situación existe un escenario diferente y en caso en lo que se requiera el tratamiento se cambiará. Las posibilidades de recaída de la enfermedad una vez que se haya logrado la remisión completa están. En esos casos también existen múltiples opciones de tratamiento y en caso de que pueda ser posible se realizará un trasplante de médula ósea, momento en el cual el médico especialista le comentará en detalle de que consta el tratamiento.",
                 ],
             },
@@ -1592,7 +1576,7 @@ const tiposCancer = [
             {
                 subtitulo: "¿Cómo se tratan los sarcomas?",
                 textos: [
-                    "Los pacientes con sospecha de sarcoma deben ser derivados de manera temprana a un grupo de especialistas en sarcomas en centros de referencia. En general, el tratamiento se basa en quimioterapia y, según el caso, radioterapia y cirugía y ciertos tumores tienen tratamientos específicos blanco dirigidos como es el caso del tumor del estroma gastrointestinal."
+                    "Los pacientes con sospecha de sarcoma deben ser derivados de manera temprana a un grupo de especialista en sarcomas en centros de referencia. En general, el tratamiento se basa en quimioterapia y, según el caso, radioterapia y cirugía y ciertos tumores tienen tratamientos específicos blanco dirigidos como es el caso del tumor del estroma gastrointestinal."
                 ],
             },
             {
@@ -1696,7 +1680,7 @@ const opciones = [
         contenido: [
             "<span>¿Qué es lo que se debe saber acerca de investigación y ensayos clínicos?</span>",
             "<span>Cuando un paciente toma conocimiento de que tiene cáncer renal, su médico puede proponerle participar en un ensayo clínico.</span>",
-            "Los ensayos clínicos son estudios de investigación médica que evalúan la seguridad y la eficacia de avances de la ciencia prometedores en la prevención, diagnóstico y tratamiento de una enfermedad. Los tratamientos que llegan a esta etapa son los que demostraron eficacia y toxicidad tolerable en estudios previos. Estos ensayos son cuidadosamente conducidos por médicos especialistas y equipos entrenados para asegurar que los pacientes reciban el mejor cuidado posible.",
+            "Los ensayos clínicos son estudios de investigación médica que evalúan la seguridad y la eficacia de avances de la ciencia prometedores en la prevención, diagnóstico y tratamiento de una enfermedad. Los tratamientos que llegan a esta etapa son los que demostraron eficacia y toxicidad tolerable en estudios previos. Estos ensayos son cuidadosamente conducidos por médicos especialista y equipos entrenados para asegurar que los pacientes reciban el mejor cuidado posible.",
             "Algunas personas piensan que sólo deben considerar ingresar a un ensayo clínico cuando agotaron todas las opciones convencionales de tratamiento. Sin embargo puede suceder que entre las opciones tempranas de tratamiento haya un ensayo clínico que se ajuste a las características específicas de su tumor. Por ejemplo, algunos ensayos son para pacientes de reciente diagnóstico o que presentan estadios tempranos de cáncer.",
             "Las personas a veces también sienten temor creyendo que si participan en un ensayo clínico pueden sólo recibir una pastilla de azúcar (placebo) y ningún tratamiento efectivo. Esta modalidad que puede ocurrir en estudios relativos a enfermedades leves, no se implementa habitualmente en pacientes con cáncer, ya que éstos siempre reciben un tratamiento activo. Si un placebo va a ser usado en un estudio, los pacientes deben recibir información fehaciente obligatoriamente.",
             "La participación en un ensayo clínico es totalmente voluntaria y el paciente puede retirarse en cualquier momento y volver al tratamiento convencional.",
@@ -1738,7 +1722,7 @@ modal.innerHTML = `
             <span id="modalTitle"></span>
             <span class="greenUnderlineTitle"></span>
         </h2>
-        <div id="modalBody"></div>
+        <div id="modalBody" class="tipoBody"></div>
         <button class="closeBtn">CERRAR</button>
     </div>
 `;
@@ -1767,7 +1751,123 @@ document.querySelectorAll('.tipo').forEach(tipo => {
 
         const modalTitle = document.getElementById('modalTitle');
         modalTitle.textContent = tiposCancer[index].nombre;
+
+        const modalBody = document.getElementById('modalBody');
+        modalBody.innerHTML = '';
+
+        if (tiposCancer[index].textosIntroduccion) {
+            tiposCancer[index].textosIntroduccion.forEach(texto => {
+                modalBody.innerHTML += `<p>${texto}</p>`;
+            });
+        }
+
+        if (tiposCancer[index].listaIntroduccion) {
+            const ulContent = document.createElement('ul');
+            tiposCancer[index].listaIntroduccion.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                ulContent.appendChild(li);
+            });
+            modalBody.appendChild(ulContent);
+        }
+
+        if (tiposCancer[index].body) {
+            for (let body = 0; body < tiposCancer[index].body.length; body++) {
+                if (tiposCancer[index].body[body].subtitulo) {
+                    const subtitulo = tiposCancer[index].body[body].subtitulo;
+                    modalBody.innerHTML += `<h3 class="tipoSubtitulo">${subtitulo}</h3>`;
+                }
+
+                if (tiposCancer[index].body[body].textosDescriptivo) {
+                    tiposCancer[index].body[body].textosDescriptivo.forEach(texto => {
+                        modalBody.innerHTML += `<p>${texto}</p>`;
+                    });
+                }
+
+                if (tiposCancer[index].body[body].textos) {
+                    tiposCancer[index].body[body].textos.forEach(texto => {
+                        modalBody.innerHTML += `<p>${texto}</p>`;
+                    });
+                }
+
+                if (tiposCancer[index].body[body].lista) {
+                    let ulContent = '<ul>';
+                    tiposCancer[index].body[body].lista.forEach(item => {
+                        ulContent += `<li>${item}</li>`;
+                    });
+                    ulContent += '</ul>';
+                    modalBody.innerHTML += ulContent;
+                }
+
+                if (tiposCancer[index].body[body].textosFinales) {
+                    tiposCancer[index].body[body].textosFinales.forEach(texto => {
+                        modalBody.innerHTML += `<p>${texto}</p>`;
+                    });
+                }
+            }
+        }
+
+        if (tiposCancer[index].profesionales) {
+            for (let profesional = 0; profesional < tiposCancer[index].profesionales.length; profesional++) {
+                const profesionalDiv = document.createElement('div');
+                profesionalDiv.className = 'profesionalDiv';
+                profesionalDiv.innerHTML += `<p>${tiposCancer[index].profesionales[profesional].nombre}</p>`;
+                for (let texto = 0; texto < tiposCancer[index].profesionales[profesional].textos.length; texto++) {
+                    profesionalDiv.innerHTML += `<p>${tiposCancer[index].profesionales[profesional].textos[texto]}</p>`;
+                }
+                modalBody.appendChild(profesionalDiv);
+            }
+        }
+
+        if (tiposCancer[index].materialDescarga) {
+            const subtituloDescarga = document.createElement('h3');
+            subtituloDescarga.textContent = 'Materiales de descarga';
+            subtituloDescarga.classList.add('tipoSubtitulo');
+            modalBody.appendChild(subtituloDescarga);
+            const listaDescarga = document.createElement('ul');
+            for (let descarga = 0; descarga < tiposCancer[index].materialDescarga.length; descarga++) {
+                const descargaItem = document.createElement('li');
+                descargaItem.className = 'descargaItem';
+                descargaItem.innerHTML = tiposCancer[index].materialDescarga[descarga].nombre;
+                const descargaLink = document.createElement('a');
+                descargaLink.href = tiposCancer[index].materialDescarga[descarga].link;
+                descargaLink.textContent = 'Descargar';
+                descargaLink.target = '_blank';
+                descargaItem.appendChild(descargaLink);
+                listaDescarga.appendChild(descargaItem);
+            }
+            modalBody.appendChild(listaDescarga);
+        }
+
+        if (tiposCancer[index].videos) {
+            const subtituloVideos = document.createElement('h3');
+            subtituloVideos.textContent = 'Vivos y charlas';
+            subtituloVideos.classList.add('tipoSubtitulo');
+            modalBody.appendChild(subtituloVideos);
+            const videosContainer = document.createElement('div');
+            videosContainer.className = 'videosContainer';
+            for (let video = 0; video < tiposCancer[index].videos.length; video++) {
+                const videoDiv = document.createElement('div');
+                videoDiv.className = 'videoDiv';
+                const videoIframe = document.createElement('iframe');
+                videoIframe.src = tiposCancer[index].videos[video];
+                videoIframe.frameborder = '0';
+                videoIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                videoIframe.allowFullscreen = true;
+                videoDiv.appendChild(videoIframe);
+                videosContainer.appendChild(videoDiv);
+            }
+            modalBody.appendChild(videosContainer);
+        }
+
         modal.style.display = 'flex';
+
+        setTimeout(() => {
+            modalBody.scrollTo({
+                top: 0,
+                behavior: 'instant'
+            });
+        }, 0);
     });
 });
 
