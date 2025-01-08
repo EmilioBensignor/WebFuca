@@ -80,12 +80,6 @@ const tiposCancer = [
                 ],
             },
         ],
-        materialDescarga: [
-            {
-                nombre: "Cuadernillo para pacientes",
-                pdf: "#"
-            },
-        ],
     },
     {
         img: "colon",
@@ -144,16 +138,6 @@ const tiposCancer = [
             },
             {
                 subtitulo: "",
-            },
-        ],
-        materialDescarga: [
-            {
-                nombre: "Cuadernillo sobre prevención, diagnóstico y tratamiento del cáncer de colon",
-                pdf: "#"
-            },
-            {
-                nombre: "Campaña #MarzoAzul",
-                pdf: "#"
             },
         ],
     },
@@ -337,11 +321,11 @@ const tiposCancer = [
         materialDescarga: [
             {
                 nombre: "Cuadernillo con información para entender tu diagnostico",
-                pdf: "#"
+                pdf: "fuca_mama_2015"
             },
             {
                 nombre: "Folleto del cáncer de mama",
-                pdf: "#"
+                pdf: "folleto-mama"
             },
         ],
         videos: [
@@ -476,12 +460,6 @@ const tiposCancer = [
                 ],
             },
         ],
-        materialDescarga: [
-            {
-                nombre: "Tríptico sobre prevención de melanoma",
-                pdf: "#"
-            },
-        ],
     },
     {
         img: "prostata",
@@ -579,11 +557,11 @@ const tiposCancer = [
         materialDescarga: [
             {
                 nombre: "Díptico sobre prevención del cáncer de pulmón",
-                pdf: "#"
+                pdf: "diptico-pulmon-cv"
             },
             {
                 nombre: "Cuadernillo sobre prevención, diagnóstico y tratamiento de cáncer de pulmón",
-                pdf: "#"
+                pdf: "fuca_pulmon_2017"
             },
         ],
         videos: [
@@ -805,12 +783,6 @@ const tiposCancer = [
                 ],
             },
         ],
-        materialDescarga: [
-            {
-                nombre: "Cuadernillo de prevención, diagnóstico y tratamiento.",
-                pdf: "#"
-            },
-        ],
     },
     {
         img: "renal",
@@ -922,7 +894,7 @@ const tiposCancer = [
         materialDescarga: [
             {
                 nombre: "Cuadernillo para pacientes.",
-                pdf: "#"
+                pdf: "fuca_renal_2020"
             },
         ],
         videos: [
@@ -1830,7 +1802,7 @@ document.querySelectorAll('.tipo').forEach(tipo => {
                 descargaItem.className = 'descargaItem';
                 descargaItem.innerHTML = tiposCancer[index].materialDescarga[descarga].nombre;
                 const descargaLink = document.createElement('a');
-                descargaLink.href = tiposCancer[index].materialDescarga[descarga].link;
+                descargaLink.href = '/content/img/informacionCancer/pdf/' + tiposCancer[index].materialDescarga[descarga].pdf + '.pdf';
                 descargaLink.textContent = 'Descargar';
                 descargaLink.target = '_blank';
                 descargaItem.appendChild(descargaLink);
