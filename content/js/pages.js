@@ -7,6 +7,10 @@ const modalConfigs = {
     modalText: "Dejá tus datos para poder inscribir a tu colegio en Aulas Abiertas.",
     buttonText: "INSCRIBIR A MI COLEGIO"
   },
+  solicitarGuia: {
+    modalText: "Dejá tus datos para solicitar la guía de actividades para docentes",
+    buttonText: "SOLICITAR GUÍA",
+  },
   bibliotecaBiomedica: {
     modalText: "Dejá tus datos para poder unirte a nuestra Biblioteca Biomédica.",
     buttonText: "UNIRME A LA BIBLIOTECA"

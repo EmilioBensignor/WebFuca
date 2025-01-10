@@ -152,14 +152,14 @@ const links = [
     icon: "Inscribi-Colegio",
     alt: "Inscribi a tu colegio en Aulas Abiertas",
     titulo: "Inscribí a tu colegio en Aulas Abiertas",
-    link: "#"
+    modal: "aulasAbiertas"
   },
   {
     img: "solicitaImg",
     icon: "Solicita-Guia",
     alt: "Solicita la guia de actividades para docentes",
     titulo: "Solicitá la guía de actividades para docentes",
-    link: "#"
+    modal: "solicitarGuia"
   },
 ];
 const trabajosAlumnos = [
@@ -233,7 +233,7 @@ inicializarVistaColegios();
 // Links
 for (let link = 0; link < links.length; link++) {
   linksContainer.innerHTML += `
-    <article class="w-100 linkContainer">
+    <button onclick="createModal('${links[link].modal}')" class="w-100 linkContainer">
       <div class="bgImgCover ${links[link].img}"></div>
       <div class="linkBody column bg-primary">
         <img src="/content/img/aulasAbiertas/${links[link].icon}-Icon.svg" alt="${links[link].alt}">
@@ -242,7 +242,7 @@ for (let link = 0; link < links.length; link++) {
           <img class="iconFlecha" src="/content/img/aulasAbiertas/Flecha-Derecha-Icon.svg" alt="Flecha Icon">
         </div>
       </div>
-    </article>
+    </button>
   `;
 }
 

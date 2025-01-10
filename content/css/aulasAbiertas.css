@@ -150,6 +150,12 @@ main {
   gap: 0.75rem;
 }
 
+.linkContainer {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .linkContainer div:first-child {
   width: 100%;
   height: 9.375rem;
@@ -175,8 +181,14 @@ main {
 
 .linkBody div:first-of-type {
   display: flex;
+  justify-content: space-between;
   align-items: end;
   gap: 3rem;
+}
+
+.linkBody p {
+  text-align: start;
+  font-size: 1rem;
 }
 
 .linkBody div:first-of-type p {
@@ -305,6 +317,18 @@ main {
   }
 }
 
+@media (width >=856px) {
+  .linkBody p {
+    max-width: 140px;
+  }
+}
+
+@media (width >=956px) {
+  .linkBody p {
+    max-width: 100%;
+  }
+}
+
 @media (width >=1080px) {
   h2 {
     font-size: 2rem;
@@ -429,7 +453,7 @@ main {
   /* Links */
 
   .inscribiSolicita {
-    padding: 3rem 0;
+    padding: 3rem 2rem;
   }
 
   .linkContainer div:first-child {
@@ -451,6 +475,10 @@ main {
 
   .linkBody div:first-of-type p {
     font-size: 1.5rem;
+  }
+
+  .linkBody p {
+    max-width: 215px;
   }
 
   /* Swipers */
@@ -486,6 +514,12 @@ main {
   }
 }
 
+@media (width >=1092px) {
+  .linkBody p {
+    max-width: 100%;
+  }
+}
+
 @media (width >=1280px) {
   .introDictado div:first-child img {
     width: 20rem;
@@ -498,6 +532,16 @@ main {
   .linkBody div:first-of-type {
     justify-content: space-between;
     gap: 0;
+  }
+
+  .linkBody p {
+    max-width: 386px;
+  }
+}
+
+@media (width >=1311px) {
+  .linkBody p {
+    max-width: 100%;
   }
 }
 
