@@ -195,8 +195,10 @@ function formValidation(event) {
 function mostrarResultado(modal, xmlHttp) {
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var cod = xmlHttp.responseText;
-    modal.style.display = 'none';
-    modal.remove();
+    if (modal) {
+      modal.style.display = 'none';
+      modal.remove();
+    }
     if (cod == "OK") {
       modalExito();
     } else {
