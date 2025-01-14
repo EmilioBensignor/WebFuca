@@ -11,11 +11,7 @@ const modalConfigs = {
     modalText: "Dejá tus datos para solicitar la guía de actividades para docentes",
     buttonText: "SOLICITAR GUÍA",
   },
-  bibliotecaBiomedica: {
-    modalText: "Dejá tus datos para poder unirte a nuestra Biblioteca Biomédica.",
-    buttonText: "UNIRME A LA BIBLIOTECA"
-  },
-  cursos: {
+  biblioteca: {
     modalText: "Dejá tus datos para poder unirte a nuestra Biblioteca Biomédica.",
     buttonText: "UNIRME A LA BIBLIOTECA"
   },
@@ -35,21 +31,22 @@ function createModal(configKey) {
           </button>
         </div>
         <form id="contactForm">
+		<input type="hidden" name="caso" value="${configKey}">
           <div>
             <div>
               <label for="nombre">Nombre</label>
-              <input id="nombre" placeholder="Ingrese su nombre">
+              <input id="nombre" name="nombre" placeholder="Ingrese su nombre">
               <p id="nombreError" class="error-message"></p>
             </div>
             <div>
               <label for="mail">Correo electrónico</label>
-              <input id="mail" placeholder="Ingrese su correo electrónico">
+              <input id="mail" name="mail" placeholder="Ingrese su correo electrónico">
               <p id="mailError" class="error-message"></p>
             </div>
           </div>
           <div>
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" placeholder="Escriba su mensaje..."></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje..."></textarea>
           </div>
           <button type="submit" class="btnActionModal">${config.buttonText}</button>
         </form>
@@ -174,10 +171,28 @@ function setupFormValidation(modal) {
         correo: mail.value,
         mensaje: mensaje.value
       });
-
-      modal.style.display = 'none';
-      modal.remove();
-      modalExito();
+      miAjax(modal, formModal, mostrarResultado);
     }
   });
+}
+
+function mostrarResultado(modal, xmlHttp) {
+  if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+    var cod = xmlHttp.responseText;
+    modal.style.display = 'none';
+    modal.remove();
+    if (cod == "OK") {
+      modalExito();
+    } else {
+      window.alert(cod);
+    }
+  }
+}
+
+function miAjax(modal, form, f) {
+  let xmlHttp = new XMLHttpRequest();
+  var formData = new FormData(form);
+  xmlHttp.open("POST", "/cgi-bin/fcmandarmail.pl", true);
+  xmlHttp.send(formData);
+  xmlHttp.onreadystatechange = function (evt) { f(modal, xmlHttp); };
 }
