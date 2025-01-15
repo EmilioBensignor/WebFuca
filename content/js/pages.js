@@ -17,10 +17,10 @@ const modalConfigs = {
   },
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
+    contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
       const modal = this.closest('.modalPages');
       formValidation(modal);
@@ -86,7 +86,7 @@ function createModal(configKey) {
 
   const modalForm = modal.querySelector('#contactForm');
   if (modalForm) {
-    modalForm.addEventListener('submit', function(event) {
+    modalForm.addEventListener('submit', function (event) {
       event.preventDefault();
       const modal = this.closest('.modalPages');
       formValidation(modal);
@@ -136,6 +136,24 @@ function modalExito() {
   });
 
   return modal;
+}
+
+function showLoader() {
+  const loaderHTML = `
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+  `;
+  const loaderContainer = document.createElement('div');
+  loaderContainer.innerHTML = loaderHTML;
+  document.body.appendChild(loaderContainer.firstElementChild);
+}
+
+function hideLoader() {
+  const loader = document.querySelector('.loader-container');
+  if (loader) {
+    loader.remove();
+  }
 }
 
 function formValidation(modal) {
@@ -203,23 +221,29 @@ function formValidation(modal) {
       correo: mail.value,
       mensaje: mensaje.value
     });
-    
+
+    showLoader();
+
     if (modal) {
       modal.style.display = 'none';
       modal.remove();
     }
-    
+
     miAjax(modal, contactForm, mostrarResultado);
   }
 }
 
 function mostrarResultado(xmlHttp) {
-  if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-    var cod = xmlHttp.responseText;
-    if (cod == "OK") {
-      modalExito();
-    } else {
-      window.alert(cod);
+  if (xmlHttp.readyState == 4) {
+    hideLoader();
+
+    if (xmlHttp.status == 200) {
+      var cod = xmlHttp.responseText;
+      if (cod == "OK") {
+        modalExito();
+      } else {
+        window.alert(cod);
+      }
     }
   }
 }
