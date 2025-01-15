@@ -1,5 +1,3 @@
-const contactForm = document.getElementById('contactForm');
-
 const modalConfigs = {
   home: {
     modalText: "Dejá tus datos para que nos pongamos en contacto contigo.",
@@ -18,6 +16,17 @@ const modalConfigs = {
     buttonText: "UNIRME A LA BIBLIOTECA"
   },
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const modal = this.closest('.modalPages');
+      formValidation(modal);
+    });
+  }
+});
 
 function createModal(configKey) {
   const config = modalConfigs[configKey];
@@ -49,6 +58,7 @@ function createModal(configKey) {
           <div>
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje..."></textarea>
+            <p id="mensajeError" class="error-message"></p>
           </div>
           <button type="submit" class="btnActionModal">${config.buttonText}</button>
         </form>
@@ -74,8 +84,13 @@ function createModal(configKey) {
     }
   });
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', formValidation(event));
+  const modalForm = modal.querySelector('#contactForm');
+  if (modalForm) {
+    modalForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const modal = this.closest('.modalPages');
+      formValidation(modal);
+    });
   }
 
   return modal;
@@ -93,7 +108,7 @@ function modalExito() {
             <div class="closeIconModal bgImgContain"></div>
           </button>
         </div>
-        <button type="submit" id="btnCerrar" class="btnActionModal">CERRAR</button>
+        <button type="button" id="btnCerrar" class="btnActionModal">CERRAR</button>
       </div>
     </div>
   `;
@@ -123,8 +138,8 @@ function modalExito() {
   return modal;
 }
 
-function formValidation(event) {
-  event.preventDefault();
+function formValidation(modal) {
+  const contactForm = modal ? modal.querySelector('#contactForm') : document.getElementById('contactForm');
 
   const nombre = contactForm.querySelector('#nombre');
   const mail = contactForm.querySelector('#mail');
@@ -188,17 +203,19 @@ function formValidation(event) {
       correo: mail.value,
       mensaje: mensaje.value
     });
-    miAjax(modal, formModal, mostrarResultado);
-  }
-}
-
-function mostrarResultado(modal, xmlHttp) {
-  if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-    var cod = xmlHttp.responseText;
+    
     if (modal) {
       modal.style.display = 'none';
       modal.remove();
     }
+    
+    miAjax(modal, contactForm, mostrarResultado);
+  }
+}
+
+function mostrarResultado(xmlHttp) {
+  if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+    var cod = xmlHttp.responseText;
     if (cod == "OK") {
       modalExito();
     } else {
@@ -212,5 +229,5 @@ function miAjax(modal, form, f) {
   var formData = new FormData(form);
   xmlHttp.open("POST", "/cgi-bin/fcmandarmail.pl", true);
   xmlHttp.send(formData);
-  xmlHttp.onreadystatechange = function (evt) { f(modal, xmlHttp); };
+  xmlHttp.onreadystatechange = function () { f(xmlHttp); };
 }
