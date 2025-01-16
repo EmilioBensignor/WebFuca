@@ -49,6 +49,7 @@ p {
 }
 
 .proyecto h3 {
+    color: rgba(0, 0, 0, 0.8);
     text-align: start;
 }
 
@@ -167,6 +168,7 @@ p {
 }
 
 .pill {
+    max-width: 5rem;
     background: transparent;
     border: 1px solid var(--color-primario);
     border-radius: 999px;
@@ -257,6 +259,10 @@ p {
     p,
     .pill {
         font-size: 1rem;
+    }
+
+    .pill {
+        max-width: 100%;
     }
 
     .cioContainer {

@@ -1,8 +1,11 @@
+section {
+  padding: 1.5rem 1rem;
+}
+
 /* Recibos */
 
 .recibos {
   gap: 1.5rem;
-  padding: 1.5rem 1rem;
 }
 
 .recibos p {
@@ -25,7 +28,6 @@
 
 .otrasFormas {
   gap: 0.5rem;
-  padding: 1.5rem 1rem;
 }
 
 .otrasFormas>div:first-of-type p {
@@ -160,7 +162,6 @@
 
 .porqueDonar {
   gap: 1.5rem;
-  padding: 1.5rem 1rem;
 }
 
 .porqueDonar div {
@@ -230,9 +231,8 @@
 
 @media (width >=700px) {
 
-  .recibos,
-  .otrasFormas {
-    padding: 1.5rem;
+  section {
+    padding: 3rem 2rem;
   }
 
   .formas {
@@ -268,11 +268,11 @@
   }
 
   .porqueDonar>div:first-of-type>div:first-of-type {
-    padding-left: 1.5rem;
+    padding: 1.75rem 1.5rem;
   }
 
   .porqueDonar>:nth-child(2)>div {
-    padding-right: 1.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .porqueDonar div div {
@@ -281,6 +281,7 @@
   }
 
   .porqueDonar div img {
+    width: 50%;
     max-height: 100%;
   }
 
@@ -311,7 +312,7 @@
 
 @media (width >=1080px) {
   .recibos {
-    padding: 1.5rem 14.375rem;
+    padding: 3rem 14.375rem;
   }
 
   .recibos p,
@@ -329,7 +330,6 @@
 
   .otrasFormas {
     gap: 1rem;
-    padding: 1.5rem 2rem;
   }
 
   .otrasFormas>div:first-of-type p {
@@ -346,6 +346,11 @@
 
   .porqueDonar div div {
     gap: 2rem;
+  }
+
+  .porqueDonar>div:first-of-type>div:first-of-type,
+  .porqueDonar>:nth-child(2)>div {
+    padding: 2.25rem 3rem;
   }
 
   .porqueDonar div img {
@@ -372,8 +377,11 @@
 }
 
 @media (width >=1440px) {
-  .recibos {
-    padding: 1.5rem;
+
+  section,
+  .porqueDonar>div:first-of-type>div:first-of-type,
+  .porqueDonar>:nth-child(2)>div {
+    padding: 4rem 4.93rem;
   }
 
   .recibos p,

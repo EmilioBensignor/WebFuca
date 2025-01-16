@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesPerView: 2,
       loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 1500,
         disableOnInteraction: false,
       },
       spaceBetween: 16,
