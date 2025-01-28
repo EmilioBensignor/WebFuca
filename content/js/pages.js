@@ -15,6 +15,10 @@ const modalConfigs = {
     modalText: "Dejá tus datos para poder unirte a nuestra Biblioteca Biomédica.",
     buttonText: "UNIRME A LA BIBLIOTECA"
   },
+  donaciones: {
+    modalText: "Dejá tus datos para hacer una donación en especie",
+    buttonText: "ENVIAR"
+  },
 };
 
 document.addEventListener('DOMContentLoaded', function () {

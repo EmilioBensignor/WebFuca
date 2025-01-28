@@ -112,6 +112,19 @@ section {
   font-size: 0.875rem;
 }
 
+.formasButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primaryButton {
+  text-align: center;
+  font-size: 1rem;
+}
+
 /* QR */
 
 .qrModal {
@@ -342,6 +355,10 @@ section {
 
   .forma {
     width: 32%;
+  }
+
+  .formasButtons {
+    justify-content: space-around;
   }
 
   .porqueDonar div div {
