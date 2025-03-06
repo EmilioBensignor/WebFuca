@@ -773,6 +773,11 @@ header {
 .derechos {
   background-color: #8a8a8a;
   line-height: 1.4;
+  text-align: center;
+}
+
+.derechos a {
+  text-decoration: none;
 }
 
 .menuFooterDesktop,
@@ -1327,7 +1332,7 @@ header {
     gap: 0.5rem;
   }
 
-  .derechos p {
+  .derechos a, .derechos p {
     font-size: 0.8rem;
   }
 }
@@ -1429,7 +1434,7 @@ header {
     font-size: 0.875rem;
   }
 
-  .derechos p {
+  .derechos a, .derechos p {
     font-size: 1rem;
   }
 }

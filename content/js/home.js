@@ -62,10 +62,10 @@ const linksNovedades = [
     link: "https://youtu.be/4_Rcp2VjZ-8",
     text: "Cáncer de mama",
   },
-  // {
-  //   link: "#",
-  //   text: "Investigaciones CIO",
-  // },
+  {
+    link: "/cio",
+    text: "Investigaciones CIO",
+  },
   {
     link: "https://www.instagram.com/p/DCIDO1Pv_nv/?img_index=1",
     text: "Redio",
@@ -81,20 +81,12 @@ const linksNovedades = [
 ];
 const novedades = [
   {
-    mes: "FEBRERO",
-    dia: "04",
-    anio: "2025",
-    texto: "Día mundial del Cáncer.",
-    cta: "INFÓRMATE",
-    link: "https://youtu.be/byV96VNM",
-  },
-  {
     mes: "MARZO",
-    dia: "04",
+    dia: "07",
     anio: "2025",
-    texto: "Día Internacional de la Concienciación sobre el VPH.",
-    cta: "INFÓRMATE",
-    link: "https://youtu.be/6g1HxlpKUSY"
+    texto: "Congreso Mujer y Cáncer - AAOC",
+    cta: "CONOCÉ MÁS",
+    link: "https://www.aaoc.org.ar/ii-congreso-mujer-y-cancer-caba-7-de-marzo/",
   },
   {
     mes: "MARZO",
@@ -103,6 +95,40 @@ const novedades = [
     texto: "Día Mundial de la Prevención del Cáncer de Cuello Uterino.",
     cta: "INFÓRMATE",
     link: "https://youtu.be/6g1HxlpKUSY",
+  },
+  {
+    mes: "MARZO",
+    dia: "31",
+    anio: "2025",
+    texto: "Día Mundial del Cáncer Colorrectal.",
+  },
+  {
+    mes: "ABRIL",
+    dia: "01",
+    anio: "2025",
+    texto: "Día Nacional de la Donación de Médula Ósea.",
+    cta: "DONÁ",
+    link: "https://www.argentina.gob.ar/donar-medula",
+  },
+  {
+    mes: "ABRIL",
+    dia: "06",
+    anio: "2025",
+    texto: "Día Mundial de la Actividad Física para el desarrollo y la paz.",
+  },
+  {
+    mes: "ABRIL",
+    dia: "07",
+    anio: "2025",
+    texto: "Día Mundial de la Salud.",
+    cta: "INFÓRMATE",
+    link: "https://www.who.int/es/news-room/events/detail/2025/04/07/default-calendar/world-health-day-2025-healthy-beginnings-hopeful-futures",
+  },
+  {
+    mes: "ABRIL",
+    dia: "10",
+    anio: "2025",
+    texto: "Día del Investigador científico.",
   },
   {
     mes: "SEPTIEMBRE",
@@ -144,7 +170,21 @@ for (let link = 0; link < linksNovedades.length; link++) {
 
 // Novedades
 for (let novedad = 0; novedad < novedades.length; novedad++) {
-  novedadesContainer.innerHTML += `
+  if (!novedades[novedad].link && !novedades[novedad].cta) {
+    novedadesContainer.innerHTML += `
+    <div class="novedad column">
+      <div>
+        <div class="headerNovedades bg-primary">
+          <p class="text-white">${novedades[novedad].mes}</p>
+          <p class="text-white">${novedades[novedad].dia}</p>
+          <p class="text-white">${novedades[novedad].anio}</p>
+        </div>
+        <p class="contentNovedades">${novedades[novedad].texto}</p>
+      </div>
+    </div>
+  `;
+  } else {
+    novedadesContainer.innerHTML += `
     <div class="novedad column">
       <div>
         <div class="headerNovedades bg-primary">
@@ -159,6 +199,7 @@ for (let novedad = 0; novedad < novedades.length; novedad++) {
       </div>
     </div>
   `;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

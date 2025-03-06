@@ -193,7 +193,11 @@ section {
     width: 48%;
 }
 
-.videoDiv iframe {
+.opcionVideo {
+    width: 100%;
+}
+
+.videoDiv iframe, .opcionVideo iframe {
     width: 100%;
     border-radius: 18px;
 }
@@ -228,6 +232,12 @@ section {
     padding: 0.875rem 4.5rem;
 }
 
+@media (width >=500px) {
+    .opcionVideo {
+        width: 48%;
+    }
+}
+
 @media (width >=700px) {
     section {
         padding: 3rem 2rem;
@@ -235,6 +245,12 @@ section {
 
     .informacion>div>img {
         max-height: 500px;
+    }
+}
+
+@media (width >=992px) {
+    .opcionVideo {
+        width: 32%;
     }
 }
 
@@ -292,6 +308,16 @@ section {
 
     .tipoBody ul li, .descargaItem a {
         font-size: 1rem;
+    }
+}
+
+@media (width >=1280px) {
+    .opcionBody .videosContainer {
+        justify-content: space-between;
+    }
+
+    .opcionVideo {
+        width: 23%;
     }
 }
 

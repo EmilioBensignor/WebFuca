@@ -80,6 +80,15 @@ const tiposCancer = [
                 ],
             },
         ],
+        materialDescarga: [
+            {
+                nombre: "Cuadernillo para pacientes de cáncer de cabeza y cuello",
+                pdf: "fuca_cabezaycuello_2018"
+            },
+        ],
+        videos: [
+            "https://www.youtube.com/embed/G3gI1i--trs?si=UXHNGMIB65abQvk1",
+        ],
     },
     {
         img: "colon",
@@ -139,6 +148,19 @@ const tiposCancer = [
             {
                 subtitulo: "",
             },
+        ],
+        materialDescarga: [
+            {
+                nombre: "Qué es el Cáncer Colorrectal",
+                pdf: "guia-ccr-2024"
+            },
+            {
+                nombre: "Cáncer Colorrectal",
+                pdf: "fuca_colon_2017"
+            },
+        ],
+        videos: [
+            "https://www.youtube.com/embed/8PMRHdtkFGc?si=ghmgTrUrgygzDNR5",
         ],
     },
     {
@@ -331,7 +353,10 @@ const tiposCancer = [
         videos: [
             "https://www.youtube.com/embed/XoUImAt_h-0?si=RuqdXv9mV2eh79BT",
             "https://www.youtube.com/embed/CXCHQc0eWWg?si=qKtn9I3SZsBAn0-c",
-            "https://www.youtube.com/embed/cIOyrmMX3PI?si=hpwwjfzh7B9IM179"
+            "https://www.youtube.com/embed/cIOyrmMX3PI?si=hpwwjfzh7B9IM179",
+            "https://www.youtube.com/embed/4_Rcp2VjZ-8?si=U0SkKTTAy7_4_bml",
+            "https://www.youtube.com/embed/6NFtgeT7ZA4?si=tn8_R1pUunB4rKfy",
+            "https://www.youtube.com/embed/sSpAyvWlXNg?si=aBdfYMoKaNeFckg7"
         ],
     },
     {
@@ -403,6 +428,10 @@ const tiposCancer = [
                 ],
             },
         ],
+        videos: [
+            "https://www.youtube.com/embed/sSpAyvWlXNg?si=zOEAjwBy5Ob0OUdX",
+            "https://www.youtube.com/embed/y4ZMkt29DfU?si=N6P7EG4SospXQIaJ",
+        ],
     },
     {
         img: "piel",
@@ -460,6 +489,16 @@ const tiposCancer = [
                 ],
             },
         ],
+        materialDescarga: [
+            {
+                nombre: "Información sobre la prevención de Melanoma",
+                pdf: "fuca_melanoma_2016"
+            },
+        ],
+        videos: [
+            "https://www.youtube.com/embed/xotgg9G8qrw?si=s9HvWoEqRPXGohtr",
+            "https://www.youtube.com/embed/SQxj3XynaKM?si=MU0okOG8agGv-l0K",
+        ],
     },
     {
         img: "prostata",
@@ -498,6 +537,8 @@ const tiposCancer = [
         videos: [
             "https://www.youtube.com/embed/X7F2pbhIXeI?si=9CfKqzFMGPRWcfTw",
             "https://www.youtube.com/embed/4OtMrilx6mo?si=op2yTBZaJZ1uMESs",
+            "https://www.youtube.com/embed/DYMLSW8f4ig?si=RoUGyO_ZO_tRR3Vi",
+            "https://www.youtube.com/embed/X7F2pbhIXeI?si=2-MJdijXSfPdzPDv",
         ],
     },
     {
@@ -570,6 +611,8 @@ const tiposCancer = [
             "https://www.youtube.com/embed/Q9JGGYxDAsc?si=tyS_6qjLTMjehnme",
             "https://www.youtube.com/embed/G4itzwoXFJk?si=27uzvLmDkSvhWtw5",
             "https://www.youtube.com/embed/6hSLi4JYSXw?si=toFY_DzUE6GydQks",
+            "https://www.youtube.com/embed/TyJdYJnLkS0?si=AK9cYiovr8WZqFUu",
+            "https://www.youtube.com/embed/Q9JGGYxDAsc?si=e7raFBt2-iatQXa9",
         ],
     },
     {
@@ -663,12 +706,16 @@ const tiposCancer = [
                 ],
             },
         ],
+        videos: [
+            "https://www.youtube.com/embed/9Xkh1b65Q80?si=JiLUoj9faFqiER4-",
+        ],
     },
     {
         img: "vejiga",
         nombre: "Cáncer de vejiga",
         videos: [
             "https://www.youtube.com/embed/tHdfO_sw224?si=0PBs-tSXDTS6jnTI",
+            "https://www.youtube.com/embed/tHdfO_sw224?si=8adY4jzgZr3SMU25",
         ],
     },
     {
@@ -782,6 +829,15 @@ const tiposCancer = [
                     "En los casos en que existe metástasis, el tratamiento de elección es la quimioterapia. Dependiendo del paciente el oncólogo también incluirá el tratamiento con radioterapia y/o cirugía.",
                 ],
             },
+        ],
+        materialDescarga: [
+            {
+                nombre: "Cáncer gástrico. Prevención, diagnóstico y tratamiento.",
+                pdf: "fuca_gastrico_2017"
+            },
+        ],
+        videos: [
+            "https://www.youtube.com/embed/ZfstR1dXhk0?si=GaN6gVjhW-woCsT9",
         ],
     },
     {
@@ -899,6 +955,7 @@ const tiposCancer = [
         ],
         videos: [
             "https://www.youtube.com/embed/0ctG8BK1Fzs?si=Ue-kv6CBI4XnaCI5",
+            "https://www.youtube.com/embed/0ctG8BK1Fzs?si=IpqRosC6ZDINwOP_",
         ],
     },
     {
@@ -1284,6 +1341,10 @@ const tiposCancer = [
                 ],
             },
         ],
+        videos: [
+            "https://www.youtube.com/embed/P8w4ZuZEIzY?si=CC5M9X4cCniSkFA1",
+            "https://www.youtube.com/embed/g9upfgCfeY0?si=NaM7Lk6BIOFsA2Q-",
+        ],
     },
     {
         img: "linfomas",
@@ -1428,6 +1489,9 @@ const tiposCancer = [
                 ],
             },
         ],
+        videos: [
+            "https://www.youtube.com/embed/2apC5Ufa2Ug?si=bqBghacyTqJc7qa4",
+        ],
     },
     {
         img: "mieloma",
@@ -1515,6 +1579,9 @@ const tiposCancer = [
                 ],
             },
         ],
+        videos: [
+            "https://www.youtube.com/embed/cMtFcwQa6h8?si=f8mhZqGU83imfKed",
+        ],
     },
     {
         img: "sarcomas",
@@ -1571,6 +1638,9 @@ const tiposCancer = [
                     "Junio 2021",
                 ],
             },
+        ],
+        videos: [
+            "https://www.youtube.com/embed/dHNUfkO4biI?si=a36a-0tyfptC5AYL",
         ],
     },
     {
@@ -1677,6 +1747,12 @@ const opciones = [
             "Se utilizan distintas técnicas, con respaldo científico y con probados resultados en la experiencia clínica. El objetivo principal es el manejo y disminución del “distress” emocional del paciente y la familia u otras personas significativas.",
             "Otro objetivo es el reforzamiento de las estrategias de afrontamiento exitosas con que la persona cuenta y la incorporación de nuevos recursos (psicológicos, familiares, comunitarios, sociales). La reflexión acerca de los cambios necesarios en el estilo de vida ocupa un espacio en la psicoterapia. Se realizan entrevistas de pareja y/o familiares cuando es necesario y oportuno.",
             "Otro objetivo importante es la elaboración de esta experiencia como un evento dentro de la línea temporal que implica la vida. (“Estoy - estuve enfermo”, NO “soy enfermo”) El desafío mayor para la Oncología y la Psicooncología es el trabajo con las personas que superaron la experiencia del cáncer y deben encarar su vida con este bagaje."
+        ],
+        videos: [
+            "https://www.youtube.com/embed/MBDezF0bZqA?si=RB20b6nsxSJDvZhb",
+            "https://www.youtube.com/embed/MBDezF0bZqA?si=RB20b6nsxSJDvZhb",
+            "https://www.youtube.com/embed/MBDezF0bZqA?si=RB20b6nsxSJDvZhb",
+            "https://www.youtube.com/embed/MBDezF0bZqA?si=RB20b6nsxSJDvZhb",
         ],
     },
     // {
@@ -1868,6 +1944,22 @@ function mostrarContenido(index) {
         opciones[index].contenido.forEach(parrafo => {
             opcionBody.innerHTML += `<p>${parrafo}</p>`;
         });
+    }
+    if (opciones[index].videos) {
+        const videosContainer = document.createElement('div');
+        videosContainer.className = 'videosContainer';
+        for (let video = 0; video < opciones[index].videos.length; video++) {
+            const opcionVideo = document.createElement('div');
+            opcionVideo.className = 'opcionVideo';
+            const videoIframe = document.createElement('iframe');
+            videoIframe.src = opciones[index].videos[video];
+            videoIframe.frameborder = '0';
+            videoIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            videoIframe.allowFullscreen = true;
+            opcionVideo.appendChild(videoIframe);
+            videosContainer.appendChild(opcionVideo);
+        }
+        opcionBody.appendChild(videosContainer);
     }
 }
 
